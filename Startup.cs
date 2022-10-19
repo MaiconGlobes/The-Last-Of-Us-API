@@ -29,26 +29,26 @@ namespace API_REST_The_Last_Of_Us
 
             services.AddSwaggerGen(options =>
             {
-               options.SwaggerDoc("v1", new OpenApiInfo { Title = "The Last Of Us - API", Version = "v1" });
-               options.SchemaFilter<SwaggerExcludeFilter>();
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "The Last Of Us - API", Version = "v1" });
+                options.SchemaFilter<SwaggerExcludeFilter>();
             });
 
             services.AddSwaggerGenNewtonsoftSupport();
-      }
+        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
-               app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage();
             }
 
             app.UseSwagger();
 
             app.UseSwaggerUI(options =>
             {
-               options.SwaggerEndpoint("../swagger/v1/swagger.json", "The Last Of Us API v1");
+                options.SwaggerEndpoint("../swagger/v1/swagger.json", "The Last Of Us API v1");
             });
 
             app.UseRouting();
@@ -57,8 +57,8 @@ namespace API_REST_The_Last_Of_Us
 
             app.UseEndpoints(endpoints =>
             {
-               endpoints.MapControllers();
+                endpoints.MapControllers();
             });
-      }
+        }
     }
 }
