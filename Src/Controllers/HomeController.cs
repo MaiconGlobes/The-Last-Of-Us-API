@@ -1,15 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 namespace API_REST_The_Last_Of_Us.Controllers
 {
+   [ProducesResponseType(StatusCodes.Status400BadRequest)]
+   [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+   [Produces("application/json")]
    [ApiController]
-   [Route("[controller]")]
+   [Route("home")]
    public class HomeController : ControllerBase
    {
       [HttpGet]
-      public IActionResult Get()
+      public IActionResult BoasVindas()
       {
-         return new OkResult();
+         object Retorno = new
+         {
+            boas_vindas = "Welcome Developer",
+         };
+
+         return new OkObjectResult(Retorno);
       }
    }
 }
