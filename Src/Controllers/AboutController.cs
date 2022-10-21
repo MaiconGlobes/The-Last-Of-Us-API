@@ -11,7 +11,7 @@ namespace API_REST_The_Last_Of_Us.Controllers
    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
    [Produces("application/json")]
    [Route("[controller]")]
-   public class HomeController : ControllerBase
+   public class AboutController : ControllerBase
    {
       private object FObjRetorno { get; set; }
 

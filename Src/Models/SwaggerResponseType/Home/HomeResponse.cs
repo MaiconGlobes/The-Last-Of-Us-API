@@ -11,6 +11,6 @@ namespace API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home
       public byte Code_State { get; set; }
 
       [JsonProperty("return")]
-      public RetornoAtributoResponse Return { get; set; }
+      public ReturnAtributoHomeResponse Return { get; set; }
    }
 }
