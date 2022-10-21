@@ -17,14 +17,14 @@
          "ASPNETCORE_ENVIRONMENT": "Development"
       }
    },
-    "API_REST_The_Last_Of_Us": {
+   "API_REST_The_Last_Of_Us": {
       "commandName": "Project",
       "launchBrowser": false,
       "launchUrl": "home",
-      "applicationUrl": "http://localhost:5000",
+      "applicationUrl": "http://localhost:5000/v1/api/",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+         "ASPNETCORE_ENVIRONMENT": "Development"
       }
-    }
+   }
   }
 }
