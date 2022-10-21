@@ -1,4 +1,5 @@
-﻿using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
+﻿using API_REST_The_Last_Of_Us.Src.Models.Entity;
+using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
 using API_REST_The_Last_Of_Us.Src.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -6,12 +7,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace API_REST_The_Last_Of_Us.Controllers
 {
    [ApiController]
-   //[ProducesResponseType(StatusCodes.Status200OK, Type = typeof(HomeResponse))]
+   [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(Sobre))]
    [ProducesResponseType(StatusCodes.Status400BadRequest)]
    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
    [Produces("application/json")]
-   [Route("[controller]")]
-   public class AboutController : ControllerBase
+   [Route("/sobre")]
+   public class SobreController : ControllerBase
    {
       private object FObjRetorno { get; set; }
 
@@ -20,7 +21,7 @@ namespace API_REST_The_Last_Of_Us.Controllers
       {
          try
          {
-            FObjRetorno = new { msg = "AboutController" };
+            FObjRetorno = new { msg = "SobreController" };
             return new OkObjectResult(FObjRetorno);
          }
          catch

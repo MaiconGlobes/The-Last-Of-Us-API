@@ -7,10 +7,9 @@ namespace API_REST_The_Last_Of_Us.Controllers
 {
    [ApiController]
    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(HomeResponse))]
-   [ProducesResponseType(StatusCodes.Status400BadRequest)]
    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
    [Produces("application/json")]
-   [Route("[controller]")]
+   [Route("/home")]
    public class HomeController : ControllerBase
    {
       private object FObjRetorno { get; set; }
