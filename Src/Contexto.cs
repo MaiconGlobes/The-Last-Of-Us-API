@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using API_REST_The_Last_Of_Us.Src.Models.Entity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 
@@ -6,6 +7,8 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 {
    public class Contexto : DbContext
    {
+      public DbSet<About> ABOUT { get; set; }
+
       protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
       {
 

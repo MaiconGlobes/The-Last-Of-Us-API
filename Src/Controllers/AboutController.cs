@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API_REST_The_Last_Of_Us.Controllers
 {
    [ApiController]
-   [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(HomeResponse))]
+   //[ProducesResponseType(StatusCodes.Status200OK, Type = typeof(HomeResponse))]
    [ProducesResponseType(StatusCodes.Status400BadRequest)]
    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
    [Produces("application/json")]
@@ -20,7 +20,7 @@ namespace API_REST_The_Last_Of_Us.Controllers
       {
          try
          {
-            FObjRetorno = ResponseUtils.Instancia().RetornoBoasVindasOk();
+            FObjRetorno = new { msg = "AboutController" };
             return new OkObjectResult(FObjRetorno);
          }
          catch
