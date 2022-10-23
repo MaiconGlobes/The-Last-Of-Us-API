@@ -1,22 +1,12 @@
-﻿
-using Newtonsoft.Json.Converters;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
 namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 {
-   public class CustomDateTimeConverter : IsoDateTimeConverter
-   {
-      public CustomDateTimeConverter()
-      {
-         base.DateTimeFormat = "dd-MM-yyyy";
-      }
-   }
-
    [Table("Lancamento", Schema = "public")]
-   public class Lancamento
+   public class LancamentoModel
    {
       [Key]
       [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -31,7 +21,6 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 
       [Column("Data", TypeName = "date")]
       [Required(ErrorMessage = "Propriedade [data] é obrigatório")]
-      //[JsonConverter(typeof(CustomDateTimeConverter))]
       [JsonPropertyName("data")]
       public DateTime Data { get; set; }
 
@@ -39,6 +28,6 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       public Guid Sobre_id { get; set; }
 
       [JsonIgnore]
-      public virtual Sobre Sobre { get; set; }
+      public virtual SobreModel Sobre { get; set; }
    }
 }

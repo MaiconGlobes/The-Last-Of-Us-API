@@ -7,7 +7,7 @@ using System.Text.Json.Serialization;
 namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 {
    [Table("Sobre", Schema = "public")]
-   public class Sobre
+   public class SobreModel
    {
       [Key]
       [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -31,9 +31,6 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       [JsonPropertyName("missao")]
       public string Missao { get; set; }
 
-      [JsonPropertyName("Lancamento")]
-      public virtual List<Lancamento> Lancamentos { get; set; }
-
       [Column("Desenvolvedor")]
       [Required(ErrorMessage = "Propriedade [desenvolvedor] é obrigatório")]
       [StringLength(60, ErrorMessage = "Propriedade [desenvolvedor] deve ter no máximo 60 caractere")]
@@ -49,7 +46,7 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       [Column("Perpectiva")]
       [Required(ErrorMessage = "Propriedade [perpectiva] é obrigatório")]
       [StringLength(25, ErrorMessage = "Propriedade [perpectiva] deve ter no máximo 25 caractere")]
-      [JsonPropertyName("direito_autoral")]
+      [JsonPropertyName("perpectiva")]
       public string Perpectiva { get; set; }
 
       [Column("Engine")]
@@ -58,7 +55,8 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       [JsonPropertyName("engine")]
       public string Engine { get; set; }
 
-      //[JsonPropertyName("Desenvolvedores")]
-      // public virtual List<Desenvolvedor> Desenvolvedores { get; set; }
+      [Required(ErrorMessage = "Propriedade [lancamentos] é obrigatório")]
+      [JsonPropertyName("lancamentos")]
+      public virtual List<LancamentoModel> Lancamentos { get; set; }
    }
 }
