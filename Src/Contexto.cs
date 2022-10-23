@@ -12,7 +12,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
    public class Contexto : DbContext
    {
       public DbSet<Sobre> SOBRE { get; set; }
-      public DbSet<Desenvolvedor> DESENVOLVEDOR { get; set; }
+      public DbSet<Lancamento> LANCAMENTO { get; set; }
 
       protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
       {
@@ -32,10 +32,10 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       protected override void OnModelCreating(ModelBuilder modelBuilder)
       {
          #region Chaves Primárias
-         modelBuilder.Entity<Desenvolvedor>()
-            .HasOne(desenvolvedor => desenvolvedor.Sobre)
-            .WithMany(sobre => sobre.Desenvolvedores)
-            .HasForeignKey(desenvolvedor => desenvolvedor.Sobre_id);
+         modelBuilder.Entity<Lancamento>()
+            .HasOne(lancamento => lancamento.Sobre)
+            .WithMany(sobre => sobre.Lancamentos)
+            .HasForeignKey(lancamento => lancamento.Sobre_id);
          #endregion
 
          #region Auto Generator
