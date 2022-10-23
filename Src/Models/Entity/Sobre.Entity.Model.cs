@@ -31,7 +31,7 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       [JsonPropertyName("missao")]
       public string Missao { get; set; }
 
-      [JsonPropertyName("Lançamento")]
+      [JsonPropertyName("Lancamento")]
       public virtual List<Lancamento> Lancamentos { get; set; }
 
       //[JsonPropertyName("Desenvolvedores")]

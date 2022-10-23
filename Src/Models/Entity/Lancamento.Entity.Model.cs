@@ -1,10 +1,20 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using System.Text.Json.Serialization;
+﻿
+using Newtonsoft.Json.Converters;
 using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 {
+   public class CustomDateTimeConverter : IsoDateTimeConverter
+   {
+      public CustomDateTimeConverter()
+      {
+         base.DateTimeFormat = "dd-MM-yyyy";
+      }
+   }
+
    [Table("Lancamento", Schema = "public")]
    public class Lancamento
    {
@@ -21,10 +31,10 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 
       [Column("Data", TypeName = "date")]
       [Required(ErrorMessage = "Propriedade [data] é obrigatório")]
+      //[JsonConverter(typeof(CustomDateTimeConverter))]
       [JsonPropertyName("data")]
       public DateTime Data { get; set; }
 
-      [Column("Sobre_id")]
       [JsonIgnore]
       public Guid Sobre_id { get; set; }
 
