@@ -62,5 +62,9 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       [Required(ErrorMessage = "Propriedade [sobre.generos] é obrigatório")]
       [JsonPropertyName("generos")]
       public virtual List<GeneroModel> Generos { get; set; }
+
+      [Required(ErrorMessage = "Propriedade [sobre.plataformas] é obrigatório")]
+      [JsonPropertyName("plataformas")]
+      public virtual List<PlataformaModel> Plataformas { get; set; }
    }
 }

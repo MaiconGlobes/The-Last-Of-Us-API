@@ -5,8 +5,8 @@ using System.Text.Json.Serialization;
 
 namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 {
-   [Table("Lancamento", Schema = "public")]
-   public class LancamentoModel
+   [Table("Plataforma", Schema = "public")]
+   public class PlataformaModel
    {
       [Key]
       [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -19,10 +19,11 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       [JsonPropertyName("versao")]
       public string Versao { get; set; }
 
-      [Column("Data", TypeName = "date")]
-      [Required(ErrorMessage = "Propriedade [data] é obrigatório")]
-      [JsonPropertyName("data")]
-      public DateTime Data { get; set; }
+      [Column("Console")]
+      [Required(ErrorMessage = "Propriedade [console] é obrigatório")]
+      [StringLength(20, ErrorMessage = "Propriedade [console] deve ter no máximo 20 caractere")]
+      [JsonPropertyName("console")]
+      public string Console { get; set; }
 
       [JsonIgnore]
       public Guid Sobre_id { get; set; }

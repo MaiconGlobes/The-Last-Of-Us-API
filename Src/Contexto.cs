@@ -10,6 +10,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
    {
       public DbSet<SobreModel> SOBRE { get; set; }
       public DbSet<LancamentoModel> LANCAMENTO { get; set; }
+      public DbSet<PlataformaModel> PLATAFORMA { get; set; }
 
       protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
       {
@@ -30,13 +31,15 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       {
          #region Chaves Primárias
          modelBuilder.Entity<LancamentoModel>().HasOne(lancamento => lancamento.Sobre).WithMany(sobre => sobre.Lancamentos).HasForeignKey(lancamento => lancamento.Sobre_id);
-         modelBuilder.Entity<GeneroModel>().HasOne(genero => genero.Sobre).WithMany(genero => genero.Generos).HasForeignKey(genero => genero.Sobre_id);
+         modelBuilder.Entity<GeneroModel>().HasOne(genero => genero.Sobre).WithMany(sobre => sobre.Generos).HasForeignKey(genero => genero.Sobre_id);
+         modelBuilder.Entity<PlataformaModel>().HasOne(plataforma => plataforma.Sobre).WithMany(sobre => sobre.Plataformas).HasForeignKey(plataforma => plataforma.Sobre_id);
          #endregion
 
          #region Auto Generator
          modelBuilder.Entity<SobreModel>().Property(sobre => sobre.Id).ValueGeneratedOnAdd();
          modelBuilder.Entity<LancamentoModel>().Property(lancamento => lancamento.Id).ValueGeneratedOnAdd();
          modelBuilder.Entity<GeneroModel>().Property(genero => genero.Id).ValueGeneratedOnAdd();
+         modelBuilder.Entity<PlataformaModel>().Property(plataforma => plataforma.Id).ValueGeneratedOnAdd();
          #endregion
 
          #region Unique
@@ -56,12 +59,14 @@ namespace API_REST_The_Last_Of_Us.Src.Services
          modelBuilder.Entity<LancamentoModel>().Property(lancamento => lancamento.Versao).IsRequired();
          modelBuilder.Entity<LancamentoModel>().Property(lancamento => lancamento.Sobre_id).IsRequired();
          modelBuilder.Entity<GeneroModel>().Property(genero => genero.Sobre_id).IsRequired();
+         modelBuilder.Entity<PlataformaModel>().Property(plataforma => plataforma.Sobre_id).IsRequired();
          #endregion
 
          #region Popular Dados
          modelBuilder.Entity<SobreModel>().HasData(PopularDadosUtils.Instancia().PopularSobre());
          modelBuilder.Entity<LancamentoModel>().HasData(PopularDadosUtils.Instancia().PopularLancamento());
          modelBuilder.Entity<GeneroModel>().HasData(PopularDadosUtils.Instancia().PopularGenero());
+         modelBuilder.Entity<PlataformaModel>().HasData(PopularDadosUtils.Instancia().PopularPlataforma());
          #endregion
       }
    }
