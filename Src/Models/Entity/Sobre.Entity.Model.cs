@@ -43,6 +43,12 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       [JsonPropertyName("direito_autoral")]
       public string Direito_Autoral { get; set; }
 
+      [Column("Genero")]
+      [Required(ErrorMessage = "Propriedade [genero] é obrigatório")]
+      [StringLength(35, ErrorMessage = "Propriedade [genero] deve ter no máximo 35 caractere")]
+      [JsonPropertyName("genero")]
+      public string Genero { get; set; }
+
       [Column("Perpectiva")]
       [Required(ErrorMessage = "Propriedade [perpectiva] é obrigatório")]
       [StringLength(25, ErrorMessage = "Propriedade [perpectiva] deve ter no máximo 25 caractere")]
@@ -58,10 +64,6 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       [Required(ErrorMessage = "Propriedade [sobre.lancamentos] é obrigatório")]
       [JsonPropertyName("lancamentos")]
       public virtual List<LancamentoModel> Lancamentos { get; set; }
-
-      [Required(ErrorMessage = "Propriedade [sobre.generos] é obrigatório")]
-      [JsonPropertyName("generos")]
-      public virtual List<GeneroModel> Generos { get; set; }
 
       [Required(ErrorMessage = "Propriedade [sobre.plataformas] é obrigatório")]
       [JsonPropertyName("plataformas")]
