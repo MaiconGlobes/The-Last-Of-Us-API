@@ -55,8 +55,12 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       [JsonPropertyName("engine")]
       public string Engine { get; set; }
 
-      [Required(ErrorMessage = "Propriedade [lancamentos] é obrigatório")]
+      [Required(ErrorMessage = "Propriedade [sobre.lancamentos] é obrigatório")]
       [JsonPropertyName("lancamentos")]
       public virtual List<LancamentoModel> Lancamentos { get; set; }
+
+      [Required(ErrorMessage = "Propriedade [sobre.generos] é obrigatório")]
+      [JsonPropertyName("generos")]
+      public virtual List<GeneroModel> Generos { get; set; }
    }
 }
