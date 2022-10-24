@@ -54,5 +54,36 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
             }
          };
       }
+
+      public IList<GeneroModel> PopularGenero()
+      {
+         return new List<GeneroModel>
+         {
+            new GeneroModel
+            {
+               Id = new Guid("5C354946-207C-44B6-A434-7556002EC55F"),
+               Descricao = "Ação",
+               Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
+            },
+            new GeneroModel
+            {
+               Id = new Guid("BE16A989-4CD9-4779-9362-3D2334486E0C"),
+               Descricao = "Aventura",
+               Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
+            },
+            new GeneroModel
+            {
+               Id = new Guid("7986FF87-9714-4D0E-A96A-5D0BA2590595"),
+               Descricao = "Terror",
+               Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
+            },
+            new GeneroModel
+            {
+               Id = new Guid("C3C79B3F-5E37-4B89-BF1D-F59DD209749A"),
+               Descricao = "Sobrevivência ",
+               Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
+            }
+         };
+      }
    }
 }
