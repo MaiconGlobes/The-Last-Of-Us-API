@@ -2,7 +2,7 @@ name: Compilar e implantar o aplicativo .NET Core no aplicativo Web thelastofusa
 on:
   push:
     branches:
-    - feature/rota-about
+    - develop
 env:
   AZURE_WEBAPP_NAME: thelastofusapi
   AZURE_WEBAPP_PACKAGE_PATH: ./publish
