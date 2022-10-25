@@ -1,17 +1,13 @@
-﻿using API_REST_The_Last_Of_Us.Src.Models.Dto;
-using API_REST_The_Last_Of_Us.Src.Models.Entity;
-using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
+﻿using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
 using API_REST_The_Last_Of_Us.Src.Services;
 using API_REST_The_Last_Of_Us.Src.Utils;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 
 namespace API_REST_The_Last_Of_Us.Controllers
 {
    [ApiController]
-   //[ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(SobreRetornoBadRequest))]   
    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
    [Produces("application/json")]
    [Route("/sobre")]
@@ -19,7 +15,7 @@ namespace API_REST_The_Last_Of_Us.Controllers
    {
       private readonly IMapper FMapper;
 
-      private object FObjDados { get; set; }
+      private object FObjRetorno { get; set; }
       private SobreService FSobreService { get; set; }
 
       public SobreController(IMapper mapper)
@@ -34,13 +30,11 @@ namespace API_REST_The_Last_Of_Us.Controllers
       {
          try
          {
+            var ListaDados = FSobreService.BuscarTodosRegistros();
 
-            var ObjDados = FSobreService.BuscarTodosRegistros();
+            FObjRetorno = ResponseUtils.Instancia().RetornoOk(ListaDados);
 
-
-            var teste = ResponseUtils.Instancia().RetornoOk(ObjDados);
-
-            return new OkObjectResult(teste);
+            return new OkObjectResult(FObjRetorno);
          }
          catch
          {

@@ -1,8 +1,4 @@
-﻿using API_REST_The_Last_Of_Us.Src.Models.Dto;
-using API_REST_The_Last_Of_Us.Src.Models.Entity;
-using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
-using AutoMapper;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace API_REST_The_Last_Of_Us.Src.Utils
 {
@@ -15,27 +11,22 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
       {
          if (FInstancia == null)
          {
-               FInstancia = new ResponseUtils();
+            FInstancia = new ResponseUtils();
          }
          return FInstancia;
       }
 
       internal virtual object RetornoBoasVindasOk()
       {
-         var response = new HomeResponse
+         FObjRetorno = new
          {
-            Status = "Sucesso",
-            Codigo_Status = 200,
-            Retorno = new ReturnAtributoHomeResponse
-            {
-               Message = "Welcome Developers"
-            }
+            mensagem = "Não importa o que aconteça, você continua encontrando algo pelo qual lutar. Ellie"
          };
 
-         return response;
+         return FObjRetorno;
       }
 
-      internal virtual object RetornoOk<T>( List<T> ADados)
+      internal virtual object RetornoOk<T>(List<T> ADados)
       {
          FObjRetorno = new
          {
@@ -64,5 +55,5 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
 
          return FObjRetorno;
       }
-}
+   }
 }
