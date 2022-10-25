@@ -29,7 +29,6 @@
 
 	<ItemGroup>
 	  <Folder Include="Src\Models\Profiles\" />
-	  <Folder Include="Src\Models\Dto\" />
 	  <Folder Include="Src\Repositories\" />
 	</ItemGroup>
 

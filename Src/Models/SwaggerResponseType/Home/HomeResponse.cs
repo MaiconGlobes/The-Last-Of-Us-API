@@ -4,13 +4,13 @@ namespace API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home
 {
    public class HomeResponse
    {
-      [JsonProperty("state")]
-      public string State { get; set; }
+      [JsonProperty("status")]
+      public string Status { get; set; }
 
-      [JsonProperty("code_state")]
-      public byte Code_State { get; set; }
+      [JsonProperty("codigo_Status")]
+      public byte Codigo_Status { get; set; }
 
-      [JsonProperty("return")]
-      public ReturnAtributoHomeResponse Return { get; set; }
+      [JsonProperty("retorno")]
+      public ReturnAtributoHomeResponse Retorno { get; set; }
    }
 }
