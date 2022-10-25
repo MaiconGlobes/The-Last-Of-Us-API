@@ -1,4 +1,5 @@
-﻿using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
+﻿using API_REST_The_Last_Of_Us.Src.Models.Dto;
+using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
 using System.Collections.Generic;
 
 namespace API_REST_The_Last_Of_Us.Src.Utils
@@ -21,9 +22,9 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
       {
          var response = new HomeResponse
          {
-            State = "Sucess",
-            Code_State = 200,
-            Return = new ReturnAtributoHomeResponse
+            Status = "Sucesso",
+            Codigo_Status = 200,
+            Retorno = new ReturnAtributoHomeResponse
             {
                Message = "Welcome Developers"
             }
@@ -32,13 +33,15 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
          return response;
       }
 
-      internal virtual object RetornoOk<T>(List<T> ADados)
+      internal virtual object RetornoOk(object ADados)
       {
          FObjRetorno = new
          {
-            retorno = new
+            retorno = new SobreRetornoOk()
             {
-               dados = ADados
+               Status = "Sucesso",
+               Codigo_Status = 1,
+              // Dados = 
             }
          };
 
