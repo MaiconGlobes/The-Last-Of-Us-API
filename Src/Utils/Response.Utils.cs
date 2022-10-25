@@ -26,7 +26,7 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
          return FObjRetorno;
       }
 
-      internal virtual object RetornoOk<T>(List<T> ADados)
+      internal virtual object RetornoOk<T>(ICollection<T> ADados)
       {
          FObjRetorno = new
          {

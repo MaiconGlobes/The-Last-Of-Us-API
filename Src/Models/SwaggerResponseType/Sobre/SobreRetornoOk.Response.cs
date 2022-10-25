@@ -14,6 +14,6 @@ namespace API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home
 
       [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
       [JsonPropertyName("dados")]
-      public List<SobreResponseDto> Dados { get; set; }
+      public ICollection<SobreResponseDto> Dados { get; set; }
    }
 }

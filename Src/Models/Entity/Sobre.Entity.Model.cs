@@ -76,15 +76,15 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 
       [Required(ErrorMessage = "Propriedade [sobre.lancamentos] é obrigatório")]
       [JsonPropertyName("lancamentos")]
-      public virtual List<LancamentoModel> Lancamentos { get; set; }
+      public virtual ICollection<LancamentoModel> Lancamentos { get; set; }
 
       [Required(ErrorMessage = "Propriedade [sobre.designers] é obrigatório")]
       [JsonPropertyName("designers")]
-      public virtual List<DesignerModel> Designers { get; set; }
+      public virtual ICollection<DesignerModel> Designers { get; set; }
 
       [Required(ErrorMessage = "Propriedade [sobre.plataformas] é obrigatório")]
       [JsonPropertyName("plataformas")]
-      public virtual List<PlataformaModel> Plataformas { get; set; }
+      public virtual ICollection<PlataformaModel> Plataformas { get; set; }
 
       [Column("Sinopse", TypeName = "text")]
       [Required(ErrorMessage = "Propriedade [sinopse] é obrigatório")]
