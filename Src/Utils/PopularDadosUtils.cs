@@ -59,6 +59,48 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
          };
       }
 
+      public IList<DesignerModel> PopularDesigner()
+      {
+         return new List<DesignerModel>
+         {
+            new DesignerModel
+            {
+               Id = new Guid("5C354946-207C-44B6-A434-7556002EC55F"),
+               Nome = "Bruce Straley",
+               Perfil = "https://pt.wikipedia.org/wiki/Bruce_Straley",
+               Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
+            },
+            new DesignerModel
+            {
+               Id = new Guid("BE16A989-4CD9-4779-9362-3D2334486E0C"),
+               Nome = "Neil Druckmann",
+               Perfil = "https://pt.wikipedia.org/wiki/Neil_Druckmann",
+               Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
+            },
+            new DesignerModel
+            {
+               Id = new Guid("7986FF87-9714-4D0E-A96A-5D0BA2590595"),
+               Nome = "Ricky Cambier",
+               Perfil = "",
+               Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
+            },
+            new DesignerModel
+            {
+               Id = new Guid("6EF949C6-D579-4F75-B77F-690153580B5A"),
+               Nome = "Jacob Minkoff",
+               Perfil = "https://callofduty.fandom.com/wiki/Jacob_Minkoff",
+               Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
+            },
+            new DesignerModel
+            {
+               Id = new Guid("DC7F1A1B-7E0F-48FA-9236-E24FD7F30E9E"),
+               Nome = "Benson Russell",
+               Perfil = "",
+               Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
+            }
+         };
+      }
+
       public IList<PlataformaModel> PopularPlataforma()
       {
          return new List<PlataformaModel>

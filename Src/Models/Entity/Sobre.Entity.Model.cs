@@ -83,6 +83,10 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       [JsonPropertyName("lancamentos")]
       public virtual List<LancamentoModel> Lancamentos { get; set; }
 
+      [Required(ErrorMessage = "Propriedade [sobre.designers] é obrigatório")]
+      [JsonPropertyName("designers")]
+      public virtual List<DesignerModel> Designers { get; set; }
+
       [Required(ErrorMessage = "Propriedade [sobre.plataformas] é obrigatório")]
       [JsonPropertyName("plataformas")]
       public virtual List<PlataformaModel> Plataformas { get; set; }
