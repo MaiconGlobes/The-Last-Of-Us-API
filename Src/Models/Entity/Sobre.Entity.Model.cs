@@ -37,6 +37,18 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       [JsonPropertyName("desenvolvedor")]
       public string Desenvolvedor { get; set; }
 
+      [Column("Escritor")]
+      [Required(ErrorMessage = "Propriedade [escritor] é obrigatório")]
+      [StringLength(25, ErrorMessage = "Propriedade [escritor] deve ter no máximo 25 caractere")]
+      [JsonPropertyName("escritor")]
+      public string Escritor { get; set; }
+
+      [Column("Compositor")]
+      [Required(ErrorMessage = "Propriedade [compositor] é obrigatório")]
+      [StringLength(25, ErrorMessage = "Propriedade [compositor] deve ter no máximo 25 caractere")]
+      [JsonPropertyName("compositor")]
+      public string Compositor { get; set; }
+
       [Column("Direito_Autoral")]
       [Required(ErrorMessage = "Propriedade [direito_autoral] é obrigatório")]
       [StringLength(60, ErrorMessage = "Propriedade [direito_autoral] deve ter no máximo 60 caractere")]
@@ -60,6 +72,12 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       [StringLength(10, ErrorMessage = "Propriedade [engine] deve ter no máximo 10 caractere")]
       [JsonPropertyName("engine")]
       public string Engine { get; set; }
+
+      [Column("Classificacao")]
+      [Required(ErrorMessage = "Propriedade [classificacao] é obrigatório")]
+      [StringLength(45, ErrorMessage = "Propriedade [classificacao] deve ter no máximo 45 caractere")]
+      [JsonPropertyName("classificacao")]
+      public string Classificacao { get; set; }
 
       [Required(ErrorMessage = "Propriedade [sobre.lancamentos] é obrigatório")]
       [JsonPropertyName("lancamentos")]
