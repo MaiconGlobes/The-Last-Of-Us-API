@@ -32,7 +32,7 @@ namespace API_REST_The_Last_Of_Us
 
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new OpenApiInfo { Title = "The Last Of Us II - API", Version = "v1" });
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "The Last Of Us - API", Version = "v1" });
                 options.SchemaFilter<SwaggerExcludeFilter>();
             });
 
