@@ -7,7 +7,7 @@ namespace API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home
    public class SobreRetornoOk
    {
       [JsonPropertyName("status")]
-       public string Status { get; set; }
+      public string Status { get; set; }
 
       [JsonPropertyName("codigo_Status")]
       public byte Codigo_Status { get; set; }

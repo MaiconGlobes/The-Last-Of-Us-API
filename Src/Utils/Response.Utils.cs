@@ -1,5 +1,7 @@
 ﻿using API_REST_The_Last_Of_Us.Src.Models.Dto;
+using API_REST_The_Last_Of_Us.Src.Models.Entity;
 using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
+using AutoMapper;
 using System.Collections.Generic;
 
 namespace API_REST_The_Last_Of_Us.Src.Utils
@@ -13,7 +15,7 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
       {
          if (FInstancia == null)
          {
-            FInstancia = new ResponseUtils();
+               FInstancia = new ResponseUtils();
          }
          return FInstancia;
       }
@@ -33,19 +35,34 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
          return response;
       }
 
-      internal virtual object RetornoOk(object ADados)
+      internal virtual object RetornoOk<T>( List<T> ADados)
       {
          FObjRetorno = new
          {
-            retorno = new SobreRetornoOk()
+            retorno = new
             {
-               Status = "Sucesso",
-               Codigo_Status = 1,
-              // Dados = 
+               status = "Sucesso",
+               codigo_status = 1,
+               dados = ADados
             }
          };
 
          return FObjRetorno;
       }
-   }
+
+      internal virtual object RetornoOk(object ADados)
+      {
+         FObjRetorno = new
+         {
+            retorno = new
+            {
+               status = "Sucesso",
+               codigo_status = 1,
+               dados = ADados
+            }
+         };
+
+         return FObjRetorno;
+      }
+}
 }
