@@ -1,16 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json.Serialization;
 
 namespace API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home
 {
-   public class HomeResponse
+   public class HomeRetornoOk
    {
-      [JsonProperty("status")]
-      public string Status { get; set; }
-
-      [JsonProperty("codigo_Status")]
-      public byte Codigo_Status { get; set; }
-
-      [JsonProperty("retorno")]
-      public ReturnAtributoHomeResponse Retorno { get; set; }
+      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
+      [JsonPropertyName("mensagem")]
+      public string Mensagem { get; set; }
    }
 }

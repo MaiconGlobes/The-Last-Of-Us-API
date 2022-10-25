@@ -9,60 +9,60 @@ using System;
 
 namespace API_REST_The_Last_Of_Us
 {
-   public class Startup
-   {
-      public Startup(IConfiguration configuration)
-      {
-         Configuration = configuration;
-      }
+    public class Startup
+    {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
 
-      public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; }
 
-      public void ConfigureServices(IServiceCollection services)
-      {
-         services.AddControllers();
-         
-         /*services.AddControllersWithViews().AddNewtonsoftJson(options =>
-            options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-         ); 
-*/
-         services.AddSwaggerGenNewtonsoftSupport();
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddControllers();
 
-         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            /*services.AddControllersWithViews().AddNewtonsoftJson(options =>
+               options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            ); 
+   */
+            services.AddSwaggerGenNewtonsoftSupport();
 
-         services.AddMvc().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-         services.AddSwaggerGen(options =>
-         {
-               options.SwaggerDoc("v1", new OpenApiInfo { Title = "The Last Of Us - API", Version = "v1" });
-               options.SchemaFilter<SwaggerExcludeFilter>();
-         });
-      }
+            services.AddMvc().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
 
-      // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-      public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-      {
-         if (env.IsDevelopment())
-         {
-               app.UseDeveloperExceptionPage();
-         }
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "The Last Of Us - API", Version = "v1" });
+                options.SchemaFilter<SwaggerExcludeFilter>();
+            });
+        }
 
-         app.UseSwagger();
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
 
-         app.UseSwaggerUI(options =>
-         {
-            options.SwaggerEndpoint("../swagger/v1/swagger.json", "The Last Of Us API v1");
-            options.DefaultModelsExpandDepth(-1);
-         });
+            app.UseSwagger();
 
-         app.UseRouting();
+            app.UseSwaggerUI(options =>
+            {
+                options.SwaggerEndpoint("../swagger/v1/swagger.json", "The Last Of Us API v1");
+                options.DefaultModelsExpandDepth(-1);
+            });
 
-         app.UseAuthorization();
+            app.UseRouting();
 
-         app.UseEndpoints(endpoints =>
-         {
-               endpoints.MapControllers();
-         });
-      }
-   }
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
+        }
+    }
 }
