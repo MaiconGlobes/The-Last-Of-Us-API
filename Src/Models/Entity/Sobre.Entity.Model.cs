@@ -20,11 +20,6 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       [JsonPropertyName("titulo")]
       public string Titulo { get; set; }
 
-      [Column("Descricao", TypeName = "text")]
-      [Required(ErrorMessage = "Propriedade [descricao] é obrigatório")]
-      [JsonPropertyName("descricao")]
-      public string Descricao { get; set; }
-
       [Column("Missao")]
       [Required(ErrorMessage = "Propriedade [missao] é obrigatório")]
       [StringLength(255, ErrorMessage = "Propriedade [missao] deve ter no máximo 255 caractere")]
@@ -90,5 +85,10 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
       [Required(ErrorMessage = "Propriedade [sobre.plataformas] é obrigatório")]
       [JsonPropertyName("plataformas")]
       public virtual List<PlataformaModel> Plataformas { get; set; }
+
+      [Column("Sinopse", TypeName = "text")]
+      [Required(ErrorMessage = "Propriedade [sinopse] é obrigatório")]
+      [JsonPropertyName("descrsinopseicao")]
+      public string Sinopse { get; set; }
    }
 }
