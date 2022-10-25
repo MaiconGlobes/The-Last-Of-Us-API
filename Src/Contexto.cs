@@ -45,7 +45,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 
          #region Unique
          modelBuilder.Entity<SobreModel>().HasIndex(sobre => sobre.Titulo).IsUnique();
-         modelBuilder.Entity<SobreModel>().HasIndex(sobre => sobre.Descricao).IsUnique();
+         modelBuilder.Entity<SobreModel>().HasIndex(sobre => sobre.Sinopse).IsUnique();
          modelBuilder.Entity<SobreModel>().HasIndex(sobre => sobre.Missao).IsUnique();
          modelBuilder.Entity<LancamentoModel>().HasIndex(lancamento => lancamento.Data).IsUnique();
          modelBuilder.Entity<DesignerModel>().HasIndex(designer => designer.Nome).IsUnique();
@@ -53,7 +53,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 
          #region Required
          modelBuilder.Entity<SobreModel>().Property(sobre => sobre.Titulo).IsRequired();
-         modelBuilder.Entity<SobreModel>().Property(sobre => sobre.Descricao).IsRequired();
+         modelBuilder.Entity<SobreModel>().Property(sobre => sobre.Sinopse).IsRequired();
          modelBuilder.Entity<SobreModel>().Property(sobre => sobre.Missao).IsRequired();
          modelBuilder.Entity<LancamentoModel>().Property(lancamento => lancamento.Data).IsRequired();
          modelBuilder.Entity<LancamentoModel>().Property(lancamento => lancamento.Versao).IsRequired();
