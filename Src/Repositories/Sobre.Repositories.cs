@@ -6,15 +6,15 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 {
    public class SobreRepositories
    {
-      public Contexto Fcontexto { get; set; }
+      public Contexto FContexto { get; set; }
 
       public SobreRepositories()
       {
-         Fcontexto = new Contexto();
+         FContexto = new Contexto();
       }
       public List<SobreModel> BuscarTodosRegistros()
       {
-         return Fcontexto.SOBRE.OrderBy(sobre => sobre.Id).ToList();
+         return FContexto.SOBRE.OrderBy(sobre => sobre.Id).ToList();
       }
    }
 }

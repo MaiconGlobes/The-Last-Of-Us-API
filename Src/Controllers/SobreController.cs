@@ -1,11 +1,8 @@
-﻿using API_REST_The_Last_Of_Us.Src.Models.Dto;
-using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
+﻿using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
 using API_REST_The_Last_Of_Us.Src.Services;
-using API_REST_The_Last_Of_Us.Src.Utils;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 
 namespace API_REST_The_Last_Of_Us.Controllers
 {
@@ -32,11 +29,11 @@ namespace API_REST_The_Last_Of_Us.Controllers
       {
          try
          {
-            FObjRetornoOk = FSobreService.ProcessarBuscaRegistro();
+            var retorno = FSobreService.ProcessarBuscaRegistro();
 
-            return FObjRetornoOk.Codigo_Status switch
+            return (retorno.Status) switch
             {
-               1 => new OkObjectResult(FObjRetornoOk),
+               1 => new OkObjectResult(retorno.Json),
                _ => null,
             };
          }

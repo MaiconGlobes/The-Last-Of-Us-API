@@ -1,18 +1,11 @@
-﻿using API_REST_The_Last_Of_Us.Src.Models.Dto;
-using API_REST_The_Last_Of_Us.Src.Models.Entity;
-using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
-using API_REST_The_Last_Of_Us.Src.Utils;
-using AutoMapper;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using API_REST_The_Last_Of_Us.Src.Utils;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace API_REST_The_Last_Of_Us.Src.Services
 {
    public class SobreService
    {
+      public Object FRetorno { get; set; }
       public Contexto Fcontexto { get; set; }
       private SobreRepositories FobreRepositories { get; set; }
 
@@ -21,17 +14,20 @@ namespace API_REST_The_Last_Of_Us.Src.Services
          Fcontexto = new Contexto();
          FobreRepositories = new SobreRepositories();
       }
-      public SobreRetornoOk ProcessarBuscaRegistro()
+
+      public (int Status, object Json) ProcessarBuscaRegistro()
       {
          try
          {
             var ListaDados = FobreRepositories.BuscarTodosRegistros();
 
-            return ResponseUtils.Instancia().RetornoOk(ListaDados) as SobreRetornoOk;
+            FRetorno = ResponseUtils.Instancia().RetornoOk(ListaDados);
+
+            return new ValueTuple<int, object>(1, FRetorno);
          }
          catch
          {
-            return null;
+            return new ValueTuple<int, object>(-1, null);
          }
       }
    }
