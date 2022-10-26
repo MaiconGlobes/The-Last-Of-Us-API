@@ -1,9 +1,11 @@
-﻿using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
+﻿using API_REST_The_Last_Of_Us.Src.Models.Dto;
+using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
 using API_REST_The_Last_Of_Us.Src.Services;
 using API_REST_The_Last_Of_Us.Src.Utils;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace API_REST_The_Last_Of_Us.Controllers
 {
@@ -15,8 +17,8 @@ namespace API_REST_The_Last_Of_Us.Controllers
    {
       private readonly IMapper FMapper;
 
-      private object FObjRetorno { get; set; }
       private SobreService FSobreService { get; set; }
+      private SobreRetornoOk FObjRetornoOk { get; set; }
 
       public SobreController(IMapper mapper)
       {
@@ -30,11 +32,13 @@ namespace API_REST_The_Last_Of_Us.Controllers
       {
          try
          {
-            var ListaDados = FSobreService.BuscarTodosRegistros();
+            FObjRetornoOk = FSobreService.ProcessarBuscaRegistro();
 
-            FObjRetorno = ResponseUtils.Instancia().RetornoOk(ListaDados);
-
-            return new OkObjectResult(FObjRetorno);
+            return FObjRetornoOk.Codigo_Status switch
+            {
+               1 => new OkObjectResult(FObjRetornoOk),
+               _ => null,
+            };
          }
          catch
          {

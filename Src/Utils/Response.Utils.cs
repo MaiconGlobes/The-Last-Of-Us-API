@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using API_REST_The_Last_Of_Us.Src.Models.Dto;
+using API_REST_The_Last_Of_Us.Src.Models.Entity;
+using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
+using System;
+using System.Collections.Generic;
 
 namespace API_REST_The_Last_Of_Us.Src.Utils
 {
@@ -26,7 +30,27 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
          return FObjRetorno;
       }
 
-      internal virtual object RetornoOk<T>(ICollection<T> ADados)
+      internal virtual object RetornoOk(List<SobreModel> ADados)
+      {
+         SobreRetornoOk sobreRetorno = new SobreRetornoOk
+         {
+            Status = "Sucesso",
+            Codigo_Status = 1,
+            Dados = new List<SobreResponseDto>()
+               {
+                  new SobreResponseDto()
+                  {
+                     Id = ADados[0].Id,
+                     Classificacao = ADados[0].Classificacao
+
+                  }
+               }
+         };
+
+         return sobreRetorno;
+      }
+
+      internal virtual Object RetornoOk(Object ADados)
       {
          FObjRetorno = new
          {
@@ -41,7 +65,7 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
          return FObjRetorno;
       }
 
-      internal virtual object RetornoOk(object ADados)
+      internal virtual object RetornoOk<T>(List<T> ADados)
       {
          FObjRetorno = new
          {
