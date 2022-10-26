@@ -35,7 +35,7 @@ namespace API_REST_The_Last_Of_Us.Controllers
             return (Status) switch
             {
                (byte)EnumUtils.StatusProc.Sucesso => new OkObjectResult(Json),
-               (byte)EnumUtils.StatusProc.ErroServidor => null,
+               (byte)EnumUtils.StatusProc.ErroServidor => throw new System.NotImplementedException(),
                _ => throw new System.NotImplementedException()
             };
          }
