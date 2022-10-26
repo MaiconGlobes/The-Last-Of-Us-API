@@ -30,11 +30,11 @@ namespace API_REST_The_Last_Of_Us.Controllers
       {
          try
          {
-            var retorno = FSobreService.ProcessarBuscaRegistro();
+            var (Status, Json) = FSobreService.ProcessarBuscaRegistro();
 
-            return (retorno.Status) switch
+            return (Status) switch
             {
-               (int)EnumUtils.StatusProc.Sucesso => new OkObjectResult(retorno.Json),
+               (int)EnumUtils.StatusProc.Sucesso => new OkObjectResult(Json),
                (int)EnumUtils.StatusProc.ErroServidor => null,
                _ => throw new System.NotImplementedException()
             };

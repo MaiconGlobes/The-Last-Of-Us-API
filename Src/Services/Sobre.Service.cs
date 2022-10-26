@@ -15,7 +15,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
          FobreRepositories = new SobreRepositories();
       }
 
-      public (byte Status, object Json) ProcessarBuscaRegistro()
+      public (byte Status, Object Json) ProcessarBuscaRegistro()
       {
          try
          {
