@@ -15,7 +15,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
          FobreRepositories = new SobreRepositories();
       }
 
-      public (int Status, object Json) ProcessarBuscaRegistro()
+      public (byte Status, object Json) ProcessarBuscaRegistro()
       {
          try
          {
@@ -23,11 +23,11 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 
             FRetorno = ResponseUtils.Instancia().RetornoOk(ListaDados);
 
-            return new ValueTuple<int, object>(1, FRetorno);
+            return ((byte)EnumUtils.StatusProc.Sucesso, FRetorno);
          }
          catch
          {
-            return new ValueTuple<int, object>(-1, null);
+            return ((byte)EnumUtils.StatusProc.ErroServidor, null);
          }
       }
    }

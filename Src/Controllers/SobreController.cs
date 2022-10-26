@@ -1,5 +1,6 @@
 ﻿using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
 using API_REST_The_Last_Of_Us.Src.Services;
+using API_REST_The_Last_Of_Us.Src.Utils;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -33,8 +34,9 @@ namespace API_REST_The_Last_Of_Us.Controllers
 
             return (retorno.Status) switch
             {
-               1 => new OkObjectResult(retorno.Json),
-               _ => null,
+               (int)EnumUtils.StatusProc.Sucesso => new OkObjectResult(retorno.Json),
+               (int)EnumUtils.StatusProc.ErroServidor => null,
+               _ => throw new System.NotImplementedException()
             };
          }
          catch
