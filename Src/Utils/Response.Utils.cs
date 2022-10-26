@@ -16,17 +16,10 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
 
       internal virtual object RetornoBoasVindasOk()
       {
+
          FObjJSON = new
          {
-            retorno = new
-            {
-               status = "Sucesso",
-               codigo_status = EnumUtils.StatusProc.Sucesso,
-               dados = new
-               {
-                  mensagem = "Não importa o que aconteça, você continua encontrando algo pelo qual lutar. Ellie"
-               }
-            }
+            mensagem = "Não importa o que aconteça, você continua encontrando algo pelo qual lutar. Ellie"
          };
 
          return FObjJSON;
