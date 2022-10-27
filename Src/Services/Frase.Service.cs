@@ -15,15 +15,43 @@ namespace API_REST_The_Last_Of_Us.Src.Services
          FFraseRepositories = new FraseRepositories();
       }
 
-      public (byte Status, Object Json) ProcessarBuscaRegistro()
+      public (byte Status, object Json) BuscarTodosRegistros()
       {
          try
          {
             var ListaDados = FFraseRepositories.BuscarTodosRegistros();
 
-            FObjJSON = ResponseUtils.Instancia().RetornoOk(ListaDados);
+            if (ListaDados.Count > 0)
+            {
+               FObjJSON = ResponseUtils.Instancia().RetornoOk(ListaDados);
+               return ((byte)EnumUtils.StatusProc.Sucesso, FObjJSON);
+            }
 
-            return ((byte)EnumUtils.StatusProc.Sucesso, FObjJSON);
+            FObjJSON = ResponseUtils.Instancia().RetornoNotFound(ListaDados);
+            return ((byte)EnumUtils.StatusProc.NaoLocalizado, FObjJSON);
+         }
+         catch
+         {
+            return ((byte)EnumUtils.StatusProc.ErroServidor, null);
+         }
+      }
+
+      public (byte Status, object Json) BuscarTodosRegistrosPorPersonagem(string APersonagem)
+      {
+         try
+         {
+            APersonagem = APersonagem.ToLower();
+
+            var ListaDados = FFraseRepositories.BuscarTodosRegistrosPorPersonagem(APersonagem);
+
+            if ((ListaDados != null) & (ListaDados.Count > 0))
+            {
+               FObjJSON = ResponseUtils.Instancia().RetornoOk(ListaDados);
+               return ((byte)EnumUtils.StatusProc.Sucesso, FObjJSON);
+            }
+
+            FObjJSON = ResponseUtils.Instancia().RetornoNotFound(ListaDados);
+            return ((byte)EnumUtils.StatusProc.NaoLocalizado, FObjJSON);
          }
          catch
          {
