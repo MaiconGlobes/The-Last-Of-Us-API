@@ -6,7 +6,7 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Dto
    public class FraseResponseDto
    {
       [Required(ErrorMessage = "Propriedade [descricao] é obrigatório")]
-      [StringLength(255, MinimumLength = 3, ErrorMessage = "Propriedade [descricao] deve ter no mínimo 3 e no máximo 255 caractere")]
+      [StringLength(5000, MinimumLength = 3, ErrorMessage = "Propriedade [descricao] deve ter no mínimo 3 e no máximo 5000 caractere")]
       [JsonPropertyName("descricao")]
       public string Descricao { get; set; }
 
