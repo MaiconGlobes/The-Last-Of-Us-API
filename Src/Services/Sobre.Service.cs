@@ -5,7 +5,6 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 {
    public class SobreService
    {
-      public Object FObjJSON { get; set; }
       public Contexto Fcontexto { get; set; }
       private SobreRepositories FSobreRepositories { get; set; }
 
@@ -21,9 +20,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
          {
             var ListaDados = FSobreRepositories.BuscarTodosRegistros();
 
-            FObjJSON = ResponseUtils.Instancia().RetornoOk(ListaDados);
-
-            return ((byte)EnumUtils.StatusProc.Sucesso, FObjJSON);
+            return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(ListaDados));
          }
          catch
          {

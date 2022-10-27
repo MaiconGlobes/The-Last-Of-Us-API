@@ -2,98 +2,153 @@
 using System;
 using System.Collections.Generic;
 
+/*
+"Não importa o que aconteça, você continua encontrando algo pelo qual lutar. Ellie",
+"Eu sou apenas uma garota, não uma ameaça. Ellie",
+"Essa é a nossa rotina. Dia e noite, tudo o que fazemos é sobreviver. Isso nunca para. Ele me contou como essas ruas estavam lotadas de pessoas apenas vivendo suas vidas. Deve ter sido bom. Joel",
+"Eu acho que não importa o quanto você tente, você não pode escapar do seu passado. Joel",
+"Eu acho que não importa o quanto você tente, você não pode escapar do seu passado. Joel",
+"Eu não posso deixar você. Joel",
+"Eu praticamente perdi tudo. E então você aparece e de alguma forma nós a encontramos bem a tempo de salvá-la. Talvez fosse para ser. Joel",
+*/
+
 namespace API_REST_The_Last_Of_Us.Src.Utils
 {
-    public class ResponseUtils
-    {
-        private static ResponseUtils FInstancia { get; set; }
-        private object FObjJSON { get; set; }
+   public class ResponseUtils
+   {
+      private static ResponseUtils FInstancia { get; set; }
+      private object FObjJSON { get; set; }
 
-        public static ResponseUtils Instancia()
-        {
-            FInstancia ??= new ResponseUtils();
-            return FInstancia;
-        }
-
-        internal virtual object FrasesAleatorias()
-        {
-
-            string[] authors =
+      public static ResponseUtils Instancia()
+      {
+         FInstancia ??= new ResponseUtils();
+         return FInstancia;
+      }
+      
+      internal virtual Object RetornoOk(Object ADados)
+      {
+         FObjJSON = new
+         {
+            retorno = new
             {
-            "Não importa o que aconteça, você continua encontrando algo pelo qual lutar. Ellie",
-            "Eu sou apenas uma garota, não uma ameaça. Ellie",
-            "Essa é a nossa rotina. Dia e noite, tudo o que fazemos é sobreviver. Isso nunca para. Ele me contou como essas ruas estavam lotadas de pessoas apenas vivendo suas vidas. Deve ter sido bom. Joel",
-            "Eu acho que não importa o quanto você tente, você não pode escapar do seu passado. Joel",
-            "Eu acho que não importa o quanto você tente, você não pode escapar do seu passado. Joel",
-            "Eu não posso deixar você. Joel",
-            "Eu praticamente perdi tudo. E então você aparece e de alguma forma nós a encontramos bem a tempo de salvá-la. Talvez fosse para ser. Joel",
+               status = "Sucesso",
+               codigo_status = EnumUtils.StatusProc.Sucesso,
+               dados = ADados
+            }
          };
 
-            Random rand = new Random();
+         return FObjJSON;
+      }
 
-            int index = rand.Next(authors.Length);
-
-            FraseResponseDto mensagens = new FraseResponseDto()
+      internal virtual object RetornoOk<T>(List<T> ADados)
+      {
+         FObjJSON = new
+         {
+            retorno = new
             {
-                Descricao = ""
-            };
+               status = "Sucesso",
+               codigo_status = EnumUtils.StatusProc.Sucesso,
+               dados = ADados
+            }
+         };
 
-            FObjJSON = new
+         return FObjJSON;
+      }
+
+      internal virtual object RetornoCreated<T>(List<T> ADados)
+      {
+         FObjJSON = new
+         {
+            retorno = new
             {
-                retorno = new
-                {
-                    status = "Sucesso",
-                    codigo_status = EnumUtils.StatusProc.Sucesso,
-                    dados = mensagens,
-                }
-            };
+               status = "Sucesso",
+               codigo_status = EnumUtils.StatusProc.Sucesso,
+               dados = ADados
+            }
+         };
 
-            return FObjJSON;
-        }
+         return FObjJSON;
+      }
 
-        internal virtual Object RetornoOk(Object ADados)
-        {
-            FObjJSON = new
+      internal virtual object RetornoCreated(Object ADados)
+      {
+         FObjJSON = new
+         {
+            retorno = new
             {
-                retorno = new
-                {
-                    status = "Sucesso",
-                    codigo_status = EnumUtils.StatusProc.Sucesso,
-                    dados = ADados
-                }
-            };
+               status = "Sucesso",
+               codigo_status = EnumUtils.StatusProc.Sucesso,
+               dados = ADados
+            }
+         };
 
-            return FObjJSON;
-        }
+         return FObjJSON;
+      }
 
-        internal virtual object RetornoOk<T>(List<T> ADados)
-        {
-            FObjJSON = new
+      internal virtual object RetornoNotFound<T>(List<T> ADados)
+      {
+         FObjJSON = new
+         {
+            retorno = new
             {
-                retorno = new
-                {
-                    status = "Sucesso",
-                    codigo_status = EnumUtils.StatusProc.Sucesso,
-                    dados = ADados
-                }
-            };
+               status = "A Consulta não retornou registros",
+               codigo_status = EnumUtils.StatusProc.NaoLocalizado,
+               dados = ADados
+            }
+         };
 
-            return FObjJSON;
-        }
+         return FObjJSON;
+      }
 
-        internal virtual object RetornoNotFound<T>(List<T> ADados)
-        {
-            FObjJSON = new
+      internal virtual object RetornoNotFound(Object ADados)
+      {
+         FObjJSON = new
+         {
+            retorno = new
             {
-                retorno = new
-                {
-                    status = "A Consulta não retornou registros",
-                    codigo_status = EnumUtils.StatusProc.NaoLocalizado,
-                    dados = ADados
-                }
-            };
+               status = "A Consulta não retornou registros",
+               codigo_status = EnumUtils.StatusProc.NaoLocalizado,
+               dados = ADados
+            }
+         };
 
-            return FObjJSON;
-        }
-    }
+         return FObjJSON;
+      }
+
+      internal virtual object RetornoDuplicated<T>(List<T> ADados)
+      {
+         FObjJSON = new
+         {
+            retorno = new
+            {
+               status = "Duplicidade de registro",
+               codigo_status = EnumUtils.StatusProc.RegistroDuplicado,
+               mensagem = new
+               {
+                  descricao = "O registro que está tentando inserir já se encontra no banco de dados."
+               }
+            }
+         };
+
+         return FObjJSON;
+      }
+
+      internal virtual object RetornoDuplicated(Object ADados)
+      {
+         FObjJSON = new
+         {
+            retorno = new
+            {
+               status = "Duplicidade de registro",
+               codigo_status = EnumUtils.StatusProc.RegistroDuplicado,
+               mensagem = new
+               {
+                  descricao = "Erro de duplicidade de registro."
+               }
+            }
+         };
+
+         return FObjJSON;
+      }
+   }
 }

@@ -13,6 +13,7 @@
       public enum StatusProc : byte
       {
          Sucesso = 3,
+         RegistroDuplicado = 30,
          NaoLocalizado = 20,
          ErroServidor = 99
       }
