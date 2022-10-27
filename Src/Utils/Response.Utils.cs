@@ -1,5 +1,4 @@
-﻿using API_REST_The_Last_Of_Us.Src.Models.Dto;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 /*
@@ -24,7 +23,7 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
          FInstancia ??= new ResponseUtils();
          return FInstancia;
       }
-      
+
       internal virtual Object RetornoOk(Object ADados)
       {
          FObjJSON = new

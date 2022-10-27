@@ -1,9 +1,5 @@
-﻿using API_REST_The_Last_Of_Us.Src.Models.Dto;
-using API_REST_The_Last_Of_Us.Src.Models.Entity;
-using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
+﻿using API_REST_The_Last_Of_Us.Src.Models.Entity;
 using API_REST_The_Last_Of_Us.Src.Utils;
-using System;
-using System.Collections.Generic;
 
 namespace API_REST_The_Last_Of_Us.Src.Services
 {
