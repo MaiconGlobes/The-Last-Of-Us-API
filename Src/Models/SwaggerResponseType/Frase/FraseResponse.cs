@@ -1,4 +1,5 @@
 ﻿using API_REST_The_Last_Of_Us.Src.Models.Dto;
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
 namespace API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home
@@ -13,6 +14,6 @@ namespace API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home
 
       [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
       [JsonPropertyName("dados")]
-      public FraseResponseDto Dados { get; set; }
+      public List<FraseResponseDto> Dados { get; set; }
    }
 }

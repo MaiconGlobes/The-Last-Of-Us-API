@@ -1,11 +1,20 @@
-﻿using System.Text.Json.Serialization;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using System;
+using System.Text.Json.Serialization;
 
 namespace API_REST_The_Last_Of_Us.Src.Models.Dto
 {
    public class FraseResponseDto
    {
-      [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
-      [JsonPropertyName("mensagem")]
-      public string Mensagem { get; set; }
+      [JsonPropertyName("id")]
+      public Guid Id { get; set; }
+
+      [JsonPropertyName("descricao")]
+      public string Descricao { get; set; }
+
+      [JsonPropertyName("personagem")]
+      public string Personagem { get; set; }
    }
 }

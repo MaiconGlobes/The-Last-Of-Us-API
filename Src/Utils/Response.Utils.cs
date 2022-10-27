@@ -35,7 +35,7 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
 
          FraseResponseDto mensagens = new FraseResponseDto()
          {
-            Mensagem = authors[index],
+            Descricao =  ""
          };
 
          FObjJSON = new

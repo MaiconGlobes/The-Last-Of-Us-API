@@ -14,9 +14,7 @@ namespace API_REST_The_Last_Of_Us.Controllers
    public class SobreController : ControllerBase
    {
       private readonly IMapper FMapper;
-
       private SobreService FSobreService { get; set; }
-      private SobreRetornoOk FObjRetornoOk { get; set; }
 
       public SobreController(IMapper mapper)
       {
