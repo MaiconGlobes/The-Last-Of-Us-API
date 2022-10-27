@@ -12,6 +12,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       public DbSet<LancamentoModel> LANCAMENTO { get; set; }
       public DbSet<PlataformaModel> PLATAFORMA { get; set; }
       public DbSet<DesignerModel> DESIGNER { get; set; }
+      public DbSet<FraseModel> FRASE { get; set; }
 
       protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
       {
@@ -41,6 +42,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
          modelBuilder.Entity<LancamentoModel>().Property(lancamento => lancamento.Id).ValueGeneratedOnAdd();
          modelBuilder.Entity<PlataformaModel>().Property(plataforma => plataforma.Id).ValueGeneratedOnAdd();
          modelBuilder.Entity<DesignerModel>().Property(designer => designer.Id).ValueGeneratedOnAdd();
+         modelBuilder.Entity<FraseModel>().Property(frase => frase.Id).ValueGeneratedOnAdd();
          #endregion
 
          #region Unique
@@ -49,6 +51,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
          modelBuilder.Entity<SobreModel>().HasIndex(sobre => sobre.Missao).IsUnique();
          modelBuilder.Entity<LancamentoModel>().HasIndex(lancamento => lancamento.Data).IsUnique();
          modelBuilder.Entity<DesignerModel>().HasIndex(designer => designer.Nome).IsUnique();
+         modelBuilder.Entity<FraseModel>().HasIndex(frase => frase.Descricao).IsUnique();
          #endregion
 
          #region Required
@@ -63,6 +66,8 @@ namespace API_REST_The_Last_Of_Us.Src.Services
          modelBuilder.Entity<PlataformaModel>().Property(plataforma => plataforma.Sobre_id).IsRequired();
          modelBuilder.Entity<DesignerModel>().Property(designer => designer.Nome).IsRequired();
          modelBuilder.Entity<DesignerModel>().Property(designer => designer.Sobre_id).IsRequired();
+         modelBuilder.Entity<FraseModel>().Property(frase => frase.Descricao).IsRequired();
+         modelBuilder.Entity<FraseModel>().Property(frase => frase.Personagem).IsRequired();
          #endregion
 
          #region Popular Dados

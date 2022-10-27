@@ -1,20 +1,34 @@
-﻿using API_REST_The_Last_Of_Us.Src.Models.Entity;
-using System.Collections.Generic;
-using System.Linq;
+﻿using API_REST_The_Last_Of_Us.Src.Utils;
+using System;
 
 namespace API_REST_The_Last_Of_Us.Src.Services
 {
    public class SobreService
    {
+      public Object FObjJSON { get; set; }
       public Contexto Fcontexto { get; set; }
+      private SobreRepositories FSobreRepositories { get; set; }
 
       public SobreService()
       {
          Fcontexto = new Contexto();
+         FSobreRepositories = new SobreRepositories();
       }
-      public List<SobreModel> BuscarTodosRegistros()
+
+      public (byte Status, object Json) BuscarTodosRegistros()
       {
-         return Fcontexto.SOBRE.OrderBy(sobre => sobre.Id).ToList();
+         try
+         {
+            var ListaDados = FSobreRepositories.BuscarTodosRegistros();
+
+            FObjJSON = ResponseUtils.Instancia().RetornoOk(ListaDados);
+
+            return ((byte)EnumUtils.StatusProc.Sucesso, FObjJSON);
+         }
+         catch
+         {
+            return ((byte)EnumUtils.StatusProc.ErroServidor, null);
+         }
       }
    }
 }

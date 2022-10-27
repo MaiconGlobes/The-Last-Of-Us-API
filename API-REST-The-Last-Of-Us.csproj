@@ -27,11 +27,6 @@
 		<PackageReference Include="System.Text.Json" Version="6.0.6" />
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Src\Models\Profiles\" />
-	  <Folder Include="Src\Repositories\" />
-	</ItemGroup>
-
 	<ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
 
 
