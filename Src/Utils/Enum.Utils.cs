@@ -14,7 +14,8 @@
       {
          Sucesso = 3,
          RegistroDuplicado = 30,
-         NaoLocalizado = 20,
+         SemRegistros = 20,
+         NaoLocalizado = 32,
          ErroServidor = 99
       }
    }

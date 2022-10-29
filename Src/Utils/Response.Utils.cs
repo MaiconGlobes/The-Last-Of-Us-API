@@ -84,6 +84,42 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
          return FObjJSON;
       }
 
+      internal virtual object RetornoNotAcceptable<T>(List<T> ADados)
+      {
+         FObjJSON = new
+         {
+            retorno = new
+            {
+               status = "Registro não localizado",
+               codigo_status = EnumUtils.StatusProc.NaoLocalizado,
+               mensagem = new
+               {
+                  descricao = "O registro que está tentando realizar a operação não se encontra no banco de dados."
+               }
+            }
+         };
+
+         return FObjJSON;
+      }
+
+      internal virtual object RetornoNotAcceptable(Object ADados)
+      {
+         FObjJSON = new
+         {
+            retorno = new
+            {
+               status = "Registro não localizado",
+               codigo_status = EnumUtils.StatusProc.SemRegistros,
+               mensagem = new
+               {
+                  descricao = "O registro que está tentando realizar a operação não se encontra no banco de dados."
+               }
+            }
+         };
+
+         return FObjJSON;
+      }
+
       internal virtual object RetornoNotFound<T>(List<T> ADados)
       {
          FObjJSON = new
@@ -91,7 +127,7 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
             retorno = new
             {
                status = "A Consulta não retornou registros",
-               codigo_status = EnumUtils.StatusProc.NaoLocalizado,
+               codigo_status = EnumUtils.StatusProc.SemRegistros,
                dados = ADados
             }
          };
@@ -106,7 +142,7 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
             retorno = new
             {
                status = "A Consulta não retornou registros",
-               codigo_status = EnumUtils.StatusProc.NaoLocalizado,
+               codigo_status = EnumUtils.StatusProc.SemRegistros,
                dados = ADados
             }
          };

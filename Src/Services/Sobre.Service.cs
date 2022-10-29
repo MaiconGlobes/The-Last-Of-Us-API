@@ -17,9 +17,9 @@ namespace API_REST_The_Last_Of_Us.Src.Services
         {
             try
             {
-                var ListaDados = FSobreRepositories.BuscarTodosRegistros();
+                var listaDados = FSobreRepositories.BuscarTodosRegistros();
 
-                return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(ListaDados));
+                return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(listaDados));
             }
             catch
             {

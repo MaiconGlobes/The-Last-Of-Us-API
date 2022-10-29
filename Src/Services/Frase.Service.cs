@@ -1,5 +1,6 @@
 ﻿using API_REST_The_Last_Of_Us.Src.Models.Entity;
 using API_REST_The_Last_Of_Us.Src.Utils;
+using System;
 
 namespace API_REST_The_Last_Of_Us.Src.Services
 {
@@ -18,14 +19,14 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       {
          try
          {
-            var ListaDados = FFraseRepositories.BuscarTodosRegistros();
+            var listaDados = FFraseRepositories.BuscarTodosRegistros();
 
-            if (ListaDados.Count > 0)
+            if (listaDados.Count > 0)
             {
-               return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(ListaDados));
+               return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(listaDados));
             }
 
-            return ((byte)EnumUtils.StatusProc.NaoLocalizado, ResponseUtils.Instancia().RetornoNotFound(ListaDados));
+            return ((byte)EnumUtils.StatusProc.SemRegistros, ResponseUtils.Instancia().RetornoNotFound(listaDados));
          }
          catch
          {
@@ -39,14 +40,14 @@ namespace API_REST_The_Last_Of_Us.Src.Services
          {
             APersonagem = APersonagem.ToLower();
 
-            var ListaDados = FFraseRepositories.BuscarRegistroPorPersonagem(APersonagem);
+            var listaDados = FFraseRepositories.BuscarRegistroPorPersonagem(APersonagem);
 
-            if ((ListaDados != null) & (ListaDados.Count > 0))
+            if ((listaDados != null) & (listaDados.Count > 0))
             {
-               return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(ListaDados));
+               return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(listaDados));
             }
 
-            return ((byte)EnumUtils.StatusProc.NaoLocalizado, ResponseUtils.Instancia().RetornoNotFound(ListaDados));
+            return ((byte)EnumUtils.StatusProc.SemRegistros, ResponseUtils.Instancia().RetornoNotFound(listaDados));
          }
          catch
          {
@@ -60,18 +61,18 @@ namespace API_REST_The_Last_Of_Us.Src.Services
          {
             var frase = ADados.Descricao.ToLower();
 
-            var ListaDados = FFraseRepositories.BuscarRegistroFrase(frase);
+            var listaDados = FFraseRepositories.BuscarRegistroFrase(frase);
 
-            if ((ListaDados != null) & (ListaDados.Count == 0))
+            if ((listaDados != null) & (listaDados.Count == 0))
             {
                FraseModel registroCriado = FFraseRepositories.GravarRegistro(ADados);
 
                return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoCreated(registroCriado));
             }
             else
-            if ((ListaDados != null) & (ListaDados.Count > 0))
+            if ((listaDados != null) & (listaDados.Count > 0))
             {
-               return ((byte)EnumUtils.StatusProc.RegistroDuplicado, ResponseUtils.Instancia().RetornoDuplicated(ListaDados));
+               return ((byte)EnumUtils.StatusProc.RegistroDuplicado, ResponseUtils.Instancia().RetornoDuplicated(listaDados));
             }
 
             return ((byte)EnumUtils.StatusProc.ErroServidor, null);
@@ -79,6 +80,41 @@ namespace API_REST_The_Last_Of_Us.Src.Services
          catch
          {
             return ((byte)EnumUtils.StatusProc.ErroServidor, null);
+         }
+      }
+
+      public (byte Status, object Json) DeletarRegistro(Guid AId)
+      {
+         try
+         {
+            var listaDados = FFraseRepositories.BuscarRegistroPorId(AId);
+
+            if ((listaDados != null) & (listaDados.Count > 0))
+            {
+               FraseModel registroDeletado = FFraseRepositories.DeletarRegistro(listaDados[0]);
+
+               return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(listaDados));
+            }
+
+            return ((byte)EnumUtils.StatusProc.NaoLocalizado, ResponseUtils.Instancia().RetornoNotAcceptable(listaDados));
+         }
+         catch
+         {
+            return ((byte)EnumUtils.StatusProc.ErroServidor, null);
+         }
+      }
+
+      public byte DeletarTodosRegistros()
+      {
+         try
+         {
+            FFraseRepositories.DeletarTodosRegistros(Fcontexto.FRASE);
+
+            return (byte)EnumUtils.StatusProc.Sucesso;
+         }
+         catch
+         {
+            return (byte)EnumUtils.StatusProc.ErroServidor;
          }
       }
    }

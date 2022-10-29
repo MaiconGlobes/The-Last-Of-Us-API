@@ -6,6 +6,7 @@ using API_REST_The_Last_Of_Us.Src.Utils;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace API_REST_The_Last_Of_Us.Controllers
 {
@@ -27,7 +28,7 @@ namespace API_REST_The_Last_Of_Us.Controllers
 
       [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(FraseRetornoOk))]
       [HttpGet]
-      public IActionResult GetTodasFrase()
+      public IActionResult GetTodasFrases()
       {
          try
          {
@@ -36,7 +37,7 @@ namespace API_REST_The_Last_Of_Us.Controllers
             return Status switch
             {
                (byte)EnumUtils.StatusProc.Sucesso => new OkObjectResult(Json),
-               (byte)EnumUtils.StatusProc.NaoLocalizado => new OkObjectResult(Json),
+               (byte)EnumUtils.StatusProc.SemRegistros => new OkObjectResult(Json),
                (byte)EnumUtils.StatusProc.ErroServidor => throw new System.NotImplementedException(),
                _ => throw new System.NotImplementedException()
             };
@@ -58,7 +59,7 @@ namespace API_REST_The_Last_Of_Us.Controllers
             return Status switch
             {
                (byte)EnumUtils.StatusProc.Sucesso => new OkObjectResult(Json),
-               (byte)EnumUtils.StatusProc.NaoLocalizado => new OkObjectResult(Json),
+               (byte)EnumUtils.StatusProc.SemRegistros => new OkObjectResult(Json),
                (byte)EnumUtils.StatusProc.ErroServidor => throw new System.NotImplementedException(),
                _ => throw new System.NotImplementedException()
             };
@@ -70,6 +71,7 @@ namespace API_REST_The_Last_Of_Us.Controllers
       }
 
       [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(FraseRetornoOk))]
+      [ApiExplorerSettings(IgnoreApi = true)]
       [HttpPost]
       public IActionResult PostFrase([FromBody] FraseResponseDto AFraseBody)
       {
@@ -83,6 +85,51 @@ namespace API_REST_The_Last_Of_Us.Controllers
             {
                (byte)EnumUtils.StatusProc.Sucesso => new CreatedResult(nameof(FraseRetornoOk), Json),
                (byte)EnumUtils.StatusProc.RegistroDuplicado => new ConflictObjectResult(Json),
+               (byte)EnumUtils.StatusProc.ErroServidor => throw new System.NotImplementedException(),
+               _ => throw new System.NotImplementedException()
+            };
+         }
+         catch
+         {
+            return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+         }
+      }
+
+      [ProducesResponseType(StatusCodes.Status204NoContent)]
+      [ApiExplorerSettings(IgnoreApi = true)]
+      [HttpDelete("{id}")]
+      public IActionResult DeleteFrasePorId(Guid id)
+      {
+         try
+         {
+            var (Status, Json) = FFraseService.DeletarRegistro(id);
+
+            return Status switch
+            {
+               (byte)EnumUtils.StatusProc.Sucesso => new NoContentResult(),
+               (byte)EnumUtils.StatusProc.NaoLocalizado => new OkObjectResult(Json),
+               (byte)EnumUtils.StatusProc.ErroServidor => throw new System.NotImplementedException(),
+               _ => throw new System.NotImplementedException()
+            };
+         }
+         catch
+         {
+            return new StatusCodeResult(StatusCodes.Status500InternalServerError);
+         }
+      }
+
+      [ProducesResponseType(StatusCodes.Status204NoContent)]
+      [ApiExplorerSettings(IgnoreApi = true)]
+      [HttpDelete]
+      public IActionResult DeleteTodasFrases()
+      {
+         try
+         {
+            var Status = FFraseService.DeletarTodosRegistros();
+
+            return Status switch
+            {
+               (byte)EnumUtils.StatusProc.Sucesso => new NoContentResult(),
                (byte)EnumUtils.StatusProc.ErroServidor => throw new System.NotImplementedException(),
                _ => throw new System.NotImplementedException()
             };
