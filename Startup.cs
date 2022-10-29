@@ -57,12 +57,11 @@ namespace API_REST_The_Last_Of_Us
             app.UseSwagger();
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles(new StaticFileOptions
-            {
-                FileProvider = new PhysicalFileProvider(
-               Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
-                RequestPath = "/wwwroot"
-            });
+         app.UseStaticFiles(new StaticFileOptions
+         {
+            FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
+            RequestPath = ""
+         });
 
             app.UseSwaggerUI(options =>
             {
