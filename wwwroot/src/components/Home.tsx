@@ -1,10 +1,7 @@
 import React from 'react';
 
 function Home() {
-  return(
-    <>Ola mundo</>
-  )
+  return <>Ola mundo</>;
 }
 
 export default Home;
-

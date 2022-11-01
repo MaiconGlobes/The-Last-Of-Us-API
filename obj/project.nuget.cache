@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0MHU5hwD3hIp/pp16qphXk48tCcq9u3gT6/mLuZ6lwSDR4kAc6Fs9ZhoN2QVqpHD867nJe1iUJ85lj3/XDTp7A==",
+  "dgSpecHash": "gXtwNHsrrMqhZphwbabF0RTFm95reEu7CcmG+hSYaqR1ycN9sDfU/ch1l+ZDkmZUZlVsOiYH/udkTXp+NMj7DA==",
   "success": true,
-  "projectFilePath": "e:\\DOCUMENTOS\\GIT\\The-Last-Of-Us-API\\The-Last-Of-Us-API.csproj",
+  "projectFilePath": "E:\\DOCUMENTOS\\GIT\\The-Last-Of-Us-API\\The-Last-Of-Us-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
@@ -170,12 +170,5 @@
     "C:\\Users\\Usuario\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache e:\\DOCUMENTOS\\GIT\\The-Last-Of-Us-API\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
