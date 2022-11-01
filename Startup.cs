@@ -37,7 +37,10 @@ namespace The_Last_Of_Us_API
 
          services.AddSwaggerGen(options =>
          {
-            options.SwaggerDoc("v1", new OpenApiInfo { Title = "The Last Of Us - API", Version = "v1" });
+            options.SwaggerDoc("v1", new OpenApiInfo { 
+               Title = "The Last Of Us - API", 
+               Version = "v1" 
+            });
             options.SchemaFilter<SwaggerExcludeFilter>();
          });
 
