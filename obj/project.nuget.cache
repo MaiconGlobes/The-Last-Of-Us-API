@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VpR3PBJ8RN8A6OW+xK8J5K8RSnMxaNZfWf0kpUFxmIlJQqam2/IttzLZtCVBMh/ticUzSuqMRb/u5FNwdSv9Ig==",
+  "dgSpecHash": "0MHU5hwD3hIp/pp16qphXk48tCcq9u3gT6/mLuZ6lwSDR4kAc6Fs9ZhoN2QVqpHD867nJe1iUJ85lj3/XDTp7A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Usuario\\Documents\\GIT\\The-Last-Of-Us-API\\The-Last-Of-Us-API.csproj",
+  "projectFilePath": "e:\\DOCUMENTOS\\GIT\\The-Last-Of-Us-API\\The-Last-Of-Us-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
