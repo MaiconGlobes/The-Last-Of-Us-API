@@ -1,9 +1,19 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
-import Home from './components/Home';
+import React from 'react';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+
+const Home = () => {
+  return <>Eu to aqui agora</>;
+};
 
 function App() {
-  return <Route exact path='/' component={Home} />;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='*' element={<>Deu ruim</>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
