@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace API_REST_The_Last_Of_Us
+namespace The_Last_Of_Us_API
 {
     public class Program
     {

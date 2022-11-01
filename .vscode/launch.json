@@ -10,7 +10,7 @@
       "request": "launch",
       "preLaunchTask": "build",
       // If you have changed target frameworks, make sure to update the program path.
-      "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/API-REST-The-Last-Of-Us.dll",
+      "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/The-Last-Of-Us-API.dll",
       "args": [],
       "cwd": "${workspaceFolder}",
       "stopAtEntry": false,
