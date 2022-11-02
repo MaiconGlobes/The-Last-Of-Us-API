@@ -1,16 +1,13 @@
-import React from 'react';
+import { Home } from '@mui/icons-material';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
-
-const Home = () => {
-  return <>Eu to aqui agora</>;
-};
+import NotFound from './pages/not-found';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='*' element={<>Deu ruim</>} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
