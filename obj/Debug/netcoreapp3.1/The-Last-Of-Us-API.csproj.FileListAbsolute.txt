@@ -364,4 +364,3 @@ E:\DOCUMENTOS\GIT\The-Last-Of-Us-API\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.
 E:\DOCUMENTOS\GIT\The-Last-Of-Us-API\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.dll
 E:\DOCUMENTOS\GIT\The-Last-Of-Us-API\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.pdb
 E:\DOCUMENTOS\GIT\The-Last-Of-Us-API\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.genruntimeconfig.cache
-E:\DOCUMENTOS\GIT\The-Last-Of-Us-API\bin\Debug\netcoreapp3.1\my-app\package.json

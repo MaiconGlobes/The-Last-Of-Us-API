@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 
-const NotFound = () => {
+const NotFoundPage = () => {
   return (
     <>
       <Typography variant='h4'>Aqui é a pagina NotFound</Typography>
@@ -8,4 +8,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

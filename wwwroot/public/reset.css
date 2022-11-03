@@ -1,0 +1,10 @@
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'compacta-bold-bt';
+  src: local('compacta-bold-bt'), url(./compacta-bold-bt.ttf) format('truetype');
+}
