@@ -29,11 +29,11 @@ const HomePage = () => {
         className='container'
         container
         direction='column'
-        justifyContent='space-between'
-        alignItems='stretch'
+        // justifyContent='space-between'
+        // alignItems='stretch'
         columns={12}
         sx={{
-          background: 'gray',
+          // background: 'gray',
           width: '100%',
         }}>
         <Grid
@@ -44,10 +44,15 @@ const HomePage = () => {
           md={1}
           lg={1}
           xl={1}
-          sx={{
-            background: 'red',
-          }}>
-          <AppBar position='static' sx={{ height: '50px' }}>
+          sx={
+            {
+              // background: 'red',
+              // position: 'relative',
+            }
+          }>
+          <AppBar
+            position='fixed'
+            sx={{ height: '50px', background: '#151111' }}>
             <Toolbar>
               <Box
                 sx={{
@@ -93,12 +98,12 @@ const HomePage = () => {
                   API
                 </Typography>
               </Box>
-              {/* <Box sx={{ flexGrow: 3, background: 'white' }}>ss</Box> */}
+              {/* <Box sx={{ flexGrow: 3, background: 'green' }}>espaço aqui</Box> */}
               {/* <Box sx={{ flexGrow: 1, background: 'blue' }}>ss</Box> */}
             </Toolbar>
           </AppBar>
         </Grid>
-        {/* <Grid
+        <Grid
           className='body-main'
           item
           xs={9}
@@ -108,23 +113,60 @@ const HomePage = () => {
           xl={9}
           sx={{
             background: 'blue',
-            // minHeight: '500px',
+            position: 'fixed',
           }}>
-          body
+          <Box
+            component='img'
+            sx={{
+              position: 'fixed',
+              objectFit: 'cover',
+              width: '100%',
+
+              marginTop: { xs: 0, sm: 0, md: -5, lg: -5, xl: -5 },
+
+              [theme.breakpoints.down('md')]: {
+                height: '100%',
+              },
+            }}
+            src='https://images8.alphacoders.com/532/thumb-1920-532407.jpg'
+          />
         </Grid>
         <Grid
-          className='footer'
+          // className='footer'
           item
-          xs={2}
-          sm={2}
-          md={2}
-          lg={2}
-          xl={2}
+          xs={1}
+          sm={1}
+          md={1}
+          lg={1}
+          xl={1}
           sx={{
-            background: 'lime',
+            background: '',
+            position: 'relative',
+            minHeight: '100vh',
           }}>
-          Rodapé
-        </Grid> */}
+          <Box
+            component='div'
+            sx={{
+              background: 'red',
+              height: '50vh',
+              width: '30vw',
+              margin: '100px 0 0 80px',
+            }}
+          />
+        </Grid>
+        <Grid
+          // className='footer'
+          item
+          xs={1}
+          sm={1}
+          md={1}
+          lg={1}
+          xl={1}
+          sx={{
+            background: '#0E0E19',
+            position: 'relative',
+            minHeight: '1020px',
+          }}></Grid>
       </Grid>
     </>
   );
