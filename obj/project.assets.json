@@ -9224,11 +9224,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\DOCUMENTOS\\GIT\\The-Last-Of-Us-API\\The-Last-Of-Us-API.csproj",
+      "projectUniqueName": "C:\\GIT\\GIT C#\\The-Last-Of-Us-API\\The-Last-Of-Us-API.csproj",
       "projectName": "The-Last-Of-Us-API",
-      "projectPath": "E:\\DOCUMENTOS\\GIT\\The-Last-Of-Us-API\\The-Last-Of-Us-API.csproj",
+      "projectPath": "C:\\GIT\\GIT C#\\The-Last-Of-Us-API\\The-Last-Of-Us-API.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "E:\\DOCUMENTOS\\GIT\\The-Last-Of-Us-API\\obj\\",
+      "outputPath": "C:\\GIT\\GIT C#\\The-Last-Of-Us-API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
