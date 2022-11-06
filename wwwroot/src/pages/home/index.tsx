@@ -1,4 +1,4 @@
-import { Box, Grid, useTheme } from '@mui/material';
+import { Box, Grid, Typography, useTheme } from '@mui/material';
 import ToolBar from '../../components/appbar';
 
 const HomePage = () => {
@@ -6,7 +6,6 @@ const HomePage = () => {
   return (
     <>
       <Grid
-        className='container'
         container
         direction='column'
         columns={12}
@@ -17,7 +16,6 @@ const HomePage = () => {
           <ToolBar />
         </Grid>
         <Grid
-          className='body-main'
           item
           columns={9}
           sx={{
@@ -56,11 +54,72 @@ const HomePage = () => {
           <Box
             component='div'
             sx={{
-              height: '50vh',
-              width: '30vw',
-              margin: '100px 0 0 80px',
-            }}
-          />
+              // border: 'white 1px solid',
+              height: '250px',
+              width: '280px',
+              margin: '100px 0 0 10vw',
+            }}>
+            <Box
+              component='div'
+              sx={{
+                // border: 'blue 2px solid',
+                width: '100%',
+              }}>
+              <Typography
+                sx={{
+                  background: 'white',
+                  fontSize: '2rem',
+                  fontFamily: 'compacta-bold-bt',
+                  color: '#000000',
+                  lineHeight: '2.3rem',
+                  textAlign: 'left',
+                  width: '82px',
+                  paddingLeft: '3px',
+                  paddingTop: '1.5px',
+                }}>
+                CREATE
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: '2rem',
+                  fontFamily: 'compacta-bold-bt',
+                  color: '#ffffff',
+                  lineHeight: '2.3rem',
+                  textAlign: 'left',
+                  marginTop: '-2.3rem',
+                  marginLeft: '86px',
+                }}>
+                AMAZING THINGS
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: '2rem',
+                  fontFamily: 'compacta-bold-bt',
+                  color: '#ffffff',
+                  lineHeight: '2.3rem',
+                  textAlign: 'left',
+                  width: '165px',
+                }}>
+                WITH TEH BEST OF THIS API.
+              </Typography>
+            </Box>
+            <Box
+              component='div'
+              sx={{
+                // border: 'white 2px solid',
+                width: '100%',
+              }}>
+              2
+            </Box>
+            <Box
+              component='div'
+              sx={{
+                // border: 'red 2px solid',
+                width: '100%',
+              }}>
+              3
+            </Box>
+          </Box>
         </Grid>
         <Grid
           item
