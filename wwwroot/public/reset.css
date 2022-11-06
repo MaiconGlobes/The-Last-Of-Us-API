@@ -5,6 +5,16 @@
 }
 
 @font-face {
-  font-family: 'compacta-bold-bt';
-  src: local('compacta-bold-bt'), url(./compacta-bold-bt.ttf) format('truetype');
+  font-family: 'Compacta-bold-bt';
+  src: local('Compacta-bold-bt'), url(./compacta-bold-bt.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-regular';
+  src: local('Roboto-regular'), url(./roboto-regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-light';
+  src: local('Roboto-light'), url(./roboto-light.ttf) format('truetype');
 }

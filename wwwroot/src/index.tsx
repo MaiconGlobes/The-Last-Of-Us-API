@@ -8,7 +8,11 @@ const darkTheme = createTheme({
     mode: 'dark',
   },
   typography: {
-    fontFamily: ['Roboto'].join(','),
+    allVariants: {
+      fontFamily: ['Roboto-regular', 'Roboto-light', 'Compacta-bold-bt'].join(
+        ','
+      ),
+    },
   },
 });
 

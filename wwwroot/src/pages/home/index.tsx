@@ -69,7 +69,7 @@ const HomePage = () => {
                   background: 'white',
                   height: '2.3rem',
                   fontSize: '2rem',
-                  fontFamily: 'compacta-bold-bt',
+                  fontFamily: 'Compacta-bold-bt',
                   color: '#000000',
                   lineHeight: '2.5rem',
                   textAlign: 'left',
@@ -82,7 +82,7 @@ const HomePage = () => {
               <Typography
                 sx={{
                   fontSize: '2rem',
-                  fontFamily: 'compacta-bold-bt',
+                  fontFamily: 'Compacta-bold-bt',
                   color: '#ffffff',
                   lineHeight: '2.5rem',
                   textAlign: 'left',
@@ -94,7 +94,7 @@ const HomePage = () => {
               <Typography
                 sx={{
                   fontSize: '2rem',
-                  fontFamily: 'compacta-bold-bt',
+                  fontFamily: 'Compacta-bold-bt',
                   color: '#ffffff',
                   lineHeight: '2.5rem',
                   textAlign: 'left',
@@ -113,23 +113,23 @@ const HomePage = () => {
               }}>
               <Typography
                 sx={{
-                  fontSize: '0.85rem',
-                  fontFamily: 'Roboto',
+                  fontSize: '0.735rem',
+                  fontFamily: 'Roboto-light',
                   color: '#e2e2e2',
                   lineHeight: '1rem',
-                  fontWeight: '280',
+                  // fontWeight: '250',
                   textAlign: 'left',
-                  width: '305px',
+                  width: '330px',
                 }}>
                 Vexor's API enables developers everywhere access
               </Typography>
               <Typography
                 sx={{
-                  fontSize: '0.85rem',
-                  fontFamily: 'Roboto',
+                  fontSize: '0.735rem',
+                  fontFamily: 'Roboto-light',
                   color: '#e2e2e2',
                   lineHeight: '1rem',
-                  fontWeight: '280',
+                  // fontWeight: '250',
                   textAlign: 'left',
                   width: '300px',
                 }}>
@@ -137,11 +137,11 @@ const HomePage = () => {
               </Typography>
               <Typography
                 sx={{
-                  fontSize: '0.85rem',
-                  fontFamily: 'Roboto',
+                  fontSize: '0.735rem',
+                  fontFamily: 'Roboto-light',
                   color: '#e2e2e2',
                   lineHeight: '1rem',
-                  fontWeight: '280',
+                  // fontWeight: '250',
                   textAlign: 'left',
                   width: '300px',
                 }}>

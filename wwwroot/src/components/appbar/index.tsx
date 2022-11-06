@@ -33,7 +33,7 @@ const ToolBar = () => {
             <Typography
               sx={{
                 fontSize: '1.2rem',
-                fontFamily: 'compacta-bold-bt',
+                fontFamily: 'Compacta-bold-bt',
                 color: '#ffffff',
                 lineHeight: '1.25rem',
                 textAlign: 'left',
@@ -45,7 +45,7 @@ const ToolBar = () => {
             <Typography
               fontSize={22}
               sx={{
-                fontFamily: 'compacta-bold-bt',
+                fontFamily: 'Compacta-bold-bt',
                 textAlign: 'right',
                 color: '#C2C2C2',
                 height: '25px',
@@ -64,15 +64,15 @@ const ToolBar = () => {
               [theme.breakpoints.down('sm')]: {
                 visibility: 'hidden',
               },
-              minWidth: '100px',
-              maxWidth: '100px',
+              minWidth: '114px',
+              maxWidth: '116px',
               paddingBottom: '10px',
             }}>
             <Link
               href='#'
               sx={{
-                fontFamily: 'compacta-bold-bt',
-                fontSize: '0.875rem',
+                fontFamily: 'Compacta-bold-bt',
+                fontSize: '0.975rem',
                 color: '#da0707',
                 textDecoration: 'none',
               }}>
@@ -82,16 +82,16 @@ const ToolBar = () => {
 
           <Box
             sx={{
-              minWidth: '38px',
-              maxWidth: '38px',
+              minWidth: '42px',
+              maxWidth: '45px',
               marginX: '4px',
               paddingBottom: '10px',
             }}>
             <Link
               href='#'
               sx={{
-                fontFamily: 'compacta-bold-bt',
-                fontSize: '0.875rem',
+                fontFamily: 'Compacta-bold-bt',
+                fontSize: '0.975rem',
                 color: '#C2C2C2',
                 textDecoration: 'none',
               }}>
@@ -101,15 +101,15 @@ const ToolBar = () => {
 
           <Box
             sx={{
-              minWidth: '48px',
-              maxWidth: '48px',
+              minWidth: '50px',
+              maxWidth: '53px',
               paddingBottom: '10px',
             }}>
             <Link
               href='/swagger/index.html'
               sx={{
-                fontFamily: 'compacta-bold-bt',
-                fontSize: '0.875rem',
+                fontFamily: 'Compacta-bold-bt',
+                fontSize: '0.975rem',
                 color: '#C2C2C2',
                 textDecoration: 'none',
               }}>
