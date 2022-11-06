@@ -62,7 +62,6 @@ const HomePage = () => {
             <Box
               component='div'
               sx={{
-                // border: 'blue 2px solid',
                 width: '100%',
               }}>
               <Typography
@@ -71,7 +70,7 @@ const HomePage = () => {
                   fontSize: '2rem',
                   fontFamily: 'compacta-bold-bt',
                   color: '#000000',
-                  lineHeight: '2.3rem',
+                  lineHeight: '2.5rem',
                   textAlign: 'left',
                   width: '82px',
                   paddingLeft: '3px',
@@ -84,9 +83,9 @@ const HomePage = () => {
                   fontSize: '2rem',
                   fontFamily: 'compacta-bold-bt',
                   color: '#ffffff',
-                  lineHeight: '2.3rem',
+                  lineHeight: '2.5rem',
                   textAlign: 'left',
-                  marginTop: '-2.3rem',
+                  marginTop: '-2.5rem',
                   marginLeft: '86px',
                 }}>
                 AMAZING THINGS
@@ -96,20 +95,56 @@ const HomePage = () => {
                   fontSize: '2rem',
                   fontFamily: 'compacta-bold-bt',
                   color: '#ffffff',
-                  lineHeight: '2.3rem',
+                  lineHeight: '2.5rem',
                   textAlign: 'left',
                   width: '165px',
                 }}>
-                WITH TEH BEST OF THIS API.
+                WITH THE BEST OF THIS API.
               </Typography>
             </Box>
             <Box
               component='div'
               sx={{
-                // border: 'white 2px solid',
+                // border: 'blue 0.5px solid',
+                marginTop: '10px',
                 width: '100%',
               }}>
-              2
+              <Typography
+                sx={{
+                  fontSize: '0.85rem',
+                  fontFamily: 'Roboto',
+                  color: '#e2e2e2',
+                  lineHeight: '1rem',
+                  fontWeight: '280',
+                  textAlign: 'left',
+                  width: '305px',
+                }}>
+                Vexor's API enables developers everywhere access
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: '0.85rem',
+                  fontFamily: 'Roboto',
+                  color: '#e2e2e2',
+                  lineHeight: '1rem',
+                  fontWeight: '280',
+                  textAlign: 'left',
+                  width: '300px',
+                }}>
+                information about all the characters
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: '0.85rem',
+                  fontFamily: 'Roboto',
+                  color: '#e2e2e2',
+                  lineHeight: '1rem',
+                  fontWeight: '280',
+                  textAlign: 'left',
+                  width: '300px',
+                }}>
+                in this amazing game.
+              </Typography>
             </Box>
             <Box
               component='div'
