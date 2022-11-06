@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, useTheme } from '@mui/material';
+import { Box, Button, Grid, Typography, useTheme } from '@mui/material';
 import ToolBar from '../../components/appbar';
 
 const HomePage = () => {
@@ -67,6 +67,7 @@ const HomePage = () => {
               <Typography
                 sx={{
                   background: 'white',
+                  height: '2.3rem',
                   fontSize: '2rem',
                   fontFamily: 'compacta-bold-bt',
                   color: '#000000',
@@ -74,7 +75,7 @@ const HomePage = () => {
                   textAlign: 'left',
                   width: '82px',
                   paddingLeft: '3px',
-                  paddingTop: '1.5px',
+                  // paddingTop: '0.8px',
                 }}>
                 CREATE
               </Typography>
@@ -85,7 +86,7 @@ const HomePage = () => {
                   color: '#ffffff',
                   lineHeight: '2.5rem',
                   textAlign: 'left',
-                  marginTop: '-2.5rem',
+                  marginTop: '-2.29rem',
                   marginLeft: '86px',
                 }}>
                 AMAZING THINGS
@@ -107,6 +108,7 @@ const HomePage = () => {
               sx={{
                 // border: 'blue 0.5px solid',
                 marginTop: '10px',
+                marginBottom: '10px',
                 width: '100%',
               }}>
               <Typography
@@ -152,7 +154,29 @@ const HomePage = () => {
                 // border: 'red 2px solid',
                 width: '100%',
               }}>
-              3
+              <Button
+                type='button'
+                variant='contained'
+                sx={{
+                  background: '#C4180B',
+                  border: '#7D2016 1px solid',
+                  color: '#e2e2e2',
+                  fontWeight: '300',
+                  textAlign: 'center',
+                  textTransform: 'capitalize',
+                  paddingBottom: '3px',
+                  height: '34px',
+                  '&:active': {
+                    background: '#C4180B',
+                    border: '#7D2016 1px solid',
+                  },
+                  '&:hover': {
+                    background: '#d1190c',
+                    border: '#7D2016 1px solid',
+                  },
+                }}>
+                Get Started
+              </Button>
             </Box>
           </Box>
         </Grid>
