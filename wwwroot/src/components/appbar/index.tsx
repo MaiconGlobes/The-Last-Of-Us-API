@@ -72,7 +72,7 @@ const ToolBar = () => {
               href='#'
               sx={{
                 fontFamily: 'compacta-bold-bt',
-                fontSize: '1rem',
+                fontSize: '0.875rem',
                 color: '#da0707',
                 textDecoration: 'none',
               }}>
@@ -91,7 +91,7 @@ const ToolBar = () => {
               href='#'
               sx={{
                 fontFamily: 'compacta-bold-bt',
-                fontSize: '1rem',
+                fontSize: '0.875rem',
                 color: '#C2C2C2',
                 textDecoration: 'none',
               }}>
@@ -106,14 +106,14 @@ const ToolBar = () => {
               paddingBottom: '10px',
             }}>
             <Link
-              href='#'
+              href='/swagger/index.html'
               sx={{
                 fontFamily: 'compacta-bold-bt',
-                fontSize: '1rem',
+                fontSize: '0.875rem',
                 color: '#C2C2C2',
                 textDecoration: 'none',
               }}>
-              DOCUMENTATION
+              SWAGGER
             </Link>
           </Box>
         </Toolbar>

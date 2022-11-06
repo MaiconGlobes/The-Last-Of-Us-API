@@ -30,13 +30,20 @@ const HomePage = () => {
               objectFit: 'cover',
               width: '100%',
 
-              marginTop: { xs: 0, sm: 0, md: -5, lg: -5, xl: -5 },
+              marginTop: {
+                xs: 0,
+                sm: 0,
+                md: -5,
+                lg: -5,
+                xl: -5,
+              },
 
               [theme.breakpoints.down('md')]: {
                 height: '100%',
               },
             }}
             src='https://images8.alphacoders.com/532/thumb-1920-532407.jpg'
+            // src='../../assets/img/capa-site.jpg'
           />
         </Grid>
         <Grid
@@ -61,7 +68,23 @@ const HomePage = () => {
           sx={{
             background: '#0E0E19',
             position: 'relative',
-            minHeight: '800px',
+            minHeight: '45vh',
+          }}></Grid>
+        <Grid
+          item
+          columns={1}
+          sx={{
+            background: '#14141b',
+            position: 'relative',
+            minHeight: '200vh',
+          }}></Grid>
+        <Grid
+          item
+          columns={1}
+          sx={{
+            background: '#000007',
+            position: 'relative',
+            minHeight: '40px',
           }}></Grid>
       </Grid>
     </>
