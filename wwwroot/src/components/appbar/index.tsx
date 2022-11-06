@@ -64,8 +64,8 @@ const ToolBar = () => {
               [theme.breakpoints.down('sm')]: {
                 visibility: 'hidden',
               },
-              minWidth: '115px',
-              maxWidth: '115px',
+              minWidth: '100px',
+              maxWidth: '100px',
               paddingBottom: '10px',
             }}>
             <Link
@@ -82,8 +82,8 @@ const ToolBar = () => {
 
           <Box
             sx={{
-              minWidth: '45px',
-              maxWidth: '45px',
+              minWidth: '38px',
+              maxWidth: '38px',
               marginX: '4px',
               paddingBottom: '10px',
             }}>
@@ -101,8 +101,8 @@ const ToolBar = () => {
 
           <Box
             sx={{
-              minWidth: '110px',
-              maxWidth: '110px',
+              minWidth: '48px',
+              maxWidth: '48px',
               paddingBottom: '10px',
             }}>
             <Link

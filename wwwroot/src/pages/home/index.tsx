@@ -165,7 +165,7 @@ const HomePage = () => {
                   textAlign: 'center',
                   textTransform: 'capitalize',
                   paddingBottom: '3px',
-                  height: '34px',
+                  height: '33px',
                   '&:active': {
                     background: '#C4180B',
                     border: '#7D2016 1px solid',
