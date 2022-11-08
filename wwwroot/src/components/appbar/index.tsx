@@ -68,8 +68,8 @@ const ToolBar = () => {
               maxWidth: '116px',
               paddingBottom: '10px',
             }}>
-            <Link
-              href='#'
+            <Typography
+              fontSize={22}
               sx={{
                 fontFamily: 'Compacta-bold-bt',
                 fontSize: '0.975rem',
@@ -77,7 +77,7 @@ const ToolBar = () => {
                 textDecoration: 'none',
               }}>
               DEVELOPER PORTAL |
-            </Link>
+            </Typography>
           </Box>
 
           <Box
