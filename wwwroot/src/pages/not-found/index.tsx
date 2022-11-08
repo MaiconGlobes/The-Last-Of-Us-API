@@ -1,11 +1,8 @@
 import { Typography } from '@mui/material';
+import Texto from '../../components/Texto';
 
 const NotFoundPage = () => {
-  return (
-    <>
-      <Typography variant='h4'>Aqui é a pagina NotFound</Typography>
-    </>
-  );
+  return <></>;
 };
 
 export default NotFoundPage;

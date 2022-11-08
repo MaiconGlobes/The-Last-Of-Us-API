@@ -1,15 +1,5 @@
-import {
-  AppBar,
-  Box,
-  Grid,
-  Link,
-  Stack,
-  Toolbar,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
-import { useEffect, useState } from 'react';
+import { AppBar, Box, Link, Toolbar, useTheme } from '@mui/material';
+import Texto from '../Texto';
 
 const ToolBar = () => {
   const theme = useTheme();
@@ -30,8 +20,8 @@ const ToolBar = () => {
                 marginTop: '-15px',
               },
             }}>
-            <Typography
-              sx={{
+            <Texto
+              styles={{
                 fontSize: '1.2rem',
                 fontFamily: 'Compacta-bold-bt',
                 color: '#ffffff',
@@ -41,10 +31,10 @@ const ToolBar = () => {
                 width: '60px',
               }}>
               THE LAST OF US
-            </Typography>
-            <Typography
-              fontSize={22}
-              sx={{
+            </Texto>
+            <Texto
+              styles={{
+                fontSize: '22px',
                 fontFamily: 'Compacta-bold-bt',
                 textAlign: 'right',
                 color: '#C2C2C2',
@@ -54,30 +44,29 @@ const ToolBar = () => {
                 marginTop: '-25px',
               }}>
               API
-            </Typography>
+            </Texto>
           </Box>
 
           <Box sx={{ flexGrow: 2 }}></Box>
 
           <Box
             sx={{
-              [theme.breakpoints.down('sm')]: {
-                visibility: 'hidden',
-              },
               minWidth: '114px',
               maxWidth: '116px',
               paddingBottom: '10px',
+              [theme.breakpoints.down('sm')]: {
+                visibility: 'hidden',
+              },
             }}>
-            <Typography
-              fontSize={22}
-              sx={{
+            <Texto
+              styles={{
                 fontFamily: 'Compacta-bold-bt',
                 fontSize: '0.975rem',
                 color: '#da0707',
                 textDecoration: 'none',
               }}>
               DEVELOPER PORTAL |
-            </Typography>
+            </Texto>
           </Box>
 
           <Box
@@ -88,7 +77,7 @@ const ToolBar = () => {
               paddingBottom: '10px',
             }}>
             <Link
-              href='#'
+              href='/'
               sx={{
                 fontFamily: 'Compacta-bold-bt',
                 fontSize: '0.975rem',

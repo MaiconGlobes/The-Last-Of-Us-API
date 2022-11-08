@@ -1,5 +1,6 @@
 import { Box, Button, Grid, Typography, useTheme } from '@mui/material';
 import ToolBar from '../../components/appbar';
+import Texto from '../../components/Texto';
 
 const HomePage = () => {
   const theme = useTheme();
@@ -64,8 +65,8 @@ const HomePage = () => {
               sx={{
                 width: '100%',
               }}>
-              <Typography
-                sx={{
+              <Texto
+                styles={{
                   background: 'white',
                   height: '2.3rem',
                   fontSize: '2rem',
@@ -78,9 +79,9 @@ const HomePage = () => {
                   // paddingTop: '0.8px',
                 }}>
                 CREATE
-              </Typography>
-              <Typography
-                sx={{
+              </Texto>
+              <Texto
+                styles={{
                   fontSize: '2rem',
                   fontFamily: 'Compacta-bold-bt',
                   color: '#ffffff',
@@ -90,9 +91,9 @@ const HomePage = () => {
                   marginLeft: '86px',
                 }}>
                 AMAZING THINGS
-              </Typography>
-              <Typography
-                sx={{
+              </Texto>
+              <Texto
+                styles={{
                   fontSize: '2rem',
                   fontFamily: 'Compacta-bold-bt',
                   color: '#ffffff',
@@ -101,7 +102,7 @@ const HomePage = () => {
                   width: '165px',
                 }}>
                 WITH THE BEST OF THIS API.
-              </Typography>
+              </Texto>
             </Box>
             <Box
               component='div'
@@ -111,8 +112,8 @@ const HomePage = () => {
                 marginBottom: '10px',
                 width: '100%',
               }}>
-              <Typography
-                sx={{
+              <Texto
+                styles={{
                   fontSize: '0.735rem',
                   fontFamily: 'Roboto-light',
                   color: '#e2e2e2',
@@ -122,9 +123,9 @@ const HomePage = () => {
                   width: '330px',
                 }}>
                 Vexor's API enables developers everywhere access
-              </Typography>
-              <Typography
-                sx={{
+              </Texto>
+              <Texto
+                styles={{
                   fontSize: '0.735rem',
                   fontFamily: 'Roboto-light',
                   color: '#e2e2e2',
@@ -134,9 +135,9 @@ const HomePage = () => {
                   width: '300px',
                 }}>
                 information about all the characters
-              </Typography>
-              <Typography
-                sx={{
+              </Texto>
+              <Texto
+                styles={{
                   fontSize: '0.735rem',
                   fontFamily: 'Roboto-light',
                   color: '#e2e2e2',
@@ -146,7 +147,7 @@ const HomePage = () => {
                   width: '300px',
                 }}>
                 in this amazing game.
-              </Typography>
+              </Texto>
             </Box>
             <Box
               component='div'
