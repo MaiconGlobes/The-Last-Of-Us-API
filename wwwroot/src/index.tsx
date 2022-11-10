@@ -1,15 +1,29 @@
-import 'bootstrap/dist/css/bootstrap.css';
+import { createTheme, CssBaseline, ThemeProvider } from '@mui/material';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
 import App from './App';
 
-const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
-const rootElement = document.getElementById('root');
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+  typography: {
+    allVariants: {
+      fontFamily: ['Roboto-regular', 'Roboto-light', 'Compacta-bold-bt'].join(
+        ','
+      ),
+    },
+  },
+});
 
-ReactDOM.render(
-  <BrowserRouter basename={baseUrl}>
-    <App />
-  </BrowserRouter>,
-  rootElement
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+root.render(
+  <ThemeProvider theme={darkTheme}>
+    <CssBaseline />
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </ThemeProvider>
 );

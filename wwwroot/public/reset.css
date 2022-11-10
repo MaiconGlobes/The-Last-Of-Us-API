@@ -1,0 +1,20 @@
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Compacta-bold-bt';
+  src: local('Compacta-bold-bt'), url(./compacta-bold-bt.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-regular';
+  src: local('Roboto-regular'), url(./roboto-regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-light';
+  src: local('Roboto-light'), url(./roboto-light.ttf) format('truetype');
+}

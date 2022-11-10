@@ -1,33 +1,25 @@
 {
-  "name": "the_last_of_us_api",
+  "name": "wwwroot",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "~4.6.1",
-    "jquery": "~3.6.0",
-    "merge": "^2.1.1",
-    "oidc-client": "~1.11.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-router-bootstrap": "^0.25.0",
-    "react-router": "~5.3.0",
-    "react-router-dom": "~5.3.0",
-    "reactstrap": "~8.10.1",
-    "rimraf": "^3.0.2",
-    "next": "12.2.5",
-    "next-images": "^1.8.4"
-  },
-  "devDependencies": {
-    "ajv": "^6.12.6",
-    "cross-env": "^5.2.0",
-    "eslint-config-react-app": "^5.2.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "nan": "^2.15.0",
-    "react-scripts": "^5.0.0",
-    "typescript": "^3.9.10"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.12",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.3",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.8.4",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "rimraf ./build && react-scripts start",
@@ -35,6 +27,12 @@
     "test": "cross-env CI=true react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "lint": "eslint ./src/"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
