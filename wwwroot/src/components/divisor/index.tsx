@@ -1,5 +1,5 @@
 import { Box, useTheme } from '@mui/material';
-import Texto from '../Texto';
+import Texto from '../texto';
 
 const Divisor = () => {
   const theme = useTheme();

@@ -1,6 +1,6 @@
 import { AppBar, Toolbar } from '@mui/material';
-import Divisor from '../divisor';
-import Logo from '../logo';
+import Divisor from '../../components/divisor';
+import Logo from '../../components/logo';
 import Menu from '../menu';
 
 const ToolBar = () => {

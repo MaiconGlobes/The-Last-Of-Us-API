@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { Box, Button, Grid, Typography, useTheme } from '@mui/material';
-import ToolBar from '../../components/appbar';
-import Card from '../../components/card';
-import SessionCard from '../../components/session-card';
-import Texto from '../../components/Texto';
+import ToolBar from '../../frames/appbar';
+import Card from '../../frames/card';
+import SessionCard from '../../frames/session-card';
+import Texto from '../../components/texto';
 
 const HomePage = () => {
   const theme = useTheme();
