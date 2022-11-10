@@ -1,5 +1,8 @@
+import React, { useEffect, useRef } from 'react';
 import { Box, Button, Grid, Typography, useTheme } from '@mui/material';
 import ToolBar from '../../components/appbar';
+import Card from '../../components/card';
+import SessionCard from '../../components/session-card';
 import Texto from '../../components/Texto';
 
 const HomePage = () => {
@@ -55,7 +58,6 @@ const HomePage = () => {
           <Box
             component='div'
             sx={{
-              // border: 'white 1px solid',
               height: '250px',
               width: '280px',
               margin: '100px 0 0 10vw',
@@ -76,7 +78,6 @@ const HomePage = () => {
                   textAlign: 'left',
                   width: '82px',
                   paddingLeft: '3px',
-                  // paddingTop: '0.8px',
                 }}>
                 CREATE
               </Texto>
@@ -107,7 +108,6 @@ const HomePage = () => {
             <Box
               component='div'
               sx={{
-                // border: 'blue 0.5px solid',
                 marginTop: '10px',
                 marginBottom: '10px',
                 width: '100%',
@@ -118,7 +118,6 @@ const HomePage = () => {
                   fontFamily: 'Roboto-light',
                   color: '#e2e2e2',
                   lineHeight: '1rem',
-                  // fontWeight: '250',
                   textAlign: 'left',
                   width: '330px',
                 }}>
@@ -130,7 +129,6 @@ const HomePage = () => {
                   fontFamily: 'Roboto-light',
                   color: '#e2e2e2',
                   lineHeight: '1rem',
-                  // fontWeight: '250',
                   textAlign: 'left',
                   width: '300px',
                 }}>
@@ -142,7 +140,6 @@ const HomePage = () => {
                   fontFamily: 'Roboto-light',
                   color: '#e2e2e2',
                   lineHeight: '1rem',
-                  // fontWeight: '250',
                   textAlign: 'left',
                   width: '300px',
                 }}>
@@ -152,7 +149,6 @@ const HomePage = () => {
             <Box
               component='div'
               sx={{
-                // border: 'red 2px solid',
                 width: '100%',
               }}>
               <Button
@@ -187,16 +183,13 @@ const HomePage = () => {
           sx={{
             background: '#0E0E19',
             position: 'relative',
-            minHeight: '45vh',
-          }}></Grid>
-        <Grid
-          item
-          columns={1}
-          sx={{
-            background: '#14141b',
-            position: 'relative',
-            minHeight: '200vh',
-          }}></Grid>
+            Height: '100%',
+            minHeight: '75vh',
+          }}>
+          <SessionCard>
+            <Card />
+          </SessionCard>
+        </Grid>
         <Grid
           item
           columns={1}
@@ -204,7 +197,9 @@ const HomePage = () => {
             background: '#000007',
             position: 'relative',
             minHeight: '40px',
-          }}></Grid>
+          }}>
+          {/* rodape */}
+        </Grid>
       </Grid>
     </>
   );
