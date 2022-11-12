@@ -1,8 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import { Box, Button, Grid, Typography, useTheme } from '@mui/material';
+import { Box, Button, Grid, Stack, Typography, useTheme } from '@mui/material';
 import ToolBar from '../../frames/appbar';
 import Card from '../../frames/card';
-import SessionCard from '../../frames/session-card';
 import Texto from '../../components/texto';
 
 const HomePage = () => {
@@ -186,9 +185,16 @@ const HomePage = () => {
             Height: '100%',
             minHeight: '75vh',
           }}>
-          <SessionCard>
+          <Stack
+            component='div'
+            direction='row'
+            id='session-card'
+            sx={{
+              // background: 'green',
+              marginX: '8vw',
+            }}>
             <Card />
-          </SessionCard>
+          </Stack>
         </Grid>
         <Grid
           item
@@ -196,7 +202,7 @@ const HomePage = () => {
           sx={{
             background: '#000007',
             position: 'relative',
-            minHeight: '40px',
+            minHeight: '25px',
           }}>
           {/* rodape */}
         </Grid>
