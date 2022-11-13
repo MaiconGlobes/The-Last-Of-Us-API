@@ -3,6 +3,7 @@ import { Stack } from '@mui/system';
 import Texto from '../../components/texto';
 
 const Card = () => {
+  const theme = useTheme();
   const ListaCards = [
     {
       versao: '11.11.18',
@@ -10,27 +11,24 @@ const Card = () => {
       titulo: 'List of all types of infected in The Last of Us',
       subtitulo:
         'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      imgUrl:
-        'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgQBIZG-7CXd8TTAEn1-icOaXkBAOy_82jQARujfhK2Ou7sZW5qqSeI00oA53l547JGFhj4l-5bKdgc2qvZLTLQV8bFJX0Ir6Eb5GQ5CVGOC00jYjW0qSGfYqBH5UxxTp5ekPnzJSFhFYDZc14xiiAf9Y3jnqU26YobQ6GBeWNet3Hw4H_s1AfJvxh8dQ/s852/9218F43E-9585-4B0E-B661-E0130738BA8E.jpeg',
+      imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/infected.jpeg',
     },
     {
-      versao: '11.11.18',
+      versao: '11.11.17',
       cateroria: 'arms',
       titulo:
         'Update the listing of existing weapons and accessories in The Last of Us',
       subtitulo:
         'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      imgUrl:
-        'https://www.mobygames.com/images/covers/l/538027-the-last-of-us-remastered-specter-weapon-playstation-4-front-cover.png',
+      imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/arms.jpeg',
     },
     {
-      versao: '11.11.18',
+      versao: '11.11.16',
       cateroria: 'groups',
       titulo: 'Combat group imagery implementations',
       subtitulo:
         'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      imgUrl:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx_7ItpX9lYrW9hKYGdrbvdZTLjWsFs8tNMw&usqp=CAU.jpg',
+       imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/groups.jpeg',
     },
   ];
   return (
@@ -48,11 +46,12 @@ const Card = () => {
           sx={{
             minHeight: '80px',
             width: '100%',
+            marginBottom: '20px',
           }}>
           <Texto
             styles={{
               // background: 'black',
-              fontSize: '1.25rem',
+              fontSize: '1.28rem',
               fontFamily: 'Roboto-regular',
               fontWeight: '550',
               color: '#e2e2e2',
@@ -70,7 +69,9 @@ const Card = () => {
             // background: 'lime',
             flexWrap: 'wrap',
             flexDirection: 'row',
-            width: '70%',
+            [theme.breakpoints.up('sm')]: {
+              width: '70%',
+            },
           }}>
           {ListaCards.map((element) => (
             <>
@@ -108,7 +109,7 @@ const Card = () => {
                     marginBottom: '20px',
                     width: '300px',
                   }}>
-                  {element.versao}/in {element.cateroria}
+                  {element.versao} in /{element.cateroria}
                 </Texto>
                 <Texto
                   styles={{
@@ -133,7 +134,9 @@ const Card = () => {
                     textAlign: 'left',
                     marginBottom: '20px',
                     minHeight: '30%',
-                    maxHeight: '30%',
+                    [theme.breakpoints.up('sm')]: {
+                      maxHeight: '40%',
+                    },
                   }}>
                   {element.subtitulo}
                 </Texto>
@@ -150,6 +153,7 @@ const Card = () => {
                     paddingBottom: '3px',
                     height: '30px',
                     width: '120px',
+                    cursor: 'no-drop',
                     '&:active': {
                       background: '#C4180B',
                       border: '#bd1408 1px solid',

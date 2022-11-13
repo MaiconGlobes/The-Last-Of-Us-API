@@ -43,8 +43,7 @@ const HomePage = () => {
                 height: '100%',
               },
             }}
-            src='https://images8.alphacoders.com/532/thumb-1920-532407.jpg'
-            // src='../../assets/img/capa-site.jpg'
+            src='https://thelastofusapi.azurewebsites.net/img/capa-site.jpg'
           />
         </Grid>
         <Grid
@@ -55,6 +54,7 @@ const HomePage = () => {
             minHeight: '100vh',
           }}>
           <Box
+            className='presentation'
             component='div'
             sx={{
               height: '250px',
@@ -199,6 +199,7 @@ const HomePage = () => {
         <Grid
           item
           columns={1}
+          className='footer'
           sx={{
             background: '#000007',
             position: 'relative',
