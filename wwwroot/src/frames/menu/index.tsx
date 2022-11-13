@@ -1,6 +1,6 @@
 import { Box, Link, useTheme } from '@mui/material';
 import { useRef } from 'react';
-import Texto from '../Texto';
+import Texto from '../../components/texto';
 
 const Menu = () => {
   const theme = useTheme();

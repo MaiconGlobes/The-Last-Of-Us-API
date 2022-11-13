@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from 'react';
-import { Box, Button, Grid, Typography, useTheme } from '@mui/material';
-import ToolBar from '../../components/appbar';
-import Card from '../../components/card';
-import SessionCard from '../../components/session-card';
-import Texto from '../../components/Texto';
+import { Box, Button, Grid, Stack, Typography, useTheme } from '@mui/material';
+import ToolBar from '../../frames/appbar';
+import Card from '../../frames/card';
+import Texto from '../../components/texto';
 
 const HomePage = () => {
   const theme = useTheme();
@@ -44,8 +43,7 @@ const HomePage = () => {
                 height: '100%',
               },
             }}
-            src='https://images8.alphacoders.com/532/thumb-1920-532407.jpg'
-            // src='../../assets/img/capa-site.jpg'
+            src='https://thelastofusapi.azurewebsites.net/img/capa-site.jpg'
           />
         </Grid>
         <Grid
@@ -56,6 +54,7 @@ const HomePage = () => {
             minHeight: '100vh',
           }}>
           <Box
+            className='presentation'
             component='div'
             sx={{
               height: '250px',
@@ -186,17 +185,25 @@ const HomePage = () => {
             Height: '100%',
             minHeight: '75vh',
           }}>
-          <SessionCard>
+          <Stack
+            component='div'
+            direction='row'
+            id='session-card'
+            sx={{
+              // background: 'green',
+              marginX: '8vw',
+            }}>
             <Card />
-          </SessionCard>
+          </Stack>
         </Grid>
         <Grid
           item
           columns={1}
+          className='footer'
           sx={{
             background: '#000007',
             position: 'relative',
-            minHeight: '40px',
+            minHeight: '25px',
           }}>
           {/* rodape */}
         </Grid>
