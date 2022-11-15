@@ -35,15 +35,15 @@ const Card = () => {
 
   const ListaMenu = [
     {
-      descricao: 'Link aqui...',
+      descricao: 'Last Update',
       link: '#',
     },
     {
-      descricao: 'Link aqui...',
+       descricao: 'Development curiosities',
       link: '#',
     },
     {
-      descricao: 'Link aqui...',
+       descricao: 'Tools',
       link: '#',
     },
   ];
