@@ -3,7 +3,7 @@ import { Stack } from '@mui/system';
 import Divisor from '../../components/divisor';
 import Texto from '../../components/texto';
 
-const CardFrame = () => {
+const DocumentationFrame = () => {
   const theme = useTheme();
   const ListaCards = [
     {
@@ -35,15 +35,27 @@ const CardFrame = () => {
 
   const ListaMenu = [
     {
-      descricao: 'Last Update',
+      descricao: 'Introduction',
       link: '#',
     },
     {
-      descricao: 'Development curiosities',
+      descricao: 'REST API',
       link: '#',
     },
     {
-      descricao: 'Tools',
+      descricao: 'Authentication',
+      link: '#',
+    },
+    {
+      descricao: 'Versioning',
+      link: '#',
+    },
+    {
+      descricao: 'Endpoints',
+      link: '#',
+    },
+    {
+      descricao: 'Pagination',
       link: '#',
     },
   ];
@@ -59,7 +71,7 @@ const CardFrame = () => {
           width: '80%',
         }}>
         <Stack
-          className='title-card'
+          className='documentation-card'
           sx={{
             minHeight: '80px',
             width: '100%',
@@ -76,12 +88,12 @@ const CardFrame = () => {
               textTransform: 'uppercase',
               marginTop: '20px',
             }}>
-            Last updates
+            Documentation
           </Texto>
         </Stack>
 
         <Stack
-          className='body-card-item'
+          className='body-documentation-item'
           sx={{
             flexWrap: 'wrap',
             flexDirection: 'row',
@@ -89,7 +101,7 @@ const CardFrame = () => {
               width: '100%',
             },
           }}>
-          {ListaCards.map((element) => (
+          {/* {ListaCards.map((element) => (
             <>
               <Stack
                 className='img-card'
@@ -183,11 +195,11 @@ const CardFrame = () => {
                 </Button>
               </Stack>
             </>
-          ))}
+          ))} */}
         </Stack>
       </Stack>
       <Stack
-        spacing={-1}
+        spacing={2}
         sx={{
           // background: 'gray',
           width: '20%',
@@ -203,7 +215,7 @@ const CardFrame = () => {
         <Box
           component='div'
           sx={{
-            background: '#11111c',
+            background: '#181826',
             borderLeft: '1.5px solid #919191',
             borderRadius: '3px',
             minHeight: '20%',
@@ -249,4 +261,4 @@ const CardFrame = () => {
   );
 };
 
-export default CardFrame;
+export default DocumentationFrame;
