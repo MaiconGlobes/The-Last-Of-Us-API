@@ -72,3 +72,7 @@ body {
   border-color: #3b4151;
   color: #fff;
 }
+
+.swagger-ui .opblock.opblock-get .opblock-summary {
+   border-color: #15385a;
+}

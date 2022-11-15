@@ -4,11 +4,11 @@ using AutoMapper;
 
 namespace API_REST_The_Last_Of_Us.Src.Models.Profiles
 {
-   public class SobreProfile : Profile
-   {
-      public SobreProfile()
-      {
-         CreateMap<SobreResponseDto, SobreModel>();
-      }
-   }
+    public class SobreProfile : Profile
+    {
+        public SobreProfile()
+        {
+            CreateMap<SobreResponseDto, SobreModel>();
+        }
+    }
 }

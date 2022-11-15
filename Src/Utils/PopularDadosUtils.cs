@@ -4,22 +4,22 @@ using System.Collections.Generic;
 
 namespace API_REST_The_Last_Of_Us.Src.Utils
 {
-   public class PopularDadosUtils
-   {
-      private static PopularDadosUtils FInstancia { get; set; }
+    public class PopularDadosUtils
+    {
+        private static PopularDadosUtils FInstancia { get; set; }
 
-      public static PopularDadosUtils Instancia()
-      {
-         if (FInstancia == null)
-         {
-            FInstancia = new PopularDadosUtils();
-         }
-         return FInstancia;
-      }
+        public static PopularDadosUtils Instancia()
+        {
+            if (FInstancia == null)
+            {
+                FInstancia = new PopularDadosUtils();
+            }
+            return FInstancia;
+        }
 
-      public IList<SobreModel> PopularSobre()
-      {
-         return new List<SobreModel>
+        public IList<SobreModel> PopularSobre()
+        {
+            return new List<SobreModel>
          {
             new SobreModel {
                Id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
@@ -36,11 +36,11 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
                Engine = "Havok",
             }
          };
-      }
+        }
 
-      public IList<LancamentoModel> PopularLancamento()
-      {
-         return new List<LancamentoModel>
+        public IList<LancamentoModel> PopularLancamento()
+        {
+            return new List<LancamentoModel>
          {
             new LancamentoModel
             {
@@ -57,11 +57,11 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
                Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
             }
          };
-      }
+        }
 
-      public IList<DesignerModel> PopularDesigner()
-      {
-         return new List<DesignerModel>
+        public IList<DesignerModel> PopularDesigner()
+        {
+            return new List<DesignerModel>
          {
             new DesignerModel
             {
@@ -99,11 +99,11 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
                Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
             }
          };
-      }
+        }
 
-      public IList<PlataformaModel> PopularPlataforma()
-      {
-         return new List<PlataformaModel>
+        public IList<PlataformaModel> PopularPlataforma()
+        {
+            return new List<PlataformaModel>
          {
             new PlataformaModel
             {
@@ -127,6 +127,6 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
                Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
             },
          };
-      }
-   }
+        }
+    }
 }

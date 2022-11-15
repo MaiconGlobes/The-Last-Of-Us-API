@@ -2,29 +2,29 @@
 
 namespace API_REST_The_Last_Of_Us.Src.Services
 {
-   public class SobreService
-   {
-      public Contexto Fcontexto { get; set; }
-      private SobreRepositories FSobreRepositories { get; set; }
+    public class SobreService
+    {
+        public Contexto Fcontexto { get; set; }
+        private SobreRepositories FSobreRepositories { get; set; }
 
-      public SobreService()
-      {
-         Fcontexto = new Contexto();
-         FSobreRepositories = new SobreRepositories();
-      }
+        public SobreService()
+        {
+            Fcontexto = new Contexto();
+            FSobreRepositories = new SobreRepositories();
+        }
 
-      public (byte Status, object Json) BuscarTodosRegistros()
-      {
-         try
-         {
-            var listaDados = FSobreRepositories.BuscarTodosRegistros();
+        public (byte Status, object Json) BuscarTodosRegistros()
+        {
+            try
+            {
+                var listaDados = FSobreRepositories.BuscarTodosRegistros();
 
-            return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(listaDados));
-         }
-         catch
-         {
-            return ((byte)EnumUtils.StatusProc.ErroServidor, null);
-         }
-      }
-   }
+                return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(listaDados));
+            }
+            catch
+            {
+                return ((byte)EnumUtils.StatusProc.ErroServidor, null);
+            }
+        }
+    }
 }

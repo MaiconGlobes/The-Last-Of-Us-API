@@ -180,7 +180,7 @@ const HomePage = () => {
           item
           columns={1}
           sx={{
-            background: '#0E0E19',
+             background: 'rgb(18 18 32)',
             position: 'relative',
             Height: '100%',
             minHeight: '75vh',
