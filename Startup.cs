@@ -68,6 +68,7 @@ namespace The_Last_Of_Us_API
          {
             options.SwaggerEndpoint("../swagger/v1/swagger.json", "The Last Of Us API v1");
             options.DefaultModelsExpandDepth(-1);
+            options.InjectStylesheet("/swagger-ui/custom.css"); 
          });
 
          app.UseHttpsRedirection();
