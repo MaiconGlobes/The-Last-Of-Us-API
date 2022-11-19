@@ -19,7 +19,7 @@ const IntroductionFrame = () => {
         </Texto>
         <Texto
           styles={{
-            fontSize: '0.75rem',
+            fontSize: '0.9rem',
             fontFamily: 'Roboto-light',
             fontWeight: '100',
             color: '#b1b1b1',
@@ -66,10 +66,11 @@ const IntroductionFrame = () => {
           using Lorem Ipsum is that it has a more-or-less normal distribution of
           letters, as opposed to using 'Content here, content here', making it
           look like readable English. Many desktop publishing packages and web
-          page editors now use Lorem Ipsum as their default model text, and a
-          search for 'lorem ipsum' will uncover many web sites still in their
-          infancy. Various versions have evolved over the years, sometimes by
-          accident, sometimes on purpose (injected humour and the like).
+          page editors now use Lorem Ipsum as their default model text.
+          <br /> and a search for 'lorem ipsum' will uncover many web sites
+          still in their infancy. Various versions have evolved over the years,
+          sometimes by accident, sometimes on purpose (injected humour and the
+          like).
         </Texto>
       </Box>
     </>
