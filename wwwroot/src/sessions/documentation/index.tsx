@@ -76,11 +76,12 @@ const DocumentationSession = () => {
           <Stack
             className='body-documentation-item'
             sx={{
+              // background: 'red',
               flexWrap: 'wrap',
               flexDirection: 'row',
-              width: '90%',
+              width: '89%',
               [theme.breakpoints.down('md')]: {
-                // width: '100%',
+                width: '87.5%',
               },
             }}>
             <IntroductionFrame />
