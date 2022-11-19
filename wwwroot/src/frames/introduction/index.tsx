@@ -7,24 +7,25 @@ const IntroductionFrame = () => {
       <Box className='introduction-summary'>
         <Texto
           styles={{
-            fontSize: '1.2rem',
+            fontSize: '1.4rem',
             fontFamily: 'Roboto-regular',
-            fontWeight: '500',
-            color: '#ffffff',
-            textTransform: 'none',
-            padding: '0 5% 0 1%',
-            margin: '0 0 10px 0',
+            fontWeight: '400',
+            color: '#e2e2e2',
+            lineHeight: '1.8rem',
+            textAlign: 'left',
+            marginBottom: '20px',
           }}>
           Introduction
         </Texto>
         <Texto
           styles={{
-            fontSize: '0.875rem',
+            fontSize: '0.75rem',
             fontFamily: 'Roboto-light',
             fontWeight: '100',
-            color: '#ffffff',
-            textTransform: 'none',
-            padding: '0 5% 3% 1%',
+            color: '#b1b1b1',
+            lineHeight: '1rem',
+            textAlign: 'left',
+            marginBottom: '20px',
           }}>
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form, by injected
@@ -40,24 +41,25 @@ const IntroductionFrame = () => {
         </Texto>
         <Texto
           styles={{
-            fontSize: '1.2rem',
+            fontSize: '1.4rem',
             fontFamily: 'Roboto-regular',
-            fontWeight: '500',
-            color: '#ffffff',
-            textTransform: 'none',
-            padding: '0 5% 0 1%',
-            margin: '10px 0 10px 0',
+            fontWeight: '400',
+            color: '#e2e2e2',
+            lineHeight: '1.8rem',
+            textAlign: 'left',
+            marginBottom: '20px',
           }}>
           REST API
         </Texto>
         <Texto
           styles={{
-            fontSize: '0.875rem',
+            fontSize: '0.75rem',
             fontFamily: 'Roboto-light',
             fontWeight: '100',
-            color: '#ffffff',
-            textTransform: 'none',
-            padding: '0 5% 3% 1%',
+            color: '#b1b1b1',
+            lineHeight: '1rem',
+            textAlign: 'left',
+            marginBottom: '20px',
           }}>
           It is a long established fact that a reader will be distracted by the
           readable content of a page when looking at its layout. The point of

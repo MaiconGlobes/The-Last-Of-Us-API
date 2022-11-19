@@ -78,8 +78,9 @@ const DocumentationSession = () => {
             sx={{
               flexWrap: 'wrap',
               flexDirection: 'row',
+              width: '90%',
               [theme.breakpoints.down('md')]: {
-                width: '100%',
+                // width: '100%',
               },
             }}>
             <IntroductionFrame />
