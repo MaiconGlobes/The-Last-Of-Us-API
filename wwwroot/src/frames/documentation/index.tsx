@@ -5,31 +5,132 @@ import Texto from '../../components/texto';
 
 const DocumentationFrame = () => {
   const theme = useTheme();
-  const ListaCards = [
+  const Paragrafo = () => {
+    return <br></br>;
+  };
+  const ListaConteudo = [
     {
-      versao: '11.11.18',
-      cateroria: 'infected',
-      titulo: 'List of all types of infected in The Last of Us',
-      subtitulo:
-        'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/infected.jpeg',
+      titulo: 'Introduction',
+      descricao: `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type 
+        and scrambled it to make a type specimen book. It has survived not only five centuries, 
+        but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release 
+        of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
     },
     {
-      versao: '11.11.17',
-      cateroria: 'arms',
-      titulo:
-        'Update the listing of existing weapons and accessories in The Last of Us',
-      subtitulo:
-        'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/arms.jpeg',
+      titulo: 'REST API',
+      descricao: `Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industrys standard dummy text ever
+      since the 1500s, when an unknown printer took a galley of type and
+      scrambled it to make a type specimen book. It has survived not only
+      five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with
+      the release of Letraset sheets containing Lorem Ipsum passages, and
+      more recently with desktop publishing software like Aldus PageMaker
+      including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of
+      the printing and typesetting industry.
+      Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industrys standard dummy text ever
+      since the 1500s, when an unknown printer took a galley of type and
+      scrambled it to make a type specimen book. It has survived not only
+      five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with
+      the release of Letraset sheets containing Lorem Ipsum passages, and
+      more recently with desktop publishing software like Aldus PageMaker
+      including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of
+      the printing and typesetting industry.`,
     },
     {
-      versao: '11.11.16',
-      cateroria: 'groups',
-      titulo: 'Combat group imagery implementations',
-      subtitulo:
-        'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/groups.jpeg',
+      titulo: 'Authentication',
+      descricao: `Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industrys standard dummy text ever
+      since the 1500s, when an unknown printer took a galley of type and
+      scrambled it to make a type specimen book. It has survived not only
+      five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with
+      the release of Letraset sheets containing Lorem Ipsum passages, and
+      more recently with desktop publishing software like Aldus PageMaker
+      including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of
+      the printing and typesetting industry.
+      Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industrys standard dummy text ever
+      since the 1500s, when an unknown printer took a galley of type and
+      scrambled it to make a type specimen book. It has survived not only
+      five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with
+      the release of Letraset sheets containing Lorem Ipsum passages, and
+      more recently with desktop publishing software like Aldus PageMaker
+      including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of
+      the printing and typesetting industry.`,
+    },
+    {
+      titulo: 'Versioning',
+      descricao: `Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industrys standard dummy text ever
+      since the 1500s, when an unknown printer took a galley of type and
+      scrambled it to make a type specimen book. It has survived not only
+      five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with
+      the release of Letraset sheets containing Lorem Ipsum passages, and
+      more recently with desktop publishing software like Aldus PageMaker
+      including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of
+      the printing and typesetting industry.
+      Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industrys standard dummy text ever
+      since the 1500s, when an unknown printer took a galley of type and
+      scrambled it to make a type specimen book. It has survived not only
+      five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with
+      the release of Letraset sheets containing Lorem Ipsum passages, and
+      more recently with desktop publishing software like Aldus PageMaker
+      including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of
+      the printing and typesetting industry.`,
+    },
+    {
+      titulo: 'Endpoints',
+      descricao: `Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industrys standard dummy text ever
+      since the 1500s, when an unknown printer took a galley of type and
+      scrambled it to make a type specimen book. It has survived not only
+      five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with
+      the release of Letraset sheets containing Lorem Ipsum passages, and
+      more recently with desktop publishing software like Aldus PageMaker
+      including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of
+      the printing and typesetting industry.
+      Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industrys standard dummy text ever
+      since the 1500s, when an unknown printer took a galley of type and
+      scrambled it to make a type specimen book. It has survived not only
+      five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with
+      the release of Letraset sheets containing Lorem Ipsum passages, and
+      more recently with desktop publishing software like Aldus PageMaker
+      including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of
+      the printing and typesetting industry.`,
+    },
+    {
+      titulo: 'Lorem Ipsum',
+      descricao: `Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industrys standard dummy text ever
+      since the 1500s, when an unknown printer took a galley of type and
+      scrambled it to make a type specimen book. It has survived not only
+      five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with
+      the release of Letraset sheets containing Lorem Ipsum passages, and
+      more recently with desktop publishing software like Aldus PageMaker
+      including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of
+      the printing and typesetting industry.
+      Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industrys standard dummy text ever
+      since the 1500s, when an unknown printer took a galley of type and
+      scrambled it to make a type specimen book. It has survived not only
+      five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with
+      the release of Letraset sheets containing Lorem Ipsum passages, and
+      more recently with desktop publishing software like Aldus PageMaker
+      including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of
+      the printing and typesetting industry.`,
     },
   ];
 
@@ -95,107 +196,40 @@ const DocumentationFrame = () => {
         <Stack
           className='body-documentation-item'
           sx={{
+            // background: 'red',
             flexWrap: 'wrap',
             flexDirection: 'row',
-            [theme.breakpoints.down('md')]: {
-              width: '100%',
-            },
+            width: '90%',
+            [theme.breakpoints.down('md')]: {},
           }}>
-          {/* {ListaCards.map((element) => (
+          {ListaConteudo.map((element) => (
             <>
-              <Stack
-                className='img-card'
-                sx={{
-                  // background: 'red',
-                  marginBottom: '50px',
+              <Texto
+                styles={{
+                  fontSize: '1.4rem',
+                  fontFamily: 'Roboto-regular',
+                  fontWeight: '400',
+                  color: '#e2e2e2',
+                  lineHeight: '1.8rem',
+                  textAlign: 'left',
+                  marginBottom: '20px',
                 }}>
-                <Box
-                  component='img'
-                  sx={{
-                    objectFit: 'cover',
-                    height: '18vw',
-                    width: '18vw',
-                  }}
-                  src={element.imgUrl}
-                />
-              </Stack>
-              <Stack
-                className='infos-card'
-                sx={{
-                  // background: 'blue',
-                  margin: '0 0 50px 15px',
-                  width: '60%',
+                {element.titulo}
+              </Texto>
+              <Texto
+                styles={{
+                  fontSize: '0.75rem',
+                  fontFamily: 'Roboto-light',
+                  fontWeight: '100',
+                  color: '#b1b1b1',
+                  lineHeight: '1rem',
+                  textAlign: 'left',
+                  marginBottom: '20px',
                 }}>
-                <Texto
-                  styles={{
-                    fontSize: '0.875rem',
-                    fontFamily: 'Roboto-regular',
-                    fontWeight: '300',
-                    color: '#e2e2e2',
-                    lineHeight: '1rem',
-                    textAlign: 'left',
-                    marginBottom: '20px',
-                    width: '300px',
-                  }}>
-                  {element.versao} in /{element.cateroria}
-                </Texto>
-                <Texto
-                  styles={{
-                    fontSize: '1.4rem',
-                    fontFamily: 'Roboto-regular',
-                    fontWeight: '400',
-                    color: '#e2e2e2',
-                    lineHeight: '1.8rem',
-                    textAlign: 'left',
-                    marginBottom: '20px',
-                    // width: '300px',
-                  }}>
-                  {element.titulo}
-                </Texto>
-                <Texto
-                  styles={{
-                    fontSize: '0.75rem',
-                    fontFamily: 'Roboto-light',
-                    fontWeight: '200',
-                    color: '#b1b1b1',
-                    lineHeight: '1rem',
-                    textAlign: 'left',
-                    marginBottom: '20px',
-                    minHeight: '30%',
-                    [theme.breakpoints.up('sm')]: {
-                      maxHeight: '40%',
-                    },
-                  }}>
-                  {element.subtitulo}
-                </Texto>
-                <Button
-                  type='button'
-                  variant='contained'
-                  sx={{
-                    background: '#C4180B',
-                    border: '#bd1408 1px solid',
-                    color: '#e2e2e2',
-                    fontWeight: '100',
-                    textAlign: 'center',
-                    textTransform: 'capitalize',
-                    paddingBottom: '3px',
-                    height: '30px',
-                    width: '120px',
-                    cursor: 'no-drop',
-                    '&:active': {
-                      background: '#C4180B',
-                      border: '#bd1408 1px solid',
-                    },
-                    '&:hover': {
-                      background: '#d1190c',
-                      border: '#bd1408 1px solid',
-                    },
-                  }}>
-                  Read more
-                </Button>
-              </Stack>
+                {element.descricao}
+              </Texto>
             </>
-          ))} */}
+          ))}
         </Stack>
       </Stack>
       <Stack

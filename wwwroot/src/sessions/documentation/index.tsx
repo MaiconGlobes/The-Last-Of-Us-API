@@ -1,5 +1,4 @@
 import { Grid, Stack } from '@mui/material';
-import CardFrame from '../../frames/card';
 import DocumentationFrame from '../../frames/documentation';
 
 const DocumentationSession = () => {
@@ -9,7 +8,7 @@ const DocumentationSession = () => {
       columns={1}
       className='documentation-session'
       sx={{
-        background: '#1b1b2a',
+        background: 'rgb(18 18 32)',
         position: 'relative',
         Height: '100%',
         minHeight: '75vh',
