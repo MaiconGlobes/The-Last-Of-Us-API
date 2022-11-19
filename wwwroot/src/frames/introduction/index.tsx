@@ -23,7 +23,7 @@ const IntroductionFrame = () => {
             fontFamily: 'Roboto-light',
             fontWeight: '100',
             color: '#b1b1b1',
-            lineHeight: '1rem',
+            lineHeight: '1.15rem',
             textAlign: 'left',
             marginBottom: '20px',
           }}>
@@ -31,13 +31,16 @@ const IntroductionFrame = () => {
           the majority have suffered alteration in some form, by injected
           humour, or randomised words which don't look even slightly believable.
           If you are going to use a passage of Lorem Ipsum, you need to be sure
-          there isn't anything embarrassing hidden in the middle of text. All
-          the Lorem Ipsum generators on the Internet tend to repeat predefined
-          chunks as necessary, making this the first true generator on the
-          Internet. It uses a dictionary of over 200 Latin words, combined with
-          a handful of model sentence structures, to generate Lorem Ipsum which
-          looks reasonable. The generated Lorem Ipsum is therefore always free
-          from repetition, injected humour, or non-characteristic words etc.
+          there isn't anything embarrassing hidden in the middle of text. <br />{' '}
+          All the Lorem Ipsum generators on the Internet tend to repeat
+          predefined chunks as necessary, making this the first true generator
+          on the Internet. It uses a dictionary of over 200 Latin words,
+          combined with a handful of model sentence structures, to generate
+          Lorem Ipsum which looks reasonable. <br />
+          <br /> The generated Lorem Ipsum is therefore always free from
+          repetition, injected humour, or non-characteristic words etc, or
+          non-characteristic words etc, over 200 Latin words a passage of Lorem
+          Ipsum.
         </Texto>
         <Texto
           styles={{
@@ -53,11 +56,11 @@ const IntroductionFrame = () => {
         </Texto>
         <Texto
           styles={{
-            fontSize: '0.75rem',
+            fontSize: '0.9rem',
             fontFamily: 'Roboto-light',
             fontWeight: '100',
             color: '#b1b1b1',
-            lineHeight: '1rem',
+            lineHeight: '1.15rem',
             textAlign: 'left',
             marginBottom: '20px',
           }}>
