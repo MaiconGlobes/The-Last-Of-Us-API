@@ -142,10 +142,10 @@ const CardFrame = () => {
                 </Texto>
                 <Texto
                   styles={{
-                    fontSize: '0.75rem',
+                    fontSize: '0.82rem',
                     fontFamily: 'Roboto-light',
                     fontWeight: '200',
-                    color: '#b1b1b1',
+                    color: '#bbbbbb',
                     lineHeight: '1rem',
                     textAlign: 'left',
                     marginBottom: '20px',
@@ -228,7 +228,7 @@ const CardFrame = () => {
                 sx={{
                   fontSize: '0.875rem',
                   fontFamily: 'Roboto-regular',
-                  color: '#9b9b9b',
+                  color: '#bbbbbb',
                   textTransform: 'capitalize',
                   textDecoration: 'none',
                   paddingLeft: '5px',

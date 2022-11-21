@@ -1,7 +1,9 @@
 import { Box, Grid, Link, Stack, useTheme } from '@mui/material';
 import Divisor from '../../components/divisor';
 import Texto from '../../components/texto';
-import IntroductionFrame from '../../frames/introduction';
+import AuthenticationFrame from '../../frames/doc-authentication';
+import IntroductionFrame from '../../frames/doc-introduction';
+import VersioningFrame from '../../frames/doc-versioning';
 
 const DocumentationSession = () => {
   const theme = useTheme();
@@ -83,6 +85,8 @@ const DocumentationSession = () => {
               },
             }}>
             <IntroductionFrame />
+            <AuthenticationFrame />
+            <VersioningFrame />
           </Stack>
         </Stack>
         <Stack
@@ -125,7 +129,7 @@ const DocumentationSession = () => {
                   sx={{
                     fontSize: '0.875rem',
                     fontFamily: 'Roboto-regular',
-                    color: '#9b9b9b',
+                    color: '#bbbbbb',
                     textTransform: 'capitalize',
                     textDecoration: 'none',
                     paddingLeft: '5px',

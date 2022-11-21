@@ -22,7 +22,7 @@ const IntroductionFrame = () => {
             fontSize: '0.875rem',
             fontFamily: 'Roboto-light',
             fontWeight: '100',
-            color: '#ffffff',
+            color: '#bbbbbb',
             textTransform: 'none',
             padding: '0 5% 3% 1%',
           }}>
@@ -55,7 +55,7 @@ const IntroductionFrame = () => {
             fontSize: '0.875rem',
             fontFamily: 'Roboto-light',
             fontWeight: '100',
-            color: '#ffffff',
+            color: '#bbbbbb',
             textTransform: 'none',
             padding: '0 5% 3% 1%',
           }}>

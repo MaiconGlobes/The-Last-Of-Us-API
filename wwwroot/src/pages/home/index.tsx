@@ -1,9 +1,9 @@
 import { Grid } from '@mui/material';
-import UpdatesSession from '../../sessions/updates';
 import IntroductionSession from '../../sessions/introduction';
 import HeaderSession from '../../sessions/header';
 import FooterSession from '../../sessions/footer';
 import DocumentationSession from '../../sessions/documentation';
+import UpdatesSession from '../../sessions/updates';
 
 const HomePage = () => {
   return (
