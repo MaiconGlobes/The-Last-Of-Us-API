@@ -8,7 +8,7 @@ const UpdatesSession = () => {
       columns={1}
       className='card-session'
       sx={{
-        background: 'rgb(18 18 32)',
+        background: '#0E0E19',
         position: 'relative',
         Height: '100%',
         minHeight: '75vh',

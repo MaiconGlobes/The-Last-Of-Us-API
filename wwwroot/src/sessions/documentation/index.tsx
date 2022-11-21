@@ -35,7 +35,7 @@ const DocumentationSession = () => {
       columns={1}
       className='documentation-session'
       sx={{
-        background: '#1b1b2a',
+        background: 'rgb(18 18 32)',
         position: 'relative',
         Height: '100%',
         minHeight: '75vh',
@@ -78,10 +78,12 @@ const DocumentationSession = () => {
           <Stack
             className='body-documentation-item'
             sx={{
+              // background: 'red',
               flexWrap: 'wrap',
               flexDirection: 'row',
+              width: '89%',
               [theme.breakpoints.down('md')]: {
-                width: '100%',
+                width: '87.5%',
               },
             }}>
             <IntroductionFrame />
