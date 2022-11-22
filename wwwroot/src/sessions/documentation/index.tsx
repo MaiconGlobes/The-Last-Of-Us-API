@@ -1,32 +1,28 @@
 import { Box, Grid, Link, Stack, useTheme } from '@mui/material';
+import { useRef } from 'react';
 import Divisor from '../../components/divisor';
 import Texto from '../../components/texto';
 import AuthenticationFrame from '../../frames/doc-authentication';
 import IntroductionFrame from '../../frames/doc-introduction';
-import VersioningFrame from '../../frames/doc-versioning';
 
 const DocumentationSession = () => {
   const theme = useTheme();
   const ListaMenu = [
     {
       descricao: 'Introduction',
-      link: '#introduction-summary',
+      link: '#',
     },
     {
       descricao: 'Authentication',
-      link: '#authentication-summary',
-    },
-    {
-      descricao: 'Versioning',
-      link: '#versioning-summary',
+      link: '#',
     },
     {
       descricao: 'Endpoints',
-      link: '#endpoints-summary',
+      link: '#',
     },
     {
-      descricao: 'Pagination',
-      link: '#pagination-summary',
+      descricao: 'API Testing',
+      link: '#',
     },
   ];
   return (
@@ -78,7 +74,6 @@ const DocumentationSession = () => {
           <Stack
             className='body-documentation-item'
             sx={{
-              // background: 'red',
               flexWrap: 'wrap',
               flexDirection: 'row',
               width: '89%',
@@ -88,7 +83,6 @@ const DocumentationSession = () => {
             }}>
             <IntroductionFrame />
             <AuthenticationFrame />
-            <VersioningFrame />
           </Stack>
         </Stack>
         <Stack
@@ -132,7 +126,7 @@ const DocumentationSession = () => {
                     fontSize: '0.875rem',
                     fontFamily: 'Roboto-regular',
                     color: '#bbbbbb',
-                    textTransform: 'capitalize',
+                    textTransform: 'none',
                     textDecoration: 'none',
                     paddingLeft: '5px',
                     cursor: 'pointer',
