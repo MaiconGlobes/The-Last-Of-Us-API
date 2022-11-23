@@ -19,6 +19,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
         {
             return FContexto.FRASE.OrderBy(frase => frase.Id).ToList();
         }
+
         public List<FraseModel> BuscarRegistroFrase(string AFrase)
         {
             return FContexto.FRASE.OrderBy(frase => frase.Id).Where(personagem => personagem.Descricao.ToLower().Contains(AFrase)).ToList();
