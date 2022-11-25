@@ -41,7 +41,6 @@ const IntroductionSession = () => {
           minHeight: '100vh',
         }}>
         <Box
-          className='introduction'
           component='div'
           sx={{
             height: '250px',

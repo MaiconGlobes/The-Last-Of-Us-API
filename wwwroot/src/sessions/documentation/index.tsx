@@ -1,9 +1,7 @@
 import { Box, Grid, Link, Stack, useTheme } from '@mui/material';
-import { useRef } from 'react';
 import Divisor from '../../components/divisor';
 import Texto from '../../components/texto';
-import AuthenticationFrame from '../../frames/doc-authentication';
-import IntroductionFrame from '../../frames/doc-introduction';
+import IntroductionFrame from '../../frames/docs/introduction';
 
 const DocumentationSession = () => {
   const theme = useTheme();
@@ -78,7 +76,6 @@ const DocumentationSession = () => {
               },
             }}>
             <IntroductionFrame />
-            <AuthenticationFrame />
           </Stack>
         </Stack>
         <Stack

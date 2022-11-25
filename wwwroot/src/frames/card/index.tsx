@@ -39,10 +39,6 @@ const CardFrame = () => {
 
   const ListaMenu = [
     {
-      descricao: 'Last Update',
-      link: 'card-session',
-    },
-    {
       descricao: 'Documentation',
       link: 'documentation-session',
     },
@@ -59,15 +55,12 @@ const CardFrame = () => {
   return (
     <>
       <Stack
-        className='body-card-main'
         sx={{
-          // background: '#727272',
           height: '100%',
           minHeight: '75vh',
           width: '80%',
         }}>
         <Stack
-          className='title-card'
           sx={{
             minHeight: '80px',
             width: '100%',
@@ -89,7 +82,6 @@ const CardFrame = () => {
         </Stack>
 
         <Stack
-          className='body-card-item'
           sx={{
             flexWrap: 'wrap',
             flexDirection: 'row',
@@ -100,7 +92,6 @@ const CardFrame = () => {
           {ListaCards.map((element) => (
             <>
               <Stack
-                className='img-card'
                 sx={{
                   // background: 'red',
                   marginBottom: '50px',
@@ -116,9 +107,7 @@ const CardFrame = () => {
                 />
               </Stack>
               <Stack
-                className='infos-card'
                 sx={{
-                  // background: 'blue',
                   margin: '0 0 50px 15px',
                   width: '60%',
                 }}>
