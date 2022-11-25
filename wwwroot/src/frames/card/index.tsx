@@ -4,6 +4,10 @@ import Divisor from '../../components/divisor';
 import Texto from '../../components/texto';
 
 const CardFrame = () => {
+  function RolarSessionCard(AClassname: string) {
+    console.log(AClassname);
+    document.getElementById(AClassname)?.scrollIntoView();
+  }
   const theme = useTheme();
   const ListaCards = [
     {
@@ -36,15 +40,19 @@ const CardFrame = () => {
   const ListaMenu = [
     {
       descricao: 'Last Update',
-      link: '#',
+      link: 'card-session',
+    },
+    {
+      descricao: 'Documentation',
+      link: 'documentation-session',
     },
     {
       descricao: 'Development curiosities',
-      link: '#',
+      link: 'development-curiosities-session',
     },
     {
       descricao: 'Tools',
-      link: '#',
+      link: 'footer-session',
     },
   ];
 
@@ -224,7 +232,6 @@ const CardFrame = () => {
           {ListaMenu.map((element) => (
             <>
               <Link
-                href='#'
                 sx={{
                   fontSize: '0.875rem',
                   fontFamily: 'Roboto-regular',
@@ -237,7 +244,8 @@ const CardFrame = () => {
                     fontSize: '0.9rem',
                     textDecoration: 'underline',
                   },
-                }}>
+                }}
+                onClick={() => RolarSessionCard(element.link)}>
                 {element.descricao}
               </Link>
               <Divisor />

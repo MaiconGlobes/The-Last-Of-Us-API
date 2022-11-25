@@ -29,7 +29,6 @@ const DocumentationSession = () => {
     <Grid
       item
       columns={1}
-      className='documentation-session'
       sx={{
         background: 'rgb(18 18 32)',
         position: 'relative',
@@ -39,19 +38,17 @@ const DocumentationSession = () => {
       <Stack
         component='div'
         direction='row'
-        id='session-card'
+        id='documentation-session'
         sx={{
           marginX: '8vw',
         }}>
         <Stack
-          className='body-card-main'
           sx={{
             height: '100%',
             minHeight: '75vh',
             width: '80%',
           }}>
           <Stack
-            className='documentation-card'
             sx={{
               minHeight: '80px',
               width: '100%',
@@ -72,7 +69,6 @@ const DocumentationSession = () => {
           </Stack>
 
           <Stack
-            className='body-documentation-item'
             sx={{
               flexWrap: 'wrap',
               flexDirection: 'row',

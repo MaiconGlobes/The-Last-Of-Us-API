@@ -5,7 +5,7 @@ const FooterSession = () => {
     <Grid
       item
       columns={1}
-      className='footer-session'
+      id='footer-session'
       sx={{
         background: '#000007',
         position: 'relative',
