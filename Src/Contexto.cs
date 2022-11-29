@@ -75,7 +75,8 @@ namespace API_REST_The_Last_Of_Us.Src.Services
             modelBuilder.Entity<LancamentoModel>().HasData(PopularDadosUtils.Instancia().PopularLancamento());
             modelBuilder.Entity<PlataformaModel>().HasData(PopularDadosUtils.Instancia().PopularPlataforma());
             modelBuilder.Entity<DesignerModel>().HasData(PopularDadosUtils.Instancia().PopularDesigner());
-            #endregion
-        }
+            modelBuilder.Entity<FraseModel>().HasData(PopularDadosUtils.Instancia().PopularFrase());
+         #endregion
+      }
     }
 }
