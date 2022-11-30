@@ -16,7 +16,7 @@ const IntroductionFrame = () => {
             padding: '0 0 0 1%',
             marginBottom: '20px',
           }}>
-          Introduction
+          Overview
         </Texto>
         <Texto
           styles={{
@@ -27,20 +27,19 @@ const IntroductionFrame = () => {
             textTransform: 'none',
             padding: '0 5% 3% 1%',
           }}>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable.
-          If you are going to use a passage of Lorem Ipsum, you need to be sure
-          there isn't anything embarrassing hidden in the middle of text. <br />
-          All the Lorem Ipsum generators on the Internet tend to repeat
-          predefined chunks as necessary, making this the first true generator
-          on the Internet. It uses a dictionary of over 200 Latin words,
-          combined with a handful of model sentence structures, to generate
-          Lorem Ipsum which looks reasonable. <br />
-          <br /> The generated Lorem Ipsum is therefore always free from
-          repetition, injected humour, or non-characteristic words etc, or
-          non-characteristic words etc, over 200 Latin words a passage of Lorem
-          Ipsum.
+          Welcome to the world's largest API hub.
+          <br />
+          <br />
+          Find what you need for your project, embed the API in your application
+          and make the most of the perfect story of one of the best games ever
+          released. If you create a website and/or APP, use the API to make it
+          available to thousands of fans worldwide.
+          <br />
+          It's easy to use the API to consume applications. With The Last Of Us
+          API you can consume any route using a unified format that is easy to
+          understand and incorporate into your application. To learn more about
+          using APIs, check out our Swagger Request Guide or our developer
+          documentation page.
         </Texto>
         <Texto
           styles={{
@@ -53,7 +52,7 @@ const IntroductionFrame = () => {
             padding: '0 0 0 1%',
             marginBottom: '20px',
           }}>
-          Authentication
+          Developer Quick Start Guide
         </Texto>
         <Texto
           styles={{
@@ -64,18 +63,24 @@ const IntroductionFrame = () => {
             textTransform: 'none',
             padding: '0 5% 3% 1%',
           }}>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even slightly believable.
-          If you are going to use a passage of Lorem Ipsum, you need to be sure
-          there isn't anything embarrassing hidden in the middle of text. All
-          the Lorem Ipsum generators on the Internet tend to repeat predefined
-          chunks as necessary, making this the first true generator on the
-          Internet. It uses a dictionary of over 200 Latin words, combined with
-          a handful of model sentence structures, to generate Lorem Ipsum which
-          looks reasonable. The generated Lorem Ipsum is therefore always free
-          from repetition, injected humour, or non-characteristic words etc.
+          Learn how to use the TLOU API to make your first API call and quickly
+          integrate into your app.
+          <br />
+          The first thing you'll want to do is locate an API that you want to
+          use. Let's find a translation API for this example. To get started,
+          you can type "translation" into the search bar, which will return top
+          results for your search term.
         </Texto>
+        <Box
+          id='developer-quick-session'
+          component='img'
+          sx={{
+            objectFit: 'fill',
+            height: '35vw',
+            width: '100%',
+          }}
+          src='https://user-images.githubusercontent.com/27806/53533284-ea904a00-3abf-11e9-8b0a-0bfe8358369c.gif'
+        />
       </Box>
     </>
   );

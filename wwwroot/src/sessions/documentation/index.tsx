@@ -7,16 +7,12 @@ const DocumentationSession = () => {
   const theme = useTheme();
   const ListaMenu = [
     {
-      descricao: 'Introduction',
-      link: '#',
+      descricao: 'Overview',
+      link: '#documentation-session',
     },
     {
-      descricao: 'Authentication',
-      link: '#',
-    },
-    {
-      descricao: 'Endpoints',
-      link: '#',
+      descricao: 'Consuming API',
+      link: '#developer-quick-session',
     },
     {
       descricao: 'API Testing',

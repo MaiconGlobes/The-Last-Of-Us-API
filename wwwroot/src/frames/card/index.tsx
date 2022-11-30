@@ -4,43 +4,49 @@ import Divisor from '../../components/divisor';
 import Texto from '../../components/texto';
 
 const CardFrame = () => {
-  function RolarSessionCard(AClassname: string) {
-    console.log(AClassname);
-    document.getElementById(AClassname)?.scrollIntoView();
-  }
+  // function RolarSessionCard(AClassname: string) {
+  //   console.log(AClassname);
+  //   document.getElementById(AClassname)?.scrollIntoView();
+  // }
   const theme = useTheme();
   const ListaCards = [
-    // {
-    //   versao: '11.11.18',
-    //   cateroria: 'infected',
-    //   titulo: 'List of all types of infected in The Last of Us',
-    //   subtitulo:
-    //     'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    //   imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/infected.jpeg',
-    // },
-    // {
-    //   versao: '11.11.17',
-    //   cateroria: 'arms',
-    //   titulo:
-    //     'Update the listing of existing weapons and accessories in The Last of Us',
-    //   subtitulo:
-    //     'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    //   imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/arms.jpeg',
-    // },
-    // {
-    //   versao: '11.11.16',
-    //   cateroria: 'groups',
-    //   titulo: 'Combat group imagery implementations',
-    //   subtitulo:
-    //     'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    //   imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/groups.jpeg',
-    // },
+    {
+      versao: '11.11.18',
+      cateroria: 'infected',
+      titulo: 'List of all types of infected in The Last of Us',
+      Primeiro_Paragrafo:
+        'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      Segundo_Paragrafo: null,
+      Terceiro_Paragrafo: null,
+      imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/infected.jpeg',
+    },
+    {
+      versao: '11.11.17',
+      cateroria: 'arms',
+      titulo:
+        'Update the listing of existing weapons and accessories in The Last of Us',
+      Primeiro_Paragrafo:
+        'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      Segundo_Paragrafo: null,
+      Terceiro_Paragrafo: null,
+      imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/arms.jpeg',
+    },
+    {
+      versao: '11.11.16',
+      cateroria: 'groups',
+      titulo: 'Combat group imagery implementations',
+      Primeiro_Paragrafo: `Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`,
+      Segundo_Paragrafo: null,
+      Terceiro_Paragrafo: `Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+      imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/groups.jpeg',
+    },
     {
       versao: '11.11.15',
       cateroria: 'quotes',
       titulo: 'Update of the most striking phrases mentioned by the characters',
-      subtitulo: `This update features iconic quotes from Joel, Ellie, Tess, Riley and more. Not all phrases have been added. The API only presents an outline so that the developer can apply his knowledge. An array of objects containing 3 properties is displayed. 
-        It is possible to search phrases of a certain character, passing an additional parameter after Slug Phrase/{character name}`,
+      Primeiro_Paragrafo: `This update features iconic quotes from Joel, Ellie, Tess, Riley and more. Not all phrases have been added. The API only presents an outline so that the developer can apply his knowledge. An array of objects containing 3 properties is displayed.`,
+      Segundo_Paragrafo: null,
+      Terceiro_Paragrafo: `It is possible to search phrases of a certain character, passing an additional parameter after Slug Phrase/{character name}`,
       imgUrl:
         'https://conteudo.imguol.com.br/c/entretenimento/ba/2020/02/03/the-last-of-us-1580736903354_v2_3x4.jpg',
     },
@@ -49,7 +55,7 @@ const CardFrame = () => {
   const ListaMenu = [
     {
       descricao: 'Documentation',
-      link: 'documentation-session',
+      link: '#documentation-session',
     },
     {
       descricao: 'Development curiosities',
@@ -160,7 +166,12 @@ const CardFrame = () => {
                       maxHeight: '40%',
                     },
                   }}>
-                  {element.subtitulo}
+                  {element.Primeiro_Paragrafo}
+                  <br />
+                  {element.Segundo_Paragrafo}
+                  <br />
+                  <br />
+                  {element.Terceiro_Paragrafo}
                 </Texto>
                 <Button
                   type='button'
@@ -230,6 +241,7 @@ const CardFrame = () => {
           {ListaMenu.map((element) => (
             <>
               <Link
+                href={element.link}
                 sx={{
                   fontSize: '0.875rem',
                   fontFamily: 'Roboto-regular',
@@ -242,8 +254,7 @@ const CardFrame = () => {
                     fontSize: '0.9rem',
                     textDecoration: 'underline',
                   },
-                }}
-                onClick={() => RolarSessionCard(element.link)}>
+                }}>
                 {element.descricao}
               </Link>
               <Divisor />
