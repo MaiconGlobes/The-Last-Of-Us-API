@@ -4,10 +4,9 @@ import Texto from '../../components/texto';
 
 const Menu = () => {
   const theme = useTheme();
-  const ref = useRef(null);
 
   function RolarSessionCard() {
-    const el = document.getElementById('session-card')?.scrollIntoView();
+    const el = document.getElementById('card-session')?.scrollIntoView();
   }
 
   return (

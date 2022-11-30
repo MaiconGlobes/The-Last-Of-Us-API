@@ -1,24 +1,18 @@
 import { Box, Grid, Link, Stack, useTheme } from '@mui/material';
-import { useRef } from 'react';
 import Divisor from '../../components/divisor';
 import Texto from '../../components/texto';
-import AuthenticationFrame from '../../frames/doc-authentication';
-import IntroductionFrame from '../../frames/doc-introduction';
+import IntroductionFrame from '../../frames/docs/introduction';
 
 const DocumentationSession = () => {
   const theme = useTheme();
   const ListaMenu = [
     {
-      descricao: 'Introduction',
-      link: '#',
+      descricao: 'Overview',
+      link: '#documentation-session',
     },
     {
-      descricao: 'Authentication',
-      link: '#',
-    },
-    {
-      descricao: 'Endpoints',
-      link: '#',
+      descricao: 'Consuming API',
+      link: '#developer-quick-session',
     },
     {
       descricao: 'API Testing',
@@ -29,7 +23,6 @@ const DocumentationSession = () => {
     <Grid
       item
       columns={1}
-      className='documentation-session'
       sx={{
         background: 'rgb(18 18 32)',
         position: 'relative',
@@ -39,19 +32,17 @@ const DocumentationSession = () => {
       <Stack
         component='div'
         direction='row'
-        id='session-card'
+        id='documentation-session'
         sx={{
           marginX: '8vw',
         }}>
         <Stack
-          className='body-card-main'
           sx={{
             height: '100%',
             minHeight: '75vh',
             width: '80%',
           }}>
           <Stack
-            className='documentation-card'
             sx={{
               minHeight: '80px',
               width: '100%',
@@ -72,7 +63,6 @@ const DocumentationSession = () => {
           </Stack>
 
           <Stack
-            className='body-documentation-item'
             sx={{
               flexWrap: 'wrap',
               flexDirection: 'row',
@@ -82,7 +72,6 @@ const DocumentationSession = () => {
               },
             }}>
             <IntroductionFrame />
-            <AuthenticationFrame />
           </Stack>
         </Stack>
         <Stack

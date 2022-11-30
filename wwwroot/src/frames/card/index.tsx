@@ -4,14 +4,20 @@ import Divisor from '../../components/divisor';
 import Texto from '../../components/texto';
 
 const CardFrame = () => {
+  // function RolarSessionCard(AClassname: string) {
+  //   console.log(AClassname);
+  //   document.getElementById(AClassname)?.scrollIntoView();
+  // }
   const theme = useTheme();
   const ListaCards = [
     {
       versao: '11.11.18',
       cateroria: 'infected',
       titulo: 'List of all types of infected in The Last of Us',
-      subtitulo:
+      Primeiro_Paragrafo:
         'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      Segundo_Paragrafo: null,
+      Terceiro_Paragrafo: null,
       imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/infected.jpeg',
     },
     {
@@ -19,47 +25,57 @@ const CardFrame = () => {
       cateroria: 'arms',
       titulo:
         'Update the listing of existing weapons and accessories in The Last of Us',
-      subtitulo:
+      Primeiro_Paragrafo:
         'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      Segundo_Paragrafo: null,
+      Terceiro_Paragrafo: null,
       imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/arms.jpeg',
     },
     {
       versao: '11.11.16',
       cateroria: 'groups',
       titulo: 'Combat group imagery implementations',
-      subtitulo:
-        'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      Primeiro_Paragrafo: `Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`,
+      Segundo_Paragrafo: null,
+      Terceiro_Paragrafo: `Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
       imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/groups.jpeg',
+    },
+    {
+      versao: '11.11.15',
+      cateroria: 'quotes',
+      titulo: 'Update of the most striking phrases mentioned by the characters',
+      Primeiro_Paragrafo: `This update features iconic quotes from Joel, Ellie, Tess, Riley and more. Not all phrases have been added. The API only presents an outline so that the developer can apply his knowledge. An array of objects containing 3 properties is displayed.`,
+      Segundo_Paragrafo: null,
+      Terceiro_Paragrafo: `It is possible to search phrases of a certain character, passing an additional parameter after Slug Phrase/{character name}`,
+      imgUrl:
+        'https://conteudo.imguol.com.br/c/entretenimento/ba/2020/02/03/the-last-of-us-1580736903354_v2_3x4.jpg',
     },
   ];
 
   const ListaMenu = [
     {
-      descricao: 'Last Update',
-      link: '#',
+      descricao: 'Documentation',
+      link: '#documentation-session',
     },
     {
       descricao: 'Development curiosities',
-      link: '#',
+      link: 'development-curiosities-session',
     },
     {
       descricao: 'Tools',
-      link: '#',
+      link: 'footer-session',
     },
   ];
 
   return (
     <>
       <Stack
-        className='body-card-main'
         sx={{
-          // background: '#727272',
           height: '100%',
           minHeight: '75vh',
           width: '80%',
         }}>
         <Stack
-          className='title-card'
           sx={{
             minHeight: '80px',
             width: '100%',
@@ -81,7 +97,6 @@ const CardFrame = () => {
         </Stack>
 
         <Stack
-          className='body-card-item'
           sx={{
             flexWrap: 'wrap',
             flexDirection: 'row',
@@ -92,7 +107,6 @@ const CardFrame = () => {
           {ListaCards.map((element) => (
             <>
               <Stack
-                className='img-card'
                 sx={{
                   // background: 'red',
                   marginBottom: '50px',
@@ -108,9 +122,7 @@ const CardFrame = () => {
                 />
               </Stack>
               <Stack
-                className='infos-card'
                 sx={{
-                  // background: 'blue',
                   margin: '0 0 50px 15px',
                   width: '60%',
                 }}>
@@ -154,7 +166,12 @@ const CardFrame = () => {
                       maxHeight: '40%',
                     },
                   }}>
-                  {element.subtitulo}
+                  {element.Primeiro_Paragrafo}
+                  <br />
+                  {element.Segundo_Paragrafo}
+                  <br />
+                  <br />
+                  {element.Terceiro_Paragrafo}
                 </Texto>
                 <Button
                   type='button'
@@ -224,7 +241,7 @@ const CardFrame = () => {
           {ListaMenu.map((element) => (
             <>
               <Link
-                href='#'
+                href={element.link}
                 sx={{
                   fontSize: '0.875rem',
                   fontFamily: 'Roboto-regular',

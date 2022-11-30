@@ -6,7 +6,6 @@ const UpdatesSession = () => {
     <Grid
       item
       columns={1}
-      className='card-session'
       sx={{
         background: '#0E0E19',
         position: 'relative',
@@ -16,7 +15,7 @@ const UpdatesSession = () => {
       <Stack
         component='div'
         direction='row'
-        id='session-card'
+        id='card-session'
         sx={{
           marginX: '8vw',
         }}>

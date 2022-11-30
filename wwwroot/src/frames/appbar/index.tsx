@@ -13,7 +13,7 @@ const ToolBar = () => {
           height: '60px',
           background: '#151111',
         }}>
-        <Toolbar className='tollbar'>
+        <Toolbar>
           <Logo />
           <Divisor />
           <Menu />
