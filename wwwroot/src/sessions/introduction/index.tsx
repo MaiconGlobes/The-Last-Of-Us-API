@@ -1,4 +1,5 @@
-import { Box, Button, Grid, useTheme } from '@mui/material';
+import { Box, Button, Grid, Skeleton, useTheme } from '@mui/material';
+import { useState } from 'react';
 import Texto from '../../components/texto';
 
 const IntroductionSession = () => {
@@ -8,6 +9,7 @@ const IntroductionSession = () => {
       ?.scrollIntoView();
   }
   const theme = useTheme();
+  const [imgNotLoad, setImgNotLoad] = useState(true);
   return (
     <>
       <Grid
@@ -16,6 +18,14 @@ const IntroductionSession = () => {
         sx={{
           position: 'fixed',
         }}>
+        {imgNotLoad ? (
+          <Skeleton
+            variant='rounded'
+            width='100vw'
+            height='100vh'
+            animation='wave'
+          />
+        ) : null}
         <Box
           component='img'
           sx={{
@@ -36,6 +46,7 @@ const IntroductionSession = () => {
             },
           }}
           src='https://thelastofusapi.azurewebsites.net/img/capa-site.jpg'
+          onLoad={() => setImgNotLoad(false)}
         />
       </Grid>
       <Grid
