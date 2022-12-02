@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+import { Link } from 'react-router-dom';
 import Texto from '../../../components/texto';
 
 const IntroductionFrame = () => {
@@ -38,8 +39,11 @@ const IntroductionFrame = () => {
           It's easy to use the API to consume applications. With The Last Of Us
           API you can consume any route using a unified format that is easy to
           understand and incorporate into your application. To learn more about
-          using APIs, check out our Swagger Request Guide or our developer
-          documentation page.
+          using APIs, check out our{' '}
+          <Link to='/swagger/index.html' className='link-swagger'>
+            Swagger
+          </Link>
+          Request Guide or our developer documentation page.
         </Texto>
         <Texto
           styles={{
