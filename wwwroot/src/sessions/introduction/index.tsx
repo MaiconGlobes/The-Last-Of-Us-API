@@ -1,8 +1,15 @@
-import { Box, Button, Grid, useTheme } from '@mui/material';
+import { Box, Button, Grid, Skeleton, useTheme } from '@mui/material';
+import { useState } from 'react';
 import Texto from '../../components/texto';
 
 const IntroductionSession = () => {
+  function RolarSessionCard() {
+    const el = document
+      .getElementById('documentation-session')
+      ?.scrollIntoView();
+  }
   const theme = useTheme();
+  const [imgNotLoad, setImgNotLoad] = useState(true);
   return (
     <>
       <Grid
@@ -11,6 +18,14 @@ const IntroductionSession = () => {
         sx={{
           position: 'fixed',
         }}>
+        {imgNotLoad ? (
+          <Skeleton
+            variant='rounded'
+            width='100vw'
+            height='100vh'
+            animation='wave'
+          />
+        ) : null}
         <Box
           component='img'
           sx={{
@@ -31,6 +46,7 @@ const IntroductionSession = () => {
             },
           }}
           src='https://thelastofusapi.azurewebsites.net/img/capa-site.jpg'
+          onLoad={() => setImgNotLoad(false)}
         />
       </Grid>
       <Grid
@@ -156,7 +172,8 @@ const IntroductionSession = () => {
                   background: '#d1190c',
                   border: '#7D2016 1px solid',
                 },
-              }}>
+              }}
+              onClick={RolarSessionCard}>
               Get Started
             </Button>
           </Box>

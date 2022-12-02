@@ -4,10 +4,6 @@ import Divisor from '../../components/divisor';
 import Texto from '../../components/texto';
 
 const CardFrame = () => {
-  // function RolarSessionCard(AClassname: string) {
-  //   console.log(AClassname);
-  //   document.getElementById(AClassname)?.scrollIntoView();
-  // }
   const theme = useTheme();
   const ListaCards = [
     {

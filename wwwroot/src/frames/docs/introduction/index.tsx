@@ -79,7 +79,7 @@ const IntroductionFrame = () => {
             height: '35vw',
             width: '100%',
           }}
-          src='https://user-images.githubusercontent.com/27806/53533284-ea904a00-3abf-11e9-8b0a-0bfe8358369c.gif'
+          src='https://thelastofusapi.azurewebsites.net/img/insomnia/app01-min.gif'
         />
       </Box>
     </>
