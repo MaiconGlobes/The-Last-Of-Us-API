@@ -2,6 +2,11 @@ import { Box, Button, Grid, useTheme } from '@mui/material';
 import Texto from '../../components/texto';
 
 const IntroductionSession = () => {
+  function RolarSessionCard() {
+    const el = document
+      .getElementById('documentation-session')
+      ?.scrollIntoView();
+  }
   const theme = useTheme();
   return (
     <>
@@ -156,7 +161,8 @@ const IntroductionSession = () => {
                   background: '#d1190c',
                   border: '#7D2016 1px solid',
                 },
-              }}>
+              }}
+              onClick={RolarSessionCard}>
               Get Started
             </Button>
           </Box>
