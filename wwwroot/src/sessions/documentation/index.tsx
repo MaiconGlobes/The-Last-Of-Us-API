@@ -11,12 +11,8 @@ const DocumentationSession = () => {
       link: '#documentation-session',
     },
     {
-      descricao: 'Consuming API',
-      link: '#developer-quick-session',
-    },
-    {
-      descricao: 'API Testing',
-      link: '#',
+      descricao: 'Start Guide',
+      link: '#start-guide-session',
     },
   ];
   return (

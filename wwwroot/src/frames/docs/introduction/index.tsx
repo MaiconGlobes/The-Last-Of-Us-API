@@ -74,10 +74,18 @@ const IntroductionFrame = () => {
             textTransform: 'none',
             padding: '0 5% 3% 1%',
           }}>
-          It's easy to use the .......
+          It's very easy to use the TLOU API. Just enter the URI and make the
+          request via REST.
+          <br />
+          <br />
+          The returned pattern consists of a JSON (JavaScript Object Notation)
+          architecture model. It is recommended to use applications to carry out
+          the requests.
+          <br />
+          We recommend using Imsomnia as shown in the image below.
         </Texto>
         <Box
-          id='developer-quick-session'
+          id='start-guide-session'
           component='img'
           sx={{
             objectFit: 'fill',
