@@ -28,22 +28,29 @@ const IntroductionFrame = () => {
             textTransform: 'none',
             padding: '0 5% 3% 1%',
           }}>
-          Welcome to the world's largest API hub.
+          Welcome to The Last Of Us Public API.
           <br />
           <br />
-          Find what you need for your project, embed the API in your application
-          and make the most of the perfect story of one of the best games ever
-          released. If you create a website and/or APP, use the API to make it
-          available to thousands of fans worldwide.
+          The REST API is used to access and manipulate data related to all
+          entities in The Last Of US game. It is designed to provide a standard
+          set of CRUD actions for most entities: create, read, update, and
+          delete.
           <br />
-          It's easy to use the API to consume applications. With The Last Of Us
-          API you can consume any route using a unified format that is easy to
-          understand and incorporate into your application. To learn more about
-          using APIs, check out our{' '}
-          <Link to='/swagger/index.html' className='link-swagger'>
-            Swagger
-          </Link>
-          Request Guide or our developer documentation page.
+          For reasons of data integrity and reliability, inserting, editing and
+          deleting entities has been limited to project developers only.
+          <br />
+          <br />
+          Using the API you can do things like:
+          <br />- List data related to the game such as release date, mission,
+          synopsis, supported consoles and more.
+          <br />- Lists the most striking phrases and quotes in the game. This
+          includes only phrases spoken by the characters, with no dialogue
+          between them.
+          <br />- List the weapons and accessories used in the game. It is
+          possible to list by characters.
+          <br />- List all characters in the game, along with information
+          related to them, such as function, importance, date of death, among
+          others.
         </Texto>
         <Texto
           styles={{
@@ -67,13 +74,7 @@ const IntroductionFrame = () => {
             textTransform: 'none',
             padding: '0 5% 3% 1%',
           }}>
-          Learn how to use the TLOU API to make your first API call and quickly
-          integrate into your app.
-          <br />
-          The first thing you'll want to do is locate an API that you want to
-          use. Let's find a translation API for this example. To get started,
-          you can type "translation" into the search bar, which will return top
-          results for your search term.
+          It's easy to use the .......
         </Texto>
         <Box
           id='developer-quick-session'
