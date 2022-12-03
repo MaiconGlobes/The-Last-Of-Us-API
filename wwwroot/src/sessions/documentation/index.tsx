@@ -14,6 +14,10 @@ const DocumentationSession = () => {
       descricao: 'Start Guide',
       link: '#start-guide-session',
     },
+    {
+      descricao: 'HTTP Request Headers',
+      link: '#http-request-headers',
+    },
   ];
   return (
     <Grid

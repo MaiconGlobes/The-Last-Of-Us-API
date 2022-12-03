@@ -1,5 +1,5 @@
-import { Box } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Avatar, Box, Chip } from '@mui/material';
+import Divisor from '../../../components/divisor';
 import Texto from '../../../components/texto';
 
 const IntroductionFrame = () => {
@@ -84,6 +84,7 @@ const IntroductionFrame = () => {
           <br />
           We recommend using Imsomnia as shown in the image below.
         </Texto>
+
         <Box
           id='start-guide-session'
           component='img'
@@ -91,8 +92,53 @@ const IntroductionFrame = () => {
             objectFit: 'fill',
             height: '35vw',
             width: '100%',
+            marginBottom: '30px',
           }}
           src='https://thelastofusapi.azurewebsites.net/img/insomnia/app01-min.gif'
+        />
+      </Box>
+
+      <Box id='http-request-headers' component='div'>
+        <Texto
+          styles={{
+            fontSize: '1.2rem',
+            fontFamily: 'Roboto-regular',
+            fontWeight: '400',
+            color: '#e2e2e2',
+            lineHeight: '1.8rem',
+            textAlign: 'left',
+            padding: '0 0 0 1%',
+            marginBottom: '20px',
+          }}>
+          The following headers should be set as applicable when making HTTP
+          requests to the REST API:
+        </Texto>
+        <Texto
+          styles={{
+            fontSize: '0.9rem',
+            fontFamily: 'Roboto-light',
+            fontWeight: '100',
+            color: '#bbbbbb',
+            textTransform: 'none',
+            padding: '0 5% 3% 1%',
+          }}>
+          <Chip label='Content-Type:' variant='outlined' size='small' />
+          &nbsp;required when making a or request. The MIME media type should be
+          GET application/json.
+          <br />
+          <Chip label='Authorization:' variant='outlined' size='small' />
+          &nbsp;required for all requests; see Authentication.
+        </Texto>
+        <Box
+          id='header-config-session'
+          component='img'
+          sx={{
+            objectFit: 'fill',
+            height: '35vw',
+            width: '100%',
+            marginBottom: '30px',
+          }}
+          src='https://thelastofusapi.azurewebsites.net/img/insomnia/header-config.gif'
         />
       </Box>
     </>
