@@ -99,7 +99,7 @@ const IntroductionFrame = () => {
             padding: '0 0 0 1%',
             marginBottom: '20px',
           }}>
-          The following headers should be set as applicable when making HTTP requests to the REST API:
+          Headers for HTTP requests
         </Texto>
         <Texto
           styles={{
@@ -110,11 +110,74 @@ const IntroductionFrame = () => {
             textTransform: 'none',
             padding: '0 5% 3% 1%',
           }}>
+          The following headers should be set as applicable when making HTTP requests to the REST API:
+          <br />
           <Chip label='Content-Type:' variant='outlined' size='small' />
           &nbsp;required when making a or request. The MIME media type should be GET application/json.
           <br />
           <Chip label='Authorization:' variant='outlined' size='small' />
           &nbsp;required for all requests; see Authentication.
+        </Texto>
+        <Box
+          id='header-config-session'
+          component='img'
+          sx={{
+            objectFit: 'fill',
+            height: '35vw',
+            width: '100%',
+            marginBottom: '30px',
+          }}
+          src='https://thelastofusapi.azurewebsites.net/img/insomnia/header-config.gif'
+        />
+      </Box>
+
+      <Box id='http-request-headers' component='div'>
+        <Texto
+          styles={{
+            fontSize: '1.2rem',
+            fontFamily: 'Roboto-regular',
+            fontWeight: '400',
+            color: '#e2e2e2',
+            lineHeight: '1.8rem',
+            textAlign: 'left',
+            padding: '0 0 0 1%',
+            marginBottom: '20px',
+          }}>
+          Types
+        </Texto>
+        <Texto
+          styles={{
+            fontSize: '0.9rem',
+            fontFamily: 'Roboto-light',
+            fontWeight: '100',
+            color: '#bbbbbb',
+            textTransform: 'none',
+            padding: '0 5% 3% 1%',
+          }}>
+          <Chip label='ID:' variant='outlined' size='small' />
+          &nbsp;IDs are represented in the TLOU API as strings. All IDs will be contained in a key.id These IDs are not globally unique, but will be unique
+          within a given endpoint. For example, a character in a database table will have an id, but no two characters have the same id.
+          <br />
+          <Chip label='UUID:' variant='outlined' size='small' />
+          &nbsp;Uuid fields are designated with the presence of in your key name and contain string ID values.uuid UUIDs can be considered unique across the
+          TLOU, that is, no two resources of any type repeat the same UUID.
+          <br />
+          <Chip label='String:' variant='outlined' size='small' />
+          &nbsp;A standard JSON string. Strings in the REST API use the UTF-8 character set.
+          <br />
+          <Chip label='Integer:' variant='outlined' size='small' />
+          &nbsp;Integer types are a number that can have a fractional or decimal component.
+          <br />
+          <Chip label='Boolean:' variant='outlined' size='small' />
+          &nbsp;A boolean has only two possible states: true and false. In responses, booleans are always represented by native JSON booleans — or without
+          quotes.truefalse In query strings, booleans can also be represented by string values. and are acceptable to represent a truthy value, and and are
+          acceptable to represent a falsy value."1""true""0""false"
+          <br />
+          <Chip label='Array:' variant='outlined' size='small' />
+          &nbsp;A standard JSON array. Arrays can contain any number of values, and their values ​​are alphanumeric.
+          <br />
+          <Chip label='Object:' variant='outlined' size='small' />
+          &nbsp;A standard JSON object. Objects consist of string keys paired with values that may be of any type.
         </Texto>
         <Box
           id='header-config-session'
