@@ -15,8 +15,12 @@ const DocumentationSession = () => {
       link: '#start-guide-session',
     },
     {
-      descricao: 'HTTP Request Headers',
-      link: '#http-request-headers',
+      descricao: 'HTTP Headers',
+      link: '#http-request-headers-session',
+    },
+    {
+      descricao: 'Types',
+      link: '#types-session',
     },
   ];
   return (

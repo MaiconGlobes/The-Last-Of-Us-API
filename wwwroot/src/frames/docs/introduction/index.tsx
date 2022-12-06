@@ -1,5 +1,4 @@
-import { Avatar, Box, Chip } from '@mui/material';
-import Divisor from '../../../components/divisor';
+import { Box, Chip } from '@mui/material';
 import Texto from '../../../components/texto';
 
 const IntroductionFrame = () => {
@@ -87,7 +86,7 @@ const IntroductionFrame = () => {
         />
       </Box>
 
-      <Box id='http-request-headers' component='div'>
+      <Box id='http-request-headers-session' component='div'>
         <Texto
           styles={{
             fontSize: '1.2rem',
@@ -119,7 +118,6 @@ const IntroductionFrame = () => {
           &nbsp;required for all requests; see Authentication.
         </Texto>
         <Box
-          id='header-config-session'
           component='img'
           sx={{
             objectFit: 'fill',
@@ -131,7 +129,7 @@ const IntroductionFrame = () => {
         />
       </Box>
 
-      <Box id='http-request-headers' component='div'>
+      <Box id='types-session' component='div'>
         <Texto
           styles={{
             fontSize: '1.2rem',
@@ -154,11 +152,11 @@ const IntroductionFrame = () => {
             textTransform: 'none',
             padding: '0 5% 3% 1%',
           }}>
-          <Chip label='ID:' variant='outlined' size='small' />
+          <Chip label='id:' variant='outlined' size='small' />
           &nbsp;IDs are represented in the TLOU API as strings. All IDs will be contained in a key.id These IDs are not globally unique, but will be unique
           within a given endpoint. For example, a character in a database table will have an id, but no two characters have the same id.
           <br />
-          <Chip label='UUID:' variant='outlined' size='small' />
+          <Chip label='uuid:' variant='outlined' size='small' />
           &nbsp;Uuid fields are designated with the presence of in your key name and contain string ID values.uuid UUIDs can be considered unique across the
           TLOU, that is, no two resources of any type repeat the same UUID.
           <br />
@@ -179,17 +177,6 @@ const IntroductionFrame = () => {
           <Chip label='Object:' variant='outlined' size='small' />
           &nbsp;A standard JSON object. Objects consist of string keys paired with values that may be of any type.
         </Texto>
-        <Box
-          id='header-config-session'
-          component='img'
-          sx={{
-            objectFit: 'fill',
-            height: '35vw',
-            width: '100%',
-            marginBottom: '30px',
-          }}
-          src='https://thelastofusapi.azurewebsites.net/img/insomnia/header-config.gif'
-        />
       </Box>
     </>
   );
