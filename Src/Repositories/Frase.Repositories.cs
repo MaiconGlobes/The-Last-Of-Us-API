@@ -16,6 +16,16 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			FContexto = new Contexto();
 		}
 
+		public List<FraseModel> BuscarRegistroFrase(string AFrase)
+		{
+			return FContexto.FRASE.OrderBy(frase => frase.Id).Where(personagem => personagem.Descricao.ToLower().Contains(AFrase)).ToList();
+		}
+
+		public List<FraseModel> BuscarRegistroPorId(Guid AId)
+		{
+			return FContexto.FRASE.Where(personagem => personagem.Id == AId).ToList();
+		}
+
 		public IEnumerable BuscarTodosRegistros()
 		{
 			return FContexto.FRASE.OrderBy(frase => frase.Id)
@@ -30,16 +40,6 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 								Personagem = personagem.Nome,
 							})
 				.ToList();
-		}
-
-		public List<FraseModel> BuscarRegistroFrase(string AFrase)
-		{
-			return FContexto.FRASE.OrderBy(frase => frase.Id).Where(personagem => personagem.Descricao.ToLower().Contains(AFrase)).ToList();
-		}
-
-		public List<FraseModel> BuscarRegistroPorId(Guid AId)
-		{
-			return FContexto.FRASE.Where(personagem => personagem.Id == AId).ToList();
 		}
 
 		public IEnumerable BuscarRegistroPorPersonagem(string APersonagem)
