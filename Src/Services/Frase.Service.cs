@@ -21,7 +21,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			{
 				var listaDados = FFraseRepositories.BuscarTodosRegistros();
 
-				if (listaDados.Count > 0)
+				if ((listaDados != null) && (!listaDados.IsNullOrEmpty()))
 				{
 					return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(listaDados));
 				}

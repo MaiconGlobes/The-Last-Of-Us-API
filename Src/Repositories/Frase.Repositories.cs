@@ -15,9 +15,20 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			FContexto = new Contexto();
 		}
 
-		public List<FraseModel> BuscarTodosRegistros()
+		public IEnumerable BuscarTodosRegistros()
 		{
-			return FContexto.FRASE.OrderBy(frase => frase.Id).ToList();
+			return FContexto.FRASE.OrderBy(frase => frase.Id)
+				.Join(FContexto.PERSONAGEM,
+							frase => frase.Personagem_id,
+							personagem => personagem.Id,
+							(frase, personagem) =>
+							new
+							{
+								frase.Id,
+								frase.Descricao,
+								Personagem = personagem.Nome,
+							})
+				.ToList();
 		}
 		public List<FraseModel> BuscarRegistroFrase(string AFrase)
 		{
