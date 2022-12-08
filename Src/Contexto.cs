@@ -41,31 +41,32 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			modelBuilder.Entity<FraseModel>().HasOne(frase => frase.Personagem).WithMany(personagem => personagem.Frases).HasForeignKey(frase => frase.Personagem_id);
 			modelBuilder.Entity<IdadeModel>().HasOne(idade => idade.Personagem).WithMany(personagem => personagem.Idades).HasForeignKey(idade => idade.Personagem_id);
 			modelBuilder.Entity<IdadeModel>().HasOne(idade => idade.Versao).WithMany(versao => versao.Idades).HasForeignKey(idade => idade.Versao_id);
-
 			#endregion
 
 			#region Auto Generator
+			modelBuilder.Entity<PersonagemModel>().Property(personagem => personagem.Id).ValueGeneratedOnAdd();
 			modelBuilder.Entity<SobreModel>().Property(sobre => sobre.Id).ValueGeneratedOnAdd();
 			modelBuilder.Entity<LancamentoModel>().Property(lancamento => lancamento.Id).ValueGeneratedOnAdd();
 			modelBuilder.Entity<PlataformaModel>().Property(plataforma => plataforma.Id).ValueGeneratedOnAdd();
 			modelBuilder.Entity<DesignerModel>().Property(designer => designer.Id).ValueGeneratedOnAdd();
 			modelBuilder.Entity<FraseModel>().Property(frase => frase.Id).ValueGeneratedOnAdd();
-			modelBuilder.Entity<PersonagemModel>().Property(personagem => personagem.Id).ValueGeneratedOnAdd();
 			modelBuilder.Entity<IdadeModel>().Property(idade => idade.Id).ValueGeneratedOnAdd();
 			modelBuilder.Entity<VersaoModel>().Property(versao => versao.Id).ValueGeneratedOnAdd();
 			#endregion
 
 			#region Unique
+			modelBuilder.Entity<PersonagemModel>().HasIndex(personagem => personagem.Nome).IsUnique();
 			modelBuilder.Entity<SobreModel>().HasIndex(sobre => sobre.Titulo).IsUnique();
 			modelBuilder.Entity<SobreModel>().HasIndex(sobre => sobre.Sinopse).IsUnique();
 			modelBuilder.Entity<SobreModel>().HasIndex(sobre => sobre.Missao).IsUnique();
 			modelBuilder.Entity<LancamentoModel>().HasIndex(lancamento => lancamento.Data).IsUnique();
 			modelBuilder.Entity<DesignerModel>().HasIndex(designer => designer.Nome).IsUnique();
 			modelBuilder.Entity<FraseModel>().HasIndex(frase => frase.Descricao).IsUnique();
-			modelBuilder.Entity<PersonagemModel>().HasIndex(personagem => personagem.Nome).IsUnique();
+			modelBuilder.Entity<VersaoModel>().HasIndex(versao => versao.Descricao).IsUnique();
 			#endregion
 
 			#region Required
+			modelBuilder.Entity<PersonagemModel>().Property(personagem => personagem.Nome).IsRequired();
 			modelBuilder.Entity<SobreModel>().Property(sobre => sobre.Titulo).IsRequired();
 			modelBuilder.Entity<SobreModel>().Property(sobre => sobre.Sinopse).IsRequired();
 			modelBuilder.Entity<SobreModel>().Property(sobre => sobre.Missao).IsRequired();
@@ -79,7 +80,8 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			modelBuilder.Entity<DesignerModel>().Property(designer => designer.Sobre_id).IsRequired();
 			modelBuilder.Entity<FraseModel>().Property(frase => frase.Descricao).IsRequired();
 			modelBuilder.Entity<FraseModel>().Property(frase => frase.Personagem_id).IsRequired();
-			modelBuilder.Entity<PersonagemModel>().Property(personagem => personagem.Nome).IsRequired();
+			modelBuilder.Entity<IdadeModel>().Property(idade => idade.Idade).IsRequired();
+			modelBuilder.Entity<VersaoModel>().Property(versao => versao.Descricao).IsRequired();
 
 			#endregion
 
@@ -90,6 +92,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			modelBuilder.Entity<DesignerModel>().HasData(PopularDadosUtils.Instancia().PopularDesigner());
 			modelBuilder.Entity<PersonagemModel>().HasData(PopularDadosUtils.Instancia().PopularPersonagem());
 			modelBuilder.Entity<FraseModel>().HasData(PopularDadosUtils.Instancia().PopularFrase());
+			modelBuilder.Entity<VersaoModel>().HasData(PopularDadosUtils.Instancia().PopularVersao());
 			#endregion
 		}
 	}
