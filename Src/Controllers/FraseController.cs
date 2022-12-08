@@ -6,7 +6,6 @@ using API_REST_The_Last_Of_Us.Src.Utils;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 
 namespace API_REST_The_Last_Of_Us.Controllers
 {
@@ -98,7 +97,7 @@ namespace API_REST_The_Last_Of_Us.Controllers
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ApiExplorerSettings(IgnoreApi = true)]
 		[HttpDelete("{id}")]
-		public IActionResult DeleteFrasePorId(Guid id)
+		public IActionResult DeleteFrasePorId(int id)
 		{
 			try
 			{

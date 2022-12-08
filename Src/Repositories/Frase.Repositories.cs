@@ -1,6 +1,5 @@
 ﻿using API_REST_The_Last_Of_Us.Src.Models.Entity;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +20,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			return FContexto.FRASE.OrderBy(frase => frase.Id).Where(personagem => personagem.Descricao.ToLower().Contains(AFrase)).ToList();
 		}
 
-		public List<FraseModel> BuscarRegistroPorId(Guid AId)
+		public List<FraseModel> BuscarRegistroPorId(int AId)
 		{
 			return FContexto.FRASE.Where(personagem => personagem.Id == AId).ToList();
 		}

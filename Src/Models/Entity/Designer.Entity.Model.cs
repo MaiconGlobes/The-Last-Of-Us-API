@@ -11,7 +11,7 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		[JsonPropertyName("id")]
-		public Guid Id { get; set; }
+		public int Id { get; set; }
 
 		[Column("Nome")]
 		[Required(ErrorMessage = "Propriedade [nome] é obrigatório")]

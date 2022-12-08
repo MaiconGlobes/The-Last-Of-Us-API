@@ -37,6 +37,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			#region Relacionaemtno de Tabelas
 			modelBuilder.Entity<LancamentoModel>().HasOne(lancamento => lancamento.Sobre).WithMany(sobre => sobre.Lancamentos).HasForeignKey(lancamento => lancamento.Sobre_id);
 			modelBuilder.Entity<PlataformaModel>().HasOne(plataforma => plataforma.Sobre).WithMany(sobre => sobre.Plataformas).HasForeignKey(plataforma => plataforma.Sobre_id);
+			modelBuilder.Entity<VersaoModel>().HasOne(versao => versao.Sobre).WithMany(sobre => sobre.Versoes).HasForeignKey(versao => versao.Sobre_id);
 			modelBuilder.Entity<DesignerModel>().HasOne(designer => designer.Sobre).WithMany(sobre => sobre.Designers).HasForeignKey(designer => designer.Sobre_id);
 			modelBuilder.Entity<FraseModel>().HasOne(frase => frase.Personagem).WithMany(personagem => personagem.Frases).HasForeignKey(frase => frase.Personagem_id);
 			modelBuilder.Entity<IdadeModel>().HasOne(idade => idade.Personagem).WithMany(personagem => personagem.Idades).HasForeignKey(idade => idade.Personagem_id);
@@ -91,7 +92,6 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			modelBuilder.Entity<PlataformaModel>().HasData(PopularDadosUtils.Instancia().PopularPlataforma());
 			modelBuilder.Entity<DesignerModel>().HasData(PopularDadosUtils.Instancia().PopularDesigner());
 			modelBuilder.Entity<PersonagemModel>().HasData(PopularDadosUtils.Instancia().PopularPersonagem());
-			modelBuilder.Entity<FraseModel>().HasData(PopularDadosUtils.Instancia().PopularFrase());
 			modelBuilder.Entity<VersaoModel>().HasData(PopularDadosUtils.Instancia().PopularVersao());
 			#endregion
 		}

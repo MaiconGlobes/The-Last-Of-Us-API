@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
@@ -12,7 +11,7 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		[JsonPropertyName("id")]
-		public Guid Id { get; set; }
+		public int Id { get; set; }
 
 		[Column("Nome")]
 		[Required(ErrorMessage = "Propriedade [nome] é obrigatório")]

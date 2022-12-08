@@ -12,7 +12,7 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		[JsonPropertyName("id")]
-		public Guid Id { get; set; }
+		public int Id { get; set; }
 
 		[Column("Versao")]
 		[Required(ErrorMessage = "Propriedade [descricao] é obrigatório")]
@@ -23,5 +23,11 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 		[Required(ErrorMessage = "Propriedade [versao.idades] é obrigatório")]
 		[JsonPropertyName("idades")]
 		public virtual ICollection<IdadeModel> Idades { get; set; }
+
+		[JsonIgnore]
+		public Guid Sobre_id { get; set; }
+
+		[JsonIgnore]
+		public virtual SobreModel Sobre { get; set; }
 	}
 }

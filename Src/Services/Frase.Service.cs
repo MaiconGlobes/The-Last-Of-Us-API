@@ -1,7 +1,6 @@
 ﻿using API_REST_The_Last_Of_Us.Src.Models.Entity;
 using API_REST_The_Last_Of_Us.Src.Utils;
 using Castle.Core.Internal;
-using System;
 
 namespace API_REST_The_Last_Of_Us.Src.Services
 {
@@ -84,7 +83,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			}
 		}
 
-		public (byte Status, object Json) DeletarRegistro(Guid AId)
+		public (byte Status, object Json) DeletarRegistro(int AId)
 		{
 			try
 			{

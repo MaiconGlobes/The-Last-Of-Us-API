@@ -1,5 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
@@ -11,7 +10,7 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 		[Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		[JsonPropertyName("id")]
-		public Guid Id { get; set; }
+		public int Id { get; set; }
 
 		[Column("Idade")]
 		[Required(ErrorMessage = "Propriedade [idade] é obrigatório")]
@@ -19,13 +18,13 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 		public int Idade { get; set; }
 
 		[JsonIgnore]
-		public Guid Versao_id { get; set; }
+		public int Versao_id { get; set; }
 
 		[JsonIgnore]
 		public virtual VersaoModel Versao { get; set; }
 
 		[JsonIgnore]
-		public Guid Personagem_id { get; set; }
+		public int Personagem_id { get; set; }
 
 		[JsonIgnore]
 		public virtual PersonagemModel Personagem { get; set; }
