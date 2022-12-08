@@ -10,6 +10,8 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 	{
 		public DbSet<SobreModel> SOBRE { get; set; }
 		public DbSet<LancamentoModel> LANCAMENTO { get; set; }
+		public DbSet<IdadeModel> IDADE { get; set; }
+		public DbSet<VersaoModel> VERSAO { get; set; }
 		public DbSet<PlataformaModel> PLATAFORMA { get; set; }
 		public DbSet<DesignerModel> DESIGNER { get; set; }
 		public DbSet<FraseModel> FRASE { get; set; }
@@ -37,6 +39,9 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			modelBuilder.Entity<PlataformaModel>().HasOne(plataforma => plataforma.Sobre).WithMany(sobre => sobre.Plataformas).HasForeignKey(plataforma => plataforma.Sobre_id);
 			modelBuilder.Entity<DesignerModel>().HasOne(designer => designer.Sobre).WithMany(sobre => sobre.Designers).HasForeignKey(designer => designer.Sobre_id);
 			modelBuilder.Entity<FraseModel>().HasOne(frase => frase.Personagem).WithMany(personagem => personagem.Frases).HasForeignKey(frase => frase.Personagem_id);
+			modelBuilder.Entity<IdadeModel>().HasOne(idade => idade.Personagem).WithMany(personagem => personagem.Idades).HasForeignKey(idade => idade.Personagem_id);
+			modelBuilder.Entity<IdadeModel>().HasOne(idade => idade.Versao).WithMany(versao => versao.Idades).HasForeignKey(idade => idade.Versao_id);
+
 			#endregion
 
 			#region Auto Generator
@@ -46,6 +51,8 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			modelBuilder.Entity<DesignerModel>().Property(designer => designer.Id).ValueGeneratedOnAdd();
 			modelBuilder.Entity<FraseModel>().Property(frase => frase.Id).ValueGeneratedOnAdd();
 			modelBuilder.Entity<PersonagemModel>().Property(personagem => personagem.Id).ValueGeneratedOnAdd();
+			modelBuilder.Entity<IdadeModel>().Property(idade => idade.Id).ValueGeneratedOnAdd();
+			modelBuilder.Entity<VersaoModel>().Property(versao => versao.Id).ValueGeneratedOnAdd();
 			#endregion
 
 			#region Unique

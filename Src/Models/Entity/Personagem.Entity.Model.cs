@@ -24,5 +24,9 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 		[JsonPropertyName("frases")]
 		public virtual ICollection<FraseModel> Frases { get; set; }
 
+		[Required(ErrorMessage = "Propriedade [personagem.idades] é obrigatório")]
+		[JsonPropertyName("idades")]
+		public virtual ICollection<IdadeModel> Idades { get; set; }
+
 	}
 }
