@@ -4,11 +4,12 @@ using AutoMapper;
 
 namespace API_REST_The_Last_Of_Us.Src.Models.Profiles
 {
-    public class FraseProfile : Profile
-    {
-        public FraseProfile()
-        {
-            CreateMap<FraseResponseDto, FraseModel>();
-        }
-    }
+	public class FraseProfile : Profile
+	{
+		public FraseProfile()
+		{
+			CreateMap<FraseGETResponseDto, FraseModel>();
+			CreateMap<FrasePOSTResponseDto, FraseModel>();
+		}
+	}
 }

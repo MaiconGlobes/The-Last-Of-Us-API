@@ -36,7 +36,8 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 							{
 								frase.Id,
 								frase.Descricao,
-								Personagem = personagem.Nome,
+								Nome_personagem = personagem.Nome,
+								Personagem_id = personagem.Id,
 							})
 				.ToList();
 		}

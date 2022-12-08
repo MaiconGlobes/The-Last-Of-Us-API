@@ -69,10 +69,10 @@ namespace API_REST_The_Last_Of_Us.Controllers
 			}
 		}
 
-		[ProducesResponseType(StatusCodes.Status201Created, Type = typeof(FraseRetornoOk))]
+		[ProducesResponseType(StatusCodes.Status201Created, Type = typeof(FraseRetornoCreated))]
 		[ApiExplorerSettings(IgnoreApi = true)]
 		[HttpPost]
-		public IActionResult PostFrase([FromBody] FraseResponseDto AFraseBody)
+		public IActionResult PostFrase([FromBody] FrasePOSTResponseDto AFraseBody)
 		{
 			try
 			{

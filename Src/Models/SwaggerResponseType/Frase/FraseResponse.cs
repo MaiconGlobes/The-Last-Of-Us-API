@@ -14,6 +14,19 @@ namespace API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home
 
 		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
 		[JsonPropertyName("dados")]
-		public List<FraseResponseDto> Dados { get; set; }
+		public List<FraseGETResponseDto> Dados { get; set; }
+	}
+
+	public class FraseRetornoCreated
+	{
+		[JsonPropertyName("status")]
+		public string Status { get; set; }
+
+		[JsonPropertyName("codigo_Status")]
+		public byte Codigo_Status { get; set; }
+
+		[JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+		[JsonPropertyName("dados")]
+		public List<FrasePOSTResponseDto> Dados { get; set; }
 	}
 }
