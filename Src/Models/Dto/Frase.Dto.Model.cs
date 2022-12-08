@@ -10,9 +10,7 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Dto
 		[JsonPropertyName("descricao")]
 		public string Descricao { get; set; }
 
-		[Required(ErrorMessage = "Propriedade [personagem] é obrigatório")]
-		[StringLength(60, MinimumLength = 2, ErrorMessage = "Propriedade [personagem] deve ter no mínimo 2 e no máximo 60 caractere")]
-		[JsonPropertyName("personagem")]
-		public string Personagem { get; set; }
+		[JsonPropertyName("personagem_id")]
+		public int Personagem_id { get; set; }
 	}
 }
