@@ -21,8 +21,9 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 		public string Descricao { get; set; }
 
 		[Required(ErrorMessage = "Propriedade [versao.idades] é obrigatório")]
-		[JsonPropertyName("idades")]
-		public virtual ICollection<IdadeModel> Idades { get; set; }
+      //[JsonPropertyName("idades")]
+      [JsonIgnore]
+      public virtual ICollection<IdadeModel> Idades { get; set; }
 
 		[JsonIgnore]
 		public Guid Sobre_id { get; set; }

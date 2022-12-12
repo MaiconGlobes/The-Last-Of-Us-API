@@ -46,10 +46,13 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Dto
 		[JsonPropertyName("designers")]
 		public virtual List<DesignerModel> Designers { get; set; }
 
-		[JsonPropertyName("plataformas")]
-		public virtual List<PlataformaModel> Plataformas { get; set; }
+      [JsonPropertyName("plataformas")]
+      public virtual List<PlataformaModel> Plataformas { get; set; }
 
-		[JsonPropertyName("sinopse")]
+      [JsonPropertyName("versoes")]
+      public virtual List<VersaoModel> Versoes { get; set; }
+
+      [JsonPropertyName("sinopse")]
 		public string Sinopse { get; set; }
 	}
 }
