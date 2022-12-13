@@ -126,38 +126,6 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
 			};
 		}
 
-		public IList<PersonagemModel> PopularPersonagem()
-		{
-			return new List<PersonagemModel>
-			{
-			new PersonagemModel
-			{
-				Id = 1,
-				Nome =  "Riley",
-			},
-			new PersonagemModel
-			{
-				Id = 2,
-				Nome =  "Ellie",
-			},
-			new PersonagemModel
-			{
-				Id = 3,
-				Nome =  "Bill",
-			},
-			new PersonagemModel
-			{
-				Id = 4,
-				Nome =  "Joel",
-			},
-			new PersonagemModel
-			{
-				Id = 5,
-				Nome =  "Tess",
-			},
-			};
-		}
-
 		public IList<VersaoModel> PopularVersao()
 		{
 			return new List<VersaoModel>
@@ -182,5 +150,97 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
 			},
 			};
 		}
-	}
+
+      public IList<PersonagemModel> PopularPersonagem()
+      {
+         return new List<PersonagemModel>
+         {
+				new PersonagemModel
+				{
+					Id = Guid.NewGuid(),
+					Nome =  "Ellie",
+				},
+				new PersonagemModel
+				{
+					Id = Guid.NewGuid(),
+					Nome =  "Joel",
+				},
+				new PersonagemModel
+				{
+					Id = Guid.NewGuid(),
+					Nome =  "Sarah",
+				},
+				new PersonagemModel
+				{
+					Id = Guid.NewGuid(),
+					Nome =  "Tommy",
+				},
+            new PersonagemModel
+            {
+               Id = Guid.NewGuid(),
+               Nome =  "Tess",
+            },
+            new PersonagemModel
+            {
+               Id = Guid.NewGuid(),
+               Nome =  "Marlene",
+            },
+            new PersonagemModel
+            {
+               Id = Guid.NewGuid(),
+               Nome =  "Bill",
+            },
+            new PersonagemModel
+            {
+               Id = Guid.NewGuid(),
+               Nome =  "Henry",
+            },
+            new PersonagemModel
+            {
+               Id = Guid.NewGuid(),
+               Nome =  "Sam",
+            },
+            new PersonagemModel
+            {
+               Id = Guid.NewGuid(),
+               Nome =  "David",
+            },
+            new PersonagemModel
+            {
+               Id = Guid.NewGuid(),
+               Nome =  "Abby",
+            },
+            new PersonagemModel
+            {
+               Id = Guid.NewGuid(),
+               Nome =  "Dina",
+            },
+            new PersonagemModel
+            {
+               Id = Guid.NewGuid(),
+               Nome =  "Jesse",
+            },
+            new PersonagemModel
+            {
+               Id = Guid.NewGuid(),
+               Nome =  "Lev",
+            },
+            new PersonagemModel
+            {
+               Id = Guid.NewGuid(),
+               Nome =  "Yara",
+            },
+            new PersonagemModel
+            {
+               Id = Guid.NewGuid(),
+               Nome =  "Manny",
+            },
+            new PersonagemModel
+            {
+               Id = Guid.NewGuid(),
+               Nome =  "Mel",
+            },
+         };
+      }
+   }
 }

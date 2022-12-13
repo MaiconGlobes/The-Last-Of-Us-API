@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
@@ -18,7 +19,7 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 		public string Descricao { get; set; }
 
 		[JsonIgnore]
-		public int Personagem_id { get; set; }
+		public Guid Personagem_id { get; set; }
 
 		[JsonIgnore]
 		public virtual PersonagemModel Personagem { get; set; }
