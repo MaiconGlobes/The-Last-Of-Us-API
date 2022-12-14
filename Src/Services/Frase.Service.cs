@@ -1,6 +1,6 @@
 ﻿using API_REST_The_Last_Of_Us.Src.Models.Entity;
 using API_REST_The_Last_Of_Us.Src.Utils;
-using System;
+using Castle.Core.Internal;
 
 namespace API_REST_The_Last_Of_Us.Src.Services
 {
@@ -21,7 +21,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			{
 				var listaDados = FFraseRepositories.BuscarTodosRegistros();
 
-				if (listaDados.Count > 0)
+				if ((listaDados != null) && (!listaDados.IsNullOrEmpty()))
 				{
 					return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(listaDados));
 				}
@@ -42,7 +42,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 
 				var listaDados = FFraseRepositories.BuscarRegistroPorPersonagem(APersonagem);
 
-				if ((listaDados != null) & (listaDados.Count > 0))
+				if ((listaDados != null) && (!listaDados.IsNullOrEmpty()))
 				{
 					return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(listaDados));
 				}
@@ -83,7 +83,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			}
 		}
 
-		public (byte Status, object Json) DeletarRegistro(Guid AId)
+		public (byte Status, object Json) DeletarRegistro(int AId)
 		{
 			try
 			{

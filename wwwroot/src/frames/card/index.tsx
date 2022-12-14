@@ -1,52 +1,104 @@
-import { Box, Button, Grid, useTheme } from '@mui/material';
+import { Box, Button, Grid, Link, useTheme } from '@mui/material';
 import { Stack } from '@mui/system';
+import Divisor from '../../components/divisor';
 import Texto from '../../components/texto';
 
-const Card = () => {
+const CardFrame = () => {
   const theme = useTheme();
   const ListaCards = [
+    // {
+    //   versao: '11.11.18',
+    //   cateroria: 'infected',
+    //   titulo: 'List of all types of infected in The Last of Us',
+    //   subtitulo:
+    //     'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    //   imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/infected.jpeg',
+    // },
+    // {
+    //   versao: '11.11.17',
+    //   cateroria: 'arms',
+    //   titulo:
+    //     'Update the listing of existing weapons and accessories in The Last of Us',
+    //   subtitulo:
+    //     'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    //   imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/arms.jpeg',
+    // },
+    // {
+    //   versao: '11.11.16',
+    //   cateroria: 'groups',
+    //   titulo: 'Combat group imagery implementations',
+    //   subtitulo:
+    //     'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    //   imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/groups.jpeg',
+    // },
     {
       versao: '11.11.18',
       cateroria: 'infected',
       titulo: 'List of all types of infected in The Last of Us',
-      subtitulo:
+      Primeiro_Paragrafo:
         'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      Segundo_Paragrafo: null,
+      Terceiro_Paragrafo: null,
       imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/infected.jpeg',
     },
     {
       versao: '11.11.17',
       cateroria: 'arms',
-      titulo:
-        'Update the listing of existing weapons and accessories in The Last of Us',
-      subtitulo:
+      titulo: 'Update the listing of existing weapons and accessories in The Last of Us',
+      Primeiro_Paragrafo:
         'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      Segundo_Paragrafo: null,
+      Terceiro_Paragrafo: null,
       imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/arms.jpeg',
     },
     {
       versao: '11.11.16',
       cateroria: 'groups',
       titulo: 'Combat group imagery implementations',
-      subtitulo:
-        'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-       imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/groups.jpeg',
+      Primeiro_Paragrafo: `Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`,
+      Segundo_Paragrafo: null,
+      Terceiro_Paragrafo: `Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+      imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/groups.jpeg',
+    },
+    {
+      versao: '11.11.15',
+      cateroria: 'quotes',
+      titulo: 'Update of the most striking phrases mentioned by the characters',
+      Primeiro_Paragrafo: `This update features iconic quotes from Joel, Ellie, Tess, Riley and more. Not all phrases have been added. The API only presents an outline so that the developer can apply his knowledge. An array of objects containing 3 properties is displayed.`,
+      Segundo_Paragrafo: null,
+      Terceiro_Paragrafo: `It is possible to search phrases of a certain character, passing an additional parameter after Slug Phrase/{character name}`,
+      imgUrl: 'https://conteudo.imguol.com.br/c/entretenimento/ba/2020/02/03/the-last-of-us-1580736903354_v2_3x4.jpg',
     },
   ];
+
+  const ListaMenu = [
+    {
+      descricao: 'Documentation',
+      link: '#documentation-session',
+    },
+    {
+      descricao: 'Development curiosities',
+      link: 'development-curiosities-session',
+    },
+    {
+      descricao: 'Tools',
+      link: 'footer-session',
+    },
+  ];
+
   return (
     <>
       <Stack
-        className='body-card-main'
         sx={{
-          // background: '#727272',
           height: '100%',
           minHeight: '75vh',
-          width: '100%',
+          width: '80%',
         }}>
         <Stack
-          className='title-card'
           sx={{
             minHeight: '80px',
             width: '100%',
-            marginBottom: '20px',
+            marginBottom: '25px',
           }}>
           <Texto
             styles={{
@@ -57,26 +109,23 @@ const Card = () => {
               color: '#e2e2e2',
               textAlign: 'left',
               textTransform: 'uppercase',
-              marginTop: '10px',
+              marginTop: '20px',
             }}>
             Last updates
           </Texto>
         </Stack>
 
         <Stack
-          className='body-card-item'
           sx={{
-            // background: 'lime',
             flexWrap: 'wrap',
             flexDirection: 'row',
-            [theme.breakpoints.up('sm')]: {
-              width: '70%',
+            [theme.breakpoints.down('md')]: {
+              width: '100%',
             },
           }}>
           {ListaCards.map((element) => (
             <>
               <Stack
-                className='img-card'
                 sx={{
                   // background: 'red',
                   marginBottom: '50px',
@@ -92,9 +141,7 @@ const Card = () => {
                 />
               </Stack>
               <Stack
-                className='infos-card'
                 sx={{
-                  // background: 'blue',
                   margin: '0 0 50px 15px',
                   width: '60%',
                 }}>
@@ -126,10 +173,10 @@ const Card = () => {
                 </Texto>
                 <Texto
                   styles={{
-                    fontSize: '0.75rem',
+                    fontSize: '0.82rem',
                     fontFamily: 'Roboto-light',
                     fontWeight: '200',
-                    color: '#b1b1b1',
+                    color: '#bbbbbb',
                     lineHeight: '1rem',
                     textAlign: 'left',
                     marginBottom: '20px',
@@ -138,7 +185,12 @@ const Card = () => {
                       maxHeight: '40%',
                     },
                   }}>
-                  {element.subtitulo}
+                  {element.Primeiro_Paragrafo}
+                  <br />
+                  {element.Segundo_Paragrafo}
+                  <br />
+                  <br />
+                  {element.Terceiro_Paragrafo}
                 </Texto>
                 <Button
                   type='button'
@@ -171,14 +223,66 @@ const Card = () => {
         </Stack>
       </Stack>
       <Stack
+        spacing={-1}
         sx={{
-          // background: 'yellow',
-          width: '0%',
+          // background: 'gray',
+          width: '20%',
+          justifyContent: 'stretch',
+          alignContent: 'center',
+          padding: ' 100px 15px 0 15px',
+          textAlign: 'left',
+          [theme.breakpoints.down('md')]: {
+            visibility: 'hidden',
+            width: '0%',
+          },
         }}>
-        {/* menu categorias aqui */}
+        <Box
+          component='div'
+          sx={{
+            background: '#11111c',
+            borderLeft: '1.5px solid #919191',
+            borderRadius: '3px',
+            minHeight: '20%',
+            padding: '0 0 10px 15px',
+          }}>
+          <Texto
+            styles={{
+              // background: 'black',
+              fontSize: '1rem',
+              fontFamily: 'Roboto-regular',
+              fontWeight: '500',
+              color: '#ffffff',
+              textTransform: 'uppercase',
+              margin: '10px 0 10px 0',
+            }}>
+            Categories
+          </Texto>
+          {ListaMenu.map((element) => (
+            <>
+              <Link
+                href={element.link}
+                sx={{
+                  fontSize: '0.875rem',
+                  fontFamily: 'Roboto-regular',
+                  color: '#bbbbbb',
+                  textTransform: 'capitalize',
+                  textDecoration: 'none',
+                  paddingLeft: '5px',
+                  cursor: 'pointer',
+                  '&:hover': {
+                    fontSize: '0.9rem',
+                    textDecoration: 'underline',
+                  },
+                }}>
+                {element.descricao}
+              </Link>
+              <Divisor />
+            </>
+          ))}
+        </Box>
       </Stack>
     </>
   );
 };
 
-export default Card;
+export default CardFrame;

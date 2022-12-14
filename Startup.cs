@@ -68,6 +68,7 @@ namespace The_Last_Of_Us_API
 			{
 				options.SwaggerEndpoint("../swagger/v1/swagger.json", "The Last Of Us API v1");
 				options.DefaultModelsExpandDepth(-1);
+				options.InjectStylesheet("/public/swagger-ui/custom.css");
 			});
 
 			app.UseHttpsRedirection();
@@ -82,8 +83,8 @@ namespace The_Last_Of_Us_API
 			{
 				//endpoints.MapControllers();
 				endpoints.MapControllerRoute(
-					name: "default",
-					pattern: "{controller}/{action=Index}/{id?}");
+			name: "default",
+			pattern: "{controller}/{action=Index}/{id?}");
 			});
 
 			app.UseSpa(spa =>
