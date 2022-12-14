@@ -22,9 +22,9 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 			if (!optionsBuilder.IsConfigured)
 			{
 				IConfigurationRoot configuration = new ConfigurationBuilder()
-				   .SetBasePath(Directory.GetCurrentDirectory())
-				   .AddJsonFile("appsettings.json")
-				   .Build();
+					 .SetBasePath(Directory.GetCurrentDirectory())
+					 .AddJsonFile("appsettings.json")
+					 .Build();
 
 				var connectionString = configuration.GetConnectionString("HerokuConnection");
 
