@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qj99WbN/wPkLbfPA9MdRErW5vkqEo2FDfJIbYmxF2sGRm+IDVUCFtNlxnNVdNfbhNh4wX/GP9xVyUwEuarPIdw==",
+  "dgSpecHash": "9EgtVbdexQFV+SVgddcAgD+Lf7P4jbRJs8G+gYeRNI0yvnk9lJauNL1dGn87ojFha26QBjCrkVEkVmuwBCPduQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuario\\Documents\\GIT\\API-TLOU\\The-Last-Of-Us-API.csproj",
   "expectedPackageFiles": [
@@ -168,7 +168,8 @@
     "C:\\Users\\Usuario\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\Usuario\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Users\\Usuario\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
   ],
   "logs": []
 }

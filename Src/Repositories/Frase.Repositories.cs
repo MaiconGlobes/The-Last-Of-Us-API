@@ -28,7 +28,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 		public IEnumerable BuscarTodosRegistros()
 		{
 			return FContexto.FRASE.OrderBy(frase => frase.Id)
-			  .Join(FContexto.PERSONAGEM,
+				.Join(FContexto.PERSONAGEM,
 					frase => frase.Personagem_id,
 					personagem => personagem.Id,
 					(frase, personagem) =>
@@ -39,13 +39,13 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 						Nome_personagem = personagem.Nome,
 						Personagem_id = personagem.Id,
 					})
-			  .ToList();
+				.ToList();
 		}
 
 		public IEnumerable BuscarRegistroPorPersonagem(string APersonagem)
 		{
 			return FContexto.FRASE.OrderBy(frase => frase.Id)
-			  .Join(FContexto.PERSONAGEM,
+				.Join(FContexto.PERSONAGEM,
 					frase => frase.Personagem_id,
 					personagem => personagem.Id,
 					(frase, personagem) =>
@@ -55,7 +55,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 						frase.Descricao,
 						Personagem = personagem.Nome,
 					})
-			  .Where(personagem => personagem.Personagem.ToLower().Contains(APersonagem)).ToList();
+				.Where(personagem => personagem.Personagem.ToLower().Contains(APersonagem)).ToList();
 		}
 
 		public FraseModel GravarRegistro(FraseModel ADados)
