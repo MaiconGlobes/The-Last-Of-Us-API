@@ -9,13 +9,13 @@ const Logo = () => {
         sx={{
           flexGrow: 0,
           [theme.breakpoints.up('xs')]: {
-            marginTop: '-5px',
+            marginTop: '-2px',
           },
           [theme.breakpoints.up('sm')]: {
-            marginTop: '-13px',
+            marginTop: '-5px',
           },
           [theme.breakpoints.up('md')]: {
-            marginTop: '-15px',
+            marginTop: '-5px',
           },
         }}>
         <Texto

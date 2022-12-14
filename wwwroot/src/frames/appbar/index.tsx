@@ -10,14 +10,10 @@ const ToolBar = () => {
       <AppBar
         position='fixed'
         sx={{
-          height: '50px',
+          height: '60px',
           background: '#151111',
         }}>
-        <Toolbar
-          className='tollbar'
-          sx={{
-            [theme.breakpoints.down('sm')]: {},
-          }}>
+        <Toolbar>
           <Logo />
           <Divisor />
           <Menu />
