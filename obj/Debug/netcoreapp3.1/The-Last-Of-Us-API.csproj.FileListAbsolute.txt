@@ -486,3 +486,14 @@ C:\GIT\VEXOR\The-Last-Of-Us-API\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.cspro
 C:\GIT\VEXOR\The-Last-Of-Us-API\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.dll
 C:\GIT\VEXOR\The-Last-Of-Us-API\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.pdb
 C:\GIT\VEXOR\The-Last-Of-Us-API\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.genruntimeconfig.cache
+C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.AssemblyInfoInputs.cache
+C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.AssemblyInfo.cs
+C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.RazorAssemblyInfo.cache
+C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.RazorAssemblyInfo.cs
+C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.dll
+C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.pdb
