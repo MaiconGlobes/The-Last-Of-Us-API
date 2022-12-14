@@ -32,13 +32,6 @@ const CardFrame = () => {
     //   imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/groups.jpeg',
     // },
     {
-<<<<<<< HEAD
-      versao: '11.11.15',
-      cateroria: 'quotes',
-      titulo: 'Update of the most striking phrases mentioned by the characters',
-      subtitulo: `This update features iconic quotes from Joel, Ellie, Tess, Riley and more. Not all phrases have been added. The API only presents an outline so that the developer can apply his knowledge. An array of objects containing 3 properties is displayed. 
-        It is possible to search phrases of a certain character, passing an additional parameter after Slug Phrase/{character name}`,
-=======
       versao: '11.11.18',
       cateroria: 'infected',
       titulo: 'List of all types of infected in The Last of Us',
@@ -51,8 +44,7 @@ const CardFrame = () => {
     {
       versao: '11.11.17',
       cateroria: 'arms',
-      titulo:
-        'Update the listing of existing weapons and accessories in The Last of Us',
+      titulo: 'Update the listing of existing weapons and accessories in The Last of Us',
       Primeiro_Paragrafo:
         'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
       Segundo_Paragrafo: null,
@@ -75,26 +67,12 @@ const CardFrame = () => {
       Primeiro_Paragrafo: `This update features iconic quotes from Joel, Ellie, Tess, Riley and more. Not all phrases have been added. The API only presents an outline so that the developer can apply his knowledge. An array of objects containing 3 properties is displayed.`,
       Segundo_Paragrafo: null,
       Terceiro_Paragrafo: `It is possible to search phrases of a certain character, passing an additional parameter after Slug Phrase/{character name}`,
->>>>>>> 26ccf3c4080470bc84c2174c1a28367f3b365c8c
-      imgUrl:
-        'https://conteudo.imguol.com.br/c/entretenimento/ba/2020/02/03/the-last-of-us-1580736903354_v2_3x4.jpg',
+      imgUrl: 'https://conteudo.imguol.com.br/c/entretenimento/ba/2020/02/03/the-last-of-us-1580736903354_v2_3x4.jpg',
     },
   ];
 
   const ListaMenu = [
     {
-<<<<<<< HEAD
-      descricao: 'Last Update',
-      link: '#',
-    },
-    {
-       descricao: 'Development curiosities',
-      link: '#',
-    },
-    {
-       descricao: 'Tools',
-      link: '#',
-=======
       descricao: 'Documentation',
       link: '#documentation-session',
     },
@@ -105,7 +83,6 @@ const CardFrame = () => {
     {
       descricao: 'Tools',
       link: 'footer-session',
->>>>>>> 26ccf3c4080470bc84c2174c1a28367f3b365c8c
     },
   ];
 
@@ -246,11 +223,7 @@ const CardFrame = () => {
         </Stack>
       </Stack>
       <Stack
-<<<<<<< HEAD
-        spacing={2}
-=======
         spacing={-1}
->>>>>>> 26ccf3c4080470bc84c2174c1a28367f3b365c8c
         sx={{
           // background: 'gray',
           width: '20%',
@@ -266,12 +239,8 @@ const CardFrame = () => {
         <Box
           component='div'
           sx={{
-<<<<<<< HEAD
-            background: '#1b1b2a',
-=======
             background: '#11111c',
             borderLeft: '1.5px solid #919191',
->>>>>>> 26ccf3c4080470bc84c2174c1a28367f3b365c8c
             borderRadius: '3px',
             minHeight: '20%',
             padding: '0 0 10px 15px',
@@ -291,31 +260,19 @@ const CardFrame = () => {
           {ListaMenu.map((element) => (
             <>
               <Link
-<<<<<<< HEAD
-                href='#'
-                sx={{
-                  fontSize: '0.875rem',
-                  fontFamily: 'Roboto-regular',
-                  color: '#9b9b9b',
-=======
                 href={element.link}
                 sx={{
                   fontSize: '0.875rem',
                   fontFamily: 'Roboto-regular',
                   color: '#bbbbbb',
->>>>>>> 26ccf3c4080470bc84c2174c1a28367f3b365c8c
                   textTransform: 'capitalize',
                   textDecoration: 'none',
                   paddingLeft: '5px',
                   cursor: 'pointer',
-<<<<<<< HEAD
-                  // background: 'green',
-=======
                   '&:hover': {
                     fontSize: '0.9rem',
                     textDecoration: 'underline',
                   },
->>>>>>> 26ccf3c4080470bc84c2174c1a28367f3b365c8c
                 }}>
                 {element.descricao}
               </Link>
@@ -323,31 +280,6 @@ const CardFrame = () => {
             </>
           ))}
         </Box>
-<<<<<<< HEAD
-        <Box
-          component='div'
-          sx={{
-            background: '#1b1b2a',
-            borderRadius: '3px',
-            minHeight: '60%',
-            padding: '0 0 0 15px',
-          }}>
-          <Texto
-            styles={{
-              // background: 'black',
-              fontSize: '1rem',
-              fontFamily: 'Roboto-regular',
-              fontWeight: '500',
-              color: '#ffffff',
-              textTransform: 'uppercase',
-              marginTop: '10px',
-            }}>
-            Othres
-          </Texto>
-          {/* menu categorias aqui */}
-        </Box>
-=======
->>>>>>> 26ccf3c4080470bc84c2174c1a28367f3b365c8c
       </Stack>
     </>
   );
