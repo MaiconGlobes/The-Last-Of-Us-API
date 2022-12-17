@@ -114,3 +114,4 @@ C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-A
 C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.dll
 C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.pdb
 C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.genruntimeconfig.cache
+C:\Users\Usuario\Documents\GIT\API-TLOU\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll

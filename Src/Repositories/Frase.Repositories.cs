@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace API_REST_The_Last_Of_Us.Src.Services
 {
@@ -25,9 +26,9 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       return FContexto.FRASE.Where(personagem => personagem.Id == AId).ToList();
     }
 
-    public IEnumerable BuscarTodosRegistros()
+    public async Task<IEnumerable> BuscarTodosRegistros()
     {
-      return FContexto.FRASE.OrderBy(frase => frase.Id)
+      return await FContexto.FRASE.OrderBy(frase => frase.Id)
         .Join(FContexto.PERSONAGEM,
           frase => frase.Personagem_id,
           personagem => personagem.Id,
@@ -39,12 +40,12 @@ namespace API_REST_The_Last_Of_Us.Src.Services
             frase.Personagem_id,
             personagem_nome = personagem.Nome,
           })
-        .ToList();
+        .ToListAsync();
     }
 
-    public IEnumerable BuscarRegistroPorPersonagem(string APersonagem)
+    public async Task<IEnumerable> BuscarRegistroPorPersonagemAsync(string APersonagem)
     {
-      return FContexto.FRASE.OrderBy(frase => frase.Id)
+      return await FContexto.FRASE.OrderBy(frase => frase.Id)
         .Join(FContexto.PERSONAGEM,
           frase => frase.Personagem_id,
           personagem => personagem.Id,
@@ -57,28 +58,27 @@ namespace API_REST_The_Last_Of_Us.Src.Services
             personagem_nome = personagem.Nome,
           })
         .Where(personagem => personagem.personagem_nome.ToLower().Contains(APersonagem))
-        .ToList();
+        .ToListAsync();
     }
 
-    public FraseModel GravarRegistro(FraseModel ADados)
+    public async Task<FraseModel> GravarRegistroAsync(FraseModel ADados)
     {
       FContexto.FRASE.Add(ADados);
-      FContexto.SaveChanges();
+      await FContexto.SaveChangesAsync();
       return ADados;
     }
 
-    public FraseModel DeletarRegistro(FraseModel ADados)
+    public async Task<FraseModel> DeletarRegistro(FraseModel ADados)
     {
       FContexto.FRASE.Remove(ADados);
-      FContexto.SaveChanges();
-
+      await FContexto.SaveChangesAsync();
       return ADados;
     }
 
-    public void DeletarTodosRegistros(DbSet<FraseModel> ADados)
+    public async Task DeletarTodosRegistrosAsync(DbSet<FraseModel> ADados)
     {
       FContexto.FRASE.RemoveRange(ADados);
-      FContexto.SaveChanges();
+      await FContexto.SaveChangesAsync();
     }
   }
 }

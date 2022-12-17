@@ -6,6 +6,7 @@ using API_REST_The_Last_Of_Us.Src.Utils;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace API_REST_The_Last_Of_Us.Controllers
 {
@@ -27,11 +28,11 @@ namespace API_REST_The_Last_Of_Us.Controllers
 
 		[ProducesResponseType(StatusCodes.Status200OK, Type = typeof(FraseRetornoOk))]
 		[HttpGet]
-		public IActionResult GetTodasFrases()
+		public async Task<IActionResult> GetTodasFrasesAsync()
 		{
 			try
 			{
-				var (Status, Json) = FFraseService.BuscarTodosRegistros();
+				var (Status, Json) = await FFraseService.BuscarTodosRegistrosAsync();
 
 				return Status switch
 				{
@@ -49,11 +50,11 @@ namespace API_REST_The_Last_Of_Us.Controllers
 
 		[ProducesResponseType(StatusCodes.Status200OK, Type = typeof(FraseRetornoOk))]
 		[HttpGet("{personagem}")]
-		public IActionResult GetFrasePorPersonagem(string personagem)
+		public async Task<IActionResult> GetFrasePorPersonagemAsync(string personagem)
 		{
 			try
 			{
-				var (Status, Json) = FFraseService.BuscarRegistroPorPersonagem(personagem);
+				var (Status, Json) = await FFraseService.BuscarRegistroPorPersonagemAsync(personagem);
 
 				return Status switch
 				{
@@ -72,13 +73,13 @@ namespace API_REST_The_Last_Of_Us.Controllers
 		[ProducesResponseType(StatusCodes.Status201Created, Type = typeof(FraseRetornoCreated))]
 		[ApiExplorerSettings(IgnoreApi = true)]
 		[HttpPost]
-		public IActionResult PostFrase([FromBody] FrasePOSTResponseDto AFraseBody)
+		public async Task<IActionResult> PostFraseAsync([FromBody] FrasePOSTResponseDto AFraseBody)
 		{
 			try
 			{
 				FraseModel fraseModel = FMapper.Map<FraseModel>(AFraseBody);
 
-				var (Status, Json) = FFraseService.CriarRegistro(fraseModel);
+				var (Status, Json) = await FFraseService.CriarRegistroAsync(fraseModel);
 
 				return Status switch
 				{
@@ -97,11 +98,11 @@ namespace API_REST_The_Last_Of_Us.Controllers
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ApiExplorerSettings(IgnoreApi = true)]
 		[HttpDelete("{id}")]
-		public IActionResult DeleteFrasePorId(int id)
+		public async Task<IActionResult> DeleteFrasePorId(int id)
 		{
 			try
 			{
-				var (Status, Json) = FFraseService.DeletarRegistro(id);
+				var (Status, Json) = await FFraseService.DeletarRegistroAsync(id);
 
 				return Status switch
 				{
@@ -120,11 +121,11 @@ namespace API_REST_The_Last_Of_Us.Controllers
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ApiExplorerSettings(IgnoreApi = true)]
 		[HttpDelete]
-		public IActionResult DeleteTodasFrases()
+		public async Task<IActionResult> DeleteTodasFrasesAsync()
 		{
 			try
 			{
-				var Status = FFraseService.DeletarTodosRegistros();
+				var Status = await FFraseService.DeletarTodosRegistrosAsync();
 
 				return Status switch
 				{

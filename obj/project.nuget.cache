@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9EgtVbdexQFV+SVgddcAgD+Lf7P4jbRJs8G+gYeRNI0yvnk9lJauNL1dGn87ojFha26QBjCrkVEkVmuwBCPduQ==",
+  "dgSpecHash": "T2uiiQIw/Z9KIBmwL4eA7vWn37HNE5KJNxuoJIb3WKsHf09LS/npNY4wAfZhH80uywpc3cN1gLlZ11l/J9ymKg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Usuario\\Documents\\GIT\\API-TLOU\\The-Last-Of-Us-API.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.nodeservices\\3.1.30\\microsoft.aspnetcore.nodeservices.3.1.30.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.spaservices\\3.1.30\\microsoft.aspnetcore.spaservices.3.1.30.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.aspnetcore.spaservices.extensions\\3.1.30\\microsoft.aspnetcore.spaservices.extensions.3.1.30.nupkg.sha512",
+    "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\Usuario\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

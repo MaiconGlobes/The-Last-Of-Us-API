@@ -1,6 +1,7 @@
 ﻿using API_REST_The_Last_Of_Us.Src.Models.Entity;
 using API_REST_The_Last_Of_Us.Src.Utils;
 using Castle.Core.Internal;
+using System.Threading.Tasks;
 
 namespace API_REST_The_Last_Of_Us.Src.Services
 {
@@ -15,11 +16,11 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       FFraseRepositories = new FraseRepositories();
     }
 
-    public (byte Status, object Json) BuscarTodosRegistros()
+    public async Task<(byte Status, object Json)> BuscarTodosRegistrosAsync()
     {
       try
       {
-        var listaDados = FFraseRepositories.BuscarTodosRegistros();
+        var listaDados = await FFraseRepositories.BuscarTodosRegistros();
 
         if ((listaDados != null) && (!listaDados.IsNullOrEmpty()))
         {
@@ -34,13 +35,13 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       }
     }
 
-    public (byte Status, object Json) BuscarRegistroPorPersonagem(string APersonagem)
+    public async Task<(byte Status, object Json)> BuscarRegistroPorPersonagemAsync(string APersonagem)
     {
       try
       {
         APersonagem = APersonagem.ToLower();
 
-        var listaDados = FFraseRepositories.BuscarRegistroPorPersonagem(APersonagem);
+        var listaDados = await FFraseRepositories.BuscarRegistroPorPersonagemAsync(APersonagem);
 
         if ((listaDados != null) && (!listaDados.IsNullOrEmpty()))
         {
@@ -55,7 +56,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       }
     }
 
-    public (byte Status, object Json) CriarRegistro(FraseModel ADados)
+    public async Task<(byte Status, object Json)> CriarRegistroAsync(FraseModel ADados)
     {
       try
       {
@@ -65,7 +66,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 
         if ((listaDados != null) & (listaDados.Count == 0))
         {
-          FraseModel registroCriado = FFraseRepositories.GravarRegistro(ADados);
+          FraseModel registroCriado = await FFraseRepositories.GravarRegistroAsync(ADados);
 
           return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoCreated(registroCriado));
         }
@@ -83,7 +84,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       }
     }
 
-    public (byte Status, object Json) DeletarRegistro(int AId)
+    public async Task<(byte Status, object Json)> DeletarRegistroAsync(int AId)
     {
       try
       {
@@ -91,7 +92,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
 
         if ((listaDados != null) & (listaDados.Count > 0))
         {
-          FraseModel registroDeletado = FFraseRepositories.DeletarRegistro(listaDados[0]);
+          FraseModel registroDeletado = await FFraseRepositories.DeletarRegistro(listaDados[0]);
 
           return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(listaDados));
         }
@@ -104,11 +105,11 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       }
     }
 
-    public byte DeletarTodosRegistros()
+    public async Task<byte> DeletarTodosRegistrosAsync()
     {
       try
       {
-        FFraseRepositories.DeletarTodosRegistros(Fcontexto.FRASE);
+        await FFraseRepositories.DeletarTodosRegistrosAsync(Fcontexto.FRASE);
 
         return (byte)EnumUtils.StatusProc.Sucesso;
       }
