@@ -1,4 +1,5 @@
 ﻿using API_REST_The_Last_Of_Us.Src.Utils;
+using System.Threading.Tasks;
 
 namespace API_REST_The_Last_Of_Us.Src.Services
 {
@@ -13,11 +14,11 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       FSobreRepositories = new SobreRepositories();
     }
 
-    public (byte Status, object Json) BuscarTodosRegistros()
+    public async Task<(byte Status, object Json)> BuscarTodosRegistrosAsync()
     {
       try
       {
-        var listaDados = FSobreRepositories.BuscarTodosRegistros();
+        var listaDados = await FSobreRepositories.BuscarTodosRegistrosAsync();
 
         return ((byte)EnumUtils.StatusProc.Sucesso, ResponseUtils.Instancia().RetornoOk(listaDados));
       }

@@ -4,6 +4,7 @@ using API_REST_The_Last_Of_Us.Src.Utils;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace API_REST_The_Last_Of_Us.Controllers
 {
@@ -25,11 +26,11 @@ namespace API_REST_The_Last_Of_Us.Controllers
 
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(SobreRetornoOk))]
     [HttpGet]
-    public IActionResult GetTodosRegistrosSobre()
+    public async Task<IActionResult> GetTodosRegistrosSobreAsync()
     {
       try
       {
-        var (Status, Json) = FSobreService.BuscarTodosRegistros();
+        var (Status, Json) = await FSobreService.BuscarTodosRegistrosAsync();
 
         return Status switch
         {

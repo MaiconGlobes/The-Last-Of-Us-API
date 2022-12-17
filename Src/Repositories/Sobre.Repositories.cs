@@ -1,6 +1,8 @@
 ﻿using API_REST_The_Last_Of_Us.Src.Models.Entity;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace API_REST_The_Last_Of_Us.Src.Services
 {
@@ -12,9 +14,9 @@ namespace API_REST_The_Last_Of_Us.Src.Services
     {
       FContexto = new Contexto();
     }
-    public List<SobreModel> BuscarTodosRegistros()
+    public async Task<List<SobreModel>> BuscarTodosRegistrosAsync()
     {
-      return FContexto.SOBRE.OrderBy(sobre => sobre.Id).ToList();
+      return await FContexto.SOBRE.OrderBy(sobre => sobre.Id).ToListAsync();
     }
   }
 }
