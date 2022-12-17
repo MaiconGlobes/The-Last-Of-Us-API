@@ -158,7 +158,7 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
         new PersonagemModel
         {
           Id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
-          Nome =  "Ellie Williams",
+          Nome =  "Ellie Leanne Joel (Ellie Williams)",
         },
         new PersonagemModel
         {
