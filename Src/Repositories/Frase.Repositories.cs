@@ -36,7 +36,8 @@ namespace API_REST_The_Last_Of_Us.Src.Services
           {
             frase.Id,
             frase.Descricao,
-            Personagem_id = personagem.Id,
+            frase.Personagem_id,
+            personagem_nome = personagem.Nome,
           })
         .ToList();
     }
@@ -52,9 +53,10 @@ namespace API_REST_The_Last_Of_Us.Src.Services
           {
             frase.Id,
             frase.Descricao,
-            Personagem = personagem.Nome,
+            frase.Personagem_id,
+            personagem_nome = personagem.Nome,
           })
-        .Where(personagem => personagem.Personagem.ToLower().Contains(APersonagem))
+        .Where(personagem => personagem.personagem_nome.ToLower().Contains(APersonagem))
         .ToList();
     }
 
