@@ -11,7 +11,7 @@ namespace API_REST_The_Last_Of_Us.Controllers
 	[ProducesResponseType(StatusCodes.Status500InternalServerError)]
 	[ApiExplorerSettings(IgnoreApi = true)]
 	[Produces("application/json")]
-	[Route("home")]
+	[Route("/home")]
 	public class HomeController : ControllerBase
 	{
 		private object FObjRetorno { get; set; }
