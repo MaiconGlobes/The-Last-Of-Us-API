@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
 namespace API_REST_The_Last_Of_Us.Src.Models.Dto
@@ -11,10 +12,7 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Dto
 		public string Descricao { get; set; }
 
 		[JsonPropertyName("personagem_id")]
-		public int Personagem_id { get; set; }
-
-		[JsonPropertyName("nome_personagem")]
-		public string Nome_personagem { get; set; }
+		public Guid Personagem_id { get; set; }
 	}
 
 	public class FrasePOSTResponseDto
@@ -25,6 +23,6 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Dto
 		public string Descricao { get; set; }
 
 		[JsonPropertyName("personagem_id")]
-		public int Personagem_id { get; set; }
+		public Guid Personagem_id { get; set; }
 	}
 }
