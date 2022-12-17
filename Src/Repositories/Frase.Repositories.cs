@@ -54,7 +54,8 @@ namespace API_REST_The_Last_Of_Us.Src.Services
             frase.Descricao,
             Personagem = personagem.Nome,
           })
-        .Where(personagem => personagem.Personagem.ToLower().Contains(APersonagem)).ToList();
+        .Where(personagem => personagem.Personagem.ToLower().Contains(APersonagem))
+        .ToList();
     }
 
     public FraseModel GravarRegistro(FraseModel ADados)
