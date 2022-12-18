@@ -367,27 +367,129 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
         new FraseModel
         {
           Id = 2,
-          Descricao = "Todos que eu amava me deixaram ou morreram, todos... exceto você. Então não diga que eu estaria mais segura com outra pessoa porque a verdade é que eu só estaria mais assustada.",
+          Descricao = "Eu não sou mais uma criança. Eu posso lidar comigo mesmo.",
           Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
         },
         new FraseModel
         {
           Id = 3,
-          Descricao = "Há um milhão de maneiras pelas quais deveríamos ter morrido antes de hoje, e um milhão de maneiras pelas quais podemos morrer amanhã.",
+          Descricao = "Não tenho mais medo de morrer. Só tenho medo da dor.",
           Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
         },
         new FraseModel
         {
           Id = 4,
-          Descricao = "Isso se chama sorte, e vai acabar.",
+          Descricao = "Eu só quero ficar sozinha.",
           Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
         },
         new FraseModel
         {
           Id = 5,
-          Descricao = "Se Deus me desse uma segunda chance, eu faria tudo igual",
-          Personagem_id = new Guid("fc105ebc-0610-47af-8eea-fdde2db775b8"),
+          Descricao = "Não é como se eu não estivesse acostumada com pessoas morrendo. É apenas, eu não esperava que fosse ele.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
         },
+        new FraseModel
+        {
+          Id = 6,
+          Descricao = "Eu não vou ser um fardo, eu prometo. Farei o que for preciso.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 7,
+          Descricao = "Eu não vou te deixar. Eu não vou morrer.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 8,
+          Descricao = "Eu não vou ser uma garotinha para sempre. Um dia, eu vou ser como você. Forte e corajoso.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 9,
+          Descricao = "Não tenho medo de morrer. Eu só tenho medo de perder você.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 10,
+          Descricao = "Eu odeio este lugar. Eu odeio o cheiro. Eu odeio o barulho. Eu odeio a maneira como se sente.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 11,
+          Descricao = "Estou com medo.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 12,
+          Descricao = "Eu não posso simplesmente sentar aqui e não fazer nada.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 13,
+          Descricao = "Eu não vou me esconder aqui para sempre.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 14,
+          Descricao = "Eu não vou desistir.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 15,
+          Descricao = "Eu não quero mais estar aqui.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 16,
+          Descricao = "Eu não quero voltar para aquele lugar.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 17,
+          Descricao = "Eu não posso continuar correndo para sempre.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 18,
+          Descricao = "Estou cansada de ficar com medo o tempo todo.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 19,
+          Descricao = "Estou cansado de ficar sozinho.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 20,
+          Descricao = "Eu não quero estar aqui quando isso acontecer.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 21,
+          Descricao = "Eu não quero voltar a essa vida.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        },
+        new FraseModel
+        {
+          Id = 22,
+          Descricao = "Eu não quero mais estar aqui. Quero ir para casa.",
+          Personagem_id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
+        }
       };
     }
   }
