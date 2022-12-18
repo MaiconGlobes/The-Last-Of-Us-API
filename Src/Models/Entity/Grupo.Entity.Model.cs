@@ -13,15 +13,15 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
     [JsonPropertyName("id")]
     public int Id { get; set; }
 
-    [Column("Descricao")]
-    [Required(ErrorMessage = "Propriedade [descricao] é obrigatório")]
-    [StringLength(25, ErrorMessage = "Propriedade [descricao] deve ter no máximo 25 caractere")]
-    [JsonPropertyName("descricao")]
-    public string Descricao { get; set; }
+    [Column("Titulo")]
+    [Required(ErrorMessage = "Propriedade [titulo] é obrigatório")]
+    [StringLength(25, ErrorMessage = "Propriedade [titulo] deve ter no máximo 25 caractere")]
+    [JsonPropertyName("titulo")]
+    public string Titulo { get; set; }
 
     [Column("Detalhe", TypeName = "text")]
     [JsonPropertyName("detalhe")]
-    public string Detalhe { get; set; }
+    public string Definicao { get; set; }
 
     [Required(ErrorMessage = "Propriedade [especie.personagens] é obrigatório")]
     [JsonIgnore]

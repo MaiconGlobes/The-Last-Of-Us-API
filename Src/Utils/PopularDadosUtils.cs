@@ -133,74 +133,74 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
         new GrupoModel
         {
           Id = 1,
-          Descricao = "Independentes",
-          Detalhe = "São sobreviventes que lutam por sua própria sobrevivência e pelo bem-estar um do outro.",
+          Titulo = "Independentes",
+          Definicao = "São sobreviventes que lutam por sua própria sobrevivência e pelo bem-estar um do outro.",
         },
         new GrupoModel
         {
           Id = 2,
-          Descricao = "Sentinéis",
-          Detalhe = "Um grupo de sobreviventes que tentam manter a ordem e a segurança em uma cidade chamada Jackson. Eles são liderados por Tommy e seguem regras rígidas para proteger sua comunidade.",
+          Titulo = "Sentinéis",
+          Definicao = "Um grupo de sobreviventes que tentam manter a ordem e a segurança em uma cidade chamada Jackson. Eles são liderados por Tommy e seguem regras rígidas para proteger sua comunidade.",
         },
         new GrupoModel
         {
           Id = 3,
-          Descricao = "Conquistadores",
-          Detalhe = "Um grupo de sobreviventes que se estabeleceram em uma cidade chamada Salt Lake City e que controlam o comércio de recursos valiosos, como munição e medicamentos. Eles são liderados por David e usam a violência para manterem sua posição de poder.",
+          Titulo = "Conquistadores",
+          Definicao = "Um grupo de sobreviventes que se estabeleceram em uma cidade chamada Salt Lake City e que controlam o comércio de recursos valiosos, como munição e medicamentos. Eles são liderados por David e usam a violência para manterem sua posição de poder.",
         },
         new GrupoModel
         {
           Id = 4,
-          Descricao = "Fireflies",
-          Detalhe = "Um grupo de sobreviventes que se estabeleceram em uma cidade chamada Salt Lake City e que controlam o comércio de recursos valiosos, como munição e medicamentos. Eles são liderados por David e usam a violência para manterem sua posição de poder.",
+          Titulo = "Fireflies",
+          Definicao = "Um grupo de sobreviventes que se estabeleceram em uma cidade chamada Salt Lake City e que controlam o comércio de recursos valiosos, como munição e medicamentos. Eles são liderados por David e usam a violência para manterem sua posição de poder.",
         },
         new GrupoModel
         {
           Id = 5,
-          Descricao = "Bandidos",
-          Detalhe = "Um grupo de sobreviventes que se aproveitam da situação pós-apocalíptica para cometer crimes e extorquir outros sobreviventes. Eles são liderados por Bill e são vistos como inimigos pelos outros grupos.",
+          Titulo = "Bandidos",
+          Definicao = "Um grupo de sobreviventes que se aproveitam da situação pós-apocalíptica para cometer crimes e extorquir outros sobreviventes. Eles são liderados por Bill e são vistos como inimigos pelos outros grupos.",
         },
         new GrupoModel
         {
           Id = 6,
-          Descricao = "Perseguidores ",
-          Detalhe = "Os Perseguidores são uma facção de sobreviventes hostis no jogo. Eles são um grupo de humanos que se adaptou ao mundo pós-apocalíptico criado pelo fungo Cordyceps e se dedicam a perseguir e capturar outros sobreviventes para aumentar seus próprios recursos e poder. Os Perseguidores são conhecidos por usar táticas agressivas e serem altamente treinados e equipados, o que os torna um grande perigo para os outros sobreviventes no jogo. Eles são um inimigo importante a ser enfrentado pelo protagonista, Joel, e sua companheira de viagem, Ellie, enquanto eles tentam sobreviver em um mundo perigoso e hostil.",
+          Titulo = "Perseguidores ",
+          Definicao = "Os Perseguidores são uma facção de sobreviventes hostis no jogo. Eles são um grupo de humanos que se adaptou ao mundo pós-apocalíptico criado pelo fungo Cordyceps e se dedicam a perseguir e capturar outros sobreviventes para aumentar seus próprios recursos e poder. Os Perseguidores são conhecidos por usar táticas agressivas e serem altamente treinados e equipados, o que os torna um grande perigo para os outros sobreviventes no jogo. Eles são um inimigo importante a ser enfrentado pelo protagonista, Joel, e sua companheira de viagem, Ellie, enquanto eles tentam sobreviver em um mundo perigoso e hostil.",
         },
         new GrupoModel
         {
           Id = 7,
-          Descricao = "Runners",
-          Detalhe = "O fungo cordyceps é conhecido por infectar o cérebro de seus hospedeiros e alterar seu comportamento, deixando-os extremamente agressivos e incapazes de raciocinar de maneira lógica. Após ser mordido por um hospedeiro infectado ou ter inalado os esporos do fungo, os sintomas geralmente começam a aparecer em um período de um a dois dias. Os hospedeiros infectados que ainda estão no primeiro estágio da infecção são chamados de \"corredores\" devido ao seu hábito de perseguir animais ou pessoas saudáveis quando são detectados. Embora mantenham aparência humana, eles são considerados os inimigos mais fáceis de serem eliminados quando encontrados individualmente. No entanto, quando se juntam em grandes grupos, é melhor evitar o confronto e tentar fugir.",
+          Titulo = "Runners",
+          Definicao = "O fungo cordyceps é conhecido por infectar o cérebro de seus hospedeiros e alterar seu comportamento, deixando-os extremamente agressivos e incapazes de raciocinar de maneira lógica. Após ser mordido por um hospedeiro infectado ou ter inalado os esporos do fungo, os sintomas geralmente começam a aparecer em um período de um a dois dias. Os hospedeiros infectados que ainda estão no primeiro estágio da infecção são chamados de \"corredores\" devido ao seu hábito de perseguir animais ou pessoas saudáveis quando são detectados. Embora mantenham aparência humana, eles são considerados os inimigos mais fáceis de serem eliminados quando encontrados individualmente. No entanto, quando se juntam em grandes grupos, é melhor evitar o confronto e tentar fugir.",
         },
         new GrupoModel
         {
           Id = 8,
-          Descricao = "Stalkers",
-          Detalhe = "Os Perseguidores são uma variante dos Infectados em The Last of Us. Eles atingem o segundo estágio de infecção após passar duas semanas como um Corredor, com o fungo no cérebro crescendo e danificando o córtex visual do hospedeiro. Os Perseguidores são conhecidos por serem mais silenciosos e por possuir um sentido auditivo aguçado. Eles costumam se reunir em grupos pequenos e se esconder em locais fechados e escuros, como antigos prédios ou túneis subterrâneos. Em The Last of Us: Parte II (2020), eles também podem se esconder atrás de paredes cobertas de fungos para atacar os jogadores de surpresa.",
+          Titulo = "Stalkers",
+          Definicao = "Os Perseguidores são uma variante dos Infectados em The Last of Us. Eles atingem o segundo estágio de infecção após passar duas semanas como um Corredor, com o fungo no cérebro crescendo e danificando o córtex visual do hospedeiro. Os Perseguidores são conhecidos por serem mais silenciosos e por possuir um sentido auditivo aguçado. Eles costumam se reunir em grupos pequenos e se esconder em locais fechados e escuros, como antigos prédios ou túneis subterrâneos. Em The Last of Us: Parte II (2020), eles também podem se esconder atrás de paredes cobertas de fungos para atacar os jogadores de surpresa.",
         },
         new GrupoModel
         {
           Id = 9,
-          Descricao = "Clickers",
-          Detalhe = "Os Estaladores são uma variante dos Infectados em The Last of Us. Eles são humanos que foram infectados pelo fungo Cordyceps e passaram um ano inteiro sem ser mortos por sobreviventes. Como resultado, eles atingem o terceiro estágio de infecção e se transformam em uma das criaturas mais temidas do jogo. Os Estaladores têm o crescimento fúngico enorme em seus rostos, o que os deixa completamente cegos. No entanto, eles desenvolveram uma forma primitiva de ecolocalização, emitindo sons de \"click\" que os ajudam a se orientar. Eles também são conhecidos por serem resistentes e agressivos, correndo diretamente para sua presa quando provocados. Apesar de serem vulneráveis ao fogo, os Estaladores podem ser atacados furtivamente com facas ou diretamente com algum tipo de bastão.",
+          Titulo = "Clickers",
+          Definicao = "Os Estaladores são uma variante dos Infectados em The Last of Us. Eles são humanos que foram infectados pelo fungo Cordyceps e passaram um ano inteiro sem ser mortos por sobreviventes. Como resultado, eles atingem o terceiro estágio de infecção e se transformam em uma das criaturas mais temidas do jogo. Os Estaladores têm o crescimento fúngico enorme em seus rostos, o que os deixa completamente cegos. No entanto, eles desenvolveram uma forma primitiva de ecolocalização, emitindo sons de \"click\" que os ajudam a se orientar. Eles também são conhecidos por serem resistentes e agressivos, correndo diretamente para sua presa quando provocados. Apesar de serem vulneráveis ao fogo, os Estaladores podem ser atacados furtivamente com facas ou diretamente com algum tipo de bastão.",
         },
         new GrupoModel
         {
           Id = 10,
-          Descricao = "Worms",
-          Detalhe = "Após um longo período de infecção pelo fungo cordyceps, os hospedeiros infectados atingem o estágio final da doença e se transformam em uma criatura conhecida como \"verme\". Neste estado, o fungo deforma o corpo do hospedeiro de maneira radical, cobrindo-o de grossas placas fúngicas que o tornam mais forte, resistente e difícil de ser eliminado. Além disso, os vermes também podem remover partes do fungo de seu próprio corpo e usá-las como bombas que liberam esporos. Na maioria dos jogos, essas criaturas só podem ser eliminadas com ataques de longa distância. É necessário enfraquecê-las com fogo intenso antes de usar o melhor de seu arsenal para acabar com elas.",
+          Titulo = "Worms",
+          Definicao = "Após um longo período de infecção pelo fungo cordyceps, os hospedeiros infectados atingem o estágio final da doença e se transformam em uma criatura conhecida como \"verme\". Neste estado, o fungo deforma o corpo do hospedeiro de maneira radical, cobrindo-o de grossas placas fúngicas que o tornam mais forte, resistente e difícil de ser eliminado. Além disso, os vermes também podem remover partes do fungo de seu próprio corpo e usá-las como bombas que liberam esporos. Na maioria dos jogos, essas criaturas só podem ser eliminadas com ataques de longa distância. É necessário enfraquecê-las com fogo intenso antes de usar o melhor de seu arsenal para acabar com elas.",
         },
         new GrupoModel
         {
           Id = 11,
-          Descricao = "Trôpegos",
-          Detalhe = "Quando um hospedeiro infectado que está no processo de se transformar em um verme habita um ambiente muito úmido, o fungo passa por uma mutação e um aglomerado de esporos cresce na região da cabeça e dos ombros. Essas criaturas, conhecidas como \"trôpegos\", são menores e menos resistentes que os vermes, e não possuem bocas, o que as impede de morder. No entanto, ainda são extremamente perigosas, pois expelem esporos ácidos em suas vítimas. É importante manter distância desses infectados, pois ao serem eliminados, eles explodem e liberam ainda mais ácido. Essa variante de infectado foi introduzida somente em \"The Last of Us Parte II\", e é improvável que apareça na primeira temporada da adaptação para a HBO.",
+          Titulo = "Trôpegos",
+          Definicao = "Quando um hospedeiro infectado que está no processo de se transformar em um verme habita um ambiente muito úmido, o fungo passa por uma mutação e um aglomerado de esporos cresce na região da cabeça e dos ombros. Essas criaturas, conhecidas como \"trôpegos\", são menores e menos resistentes que os vermes, e não possuem bocas, o que as impede de morder. No entanto, ainda são extremamente perigosas, pois expelem esporos ácidos em suas vítimas. É importante manter distância desses infectados, pois ao serem eliminados, eles explodem e liberam ainda mais ácido. Essa variante de infectado foi introduzida somente em \"The Last of Us Parte II\", e é improvável que apareça na primeira temporada da adaptação para a HBO.",
         },
         new GrupoModel
         {
           Id = 12,
-          Descricao = "Rei dos Ratos",
-          Detalhe = "Essa criatura nojenta e repulsiva é o resultado de alguns dos primeiros infectados terem sido mantidos em cativeiro em um hospital abandonado por 24 anos. O \"Rei dos Ratos\" (assim chamado em homenagem a um fenômeno raro no reino animal, onde um grupo de ratos foi encontrado com suas caudas interligadas e fundidas por cabelo e substâncias pegajosas) é uma mistura de todos os tipos de infectados existentes no universo de \"The Last of Us\", possuindo a velocidade de um perseguidor,  a ecolocalização de um estalador e a força de um verme. Como foi introduzido somente em \"The Last of Us Parte II\", é improvável que ele apareça na primeira temporada da nova série da HBO.",
+          Titulo = "Rei dos Ratos",
+          Definicao = "Essa criatura nojenta e repulsiva é o resultado de alguns dos primeiros infectados terem sido mantidos em cativeiro em um hospital abandonado por 24 anos. O \"Rei dos Ratos\" (assim chamado em homenagem a um fenômeno raro no reino animal, onde um grupo de ratos foi encontrado com suas caudas interligadas e fundidas por cabelo e substâncias pegajosas) é uma mistura de todos os tipos de infectados existentes no universo de \"The Last of Us\", possuindo a velocidade de um perseguidor,  a ecolocalização de um estalador e a força de um verme. Como foi introduzido somente em \"The Last of Us Parte II\", é improvável que ele apareça na primeira temporada da nova série da HBO.",
         },
       };
     }
