@@ -20,6 +20,12 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
     [JsonPropertyName("nome")]
     public string Nome { get; set; }
 
+    [JsonIgnore]
+    public int Especie_id { get; set; }
+
+    [JsonIgnore]
+    public virtual EspecieModel Especie { get; set; }
+
     [Required(ErrorMessage = "Propriedade [personagem.frases] é obrigatório")]
     [JsonPropertyName("frases")]
     public virtual ICollection<FraseModel> Frases { get; set; }

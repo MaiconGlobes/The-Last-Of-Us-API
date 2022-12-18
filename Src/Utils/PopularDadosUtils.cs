@@ -126,6 +126,43 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
       };
     }
 
+    public IList<EspecieModel> PopularEspecie()
+    {
+      return new List<EspecieModel>
+      {
+        new EspecieModel
+        {
+          Id = 1,
+          Tipo = "Humano",
+          Descricao = null,
+        },
+        new EspecieModel
+        {
+          Id = 2,
+          Tipo = "Infectado Clamoroso",
+          Descricao = "São Infectados que têm o fungo Cordyceps crescendo pelo corpo, o que os torna muito mais agressivos do que os Infectados normais. Eles são facilmente reconhecidos pelo seu grito característico.",
+        },
+        new EspecieModel
+        {
+          Id = 3,
+          Tipo = "Infectado Volátei",
+          Descricao = "São Infectados que têm uma infecção muito avançada e são extremamente perigosos. Eles são muito rápidos e ágeis, e possuem uma força sobrenatural. Eles também são muito agressivos e atacam qualquer coisa que se move.",
+        },
+        new EspecieModel
+        {
+          Id = 4,
+          Tipo = "Infectado Cego",
+          Descricao = "São Infectados que têm o fungo crescendo em seus olhos, o que os deixa cegos. No entanto, eles são capazes de detectar presas pelo som, e são muito perigosos em grupos.",
+        },
+        new EspecieModel
+        {
+          Id = 5,
+          Tipo = "Infectado de Elite",
+          Descricao = "São Infectados que têm o fungo Cordyceps crescendo em seus corpos de uma forma muito mais avançada do que os outros Infectados. Eles são muito mais fortes e resistentes do que os Infectados normais, e são muito difíceis de matar. Eles também possuem habilidades únicas, como a capacidade de controlar outros Infectados.",
+        },
+      };
+    }
+
     public IList<VersaoModel> PopularVersao()
     {
       return new List<VersaoModel>
@@ -159,91 +196,109 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
         {
           Id = new Guid("479f2095-5476-47c2-a3f4-87d14c6fe381"),
           Nome =  "Ellie Leanne Joel (Ellie Williams)",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("fc105ebc-0610-47af-8eea-fdde2db775b8"),
           Nome =  "Joel Miller",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("bcd11b9e-12e3-454a-b584-a148b58f3427"),
           Nome =  "Sarah Miller",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("4039cf0a-ca49-4a9a-9e3e-31754d8cb104"),
           Nome =  "Tommy Miller",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("3ce1f89c-06b2-441c-86a8-d437c4680569"),
           Nome =  "Tess (Theresa Servopoulos)",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("3ef7803b-a61e-49f0-85ee-b19c2e2d4626"),
           Nome =  "Marlene",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("0ba0f1a3-5c6a-478e-971d-28495db5e386"),
           Nome =  "Bill",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("ba76f052-6607-4097-82c0-88e5a82b781d"),
           Nome =  "Henry",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("4697df37-694b-495e-a18d-8e5d1176e59d"),
           Nome =  "Sam",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("b471b4ad-59e7-4c54-b181-466cd09c708a"),
           Nome =  "David",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("3d55a8a1-cb03-4161-8e27-70c7ab090dda"),
           Nome =  "Abby",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("53b4e870-746f-4113-8e26-1358f3d2283d"),
           Nome =  "Dina",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("2a78e56b-4ce5-4f03-a796-60a2eb5198c3"),
           Nome =  "Jesse",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("99943e13-4b80-49d5-9056-43fd9c5035db"),
           Nome =  "Lev",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("8cf01e12-1938-4998-afb6-fe1ea2e17584"),
           Nome =  "Yara",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("5eeef74d-096c-4c97-97ef-bce95db779a2"),
           Nome =  "Manny",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("456bc8d7-9adb-412d-822b-9c355e72bc12"),
           Nome =  "Mel",
+          Especie_id = 1
         },
         new PersonagemModel
         {
           Id = new Guid("f3e22d07-e2aa-4fc7-9955-45cb879a48a5"),
           Nome =  "Jerry Anderson",
+          Especie_id = 1
         },
       };
     }
