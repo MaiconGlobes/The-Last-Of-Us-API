@@ -15,7 +15,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
     public DbSet<PlataformaModel> PLATAFORMA { get; set; }
     public DbSet<DesignerModel> DESIGNER { get; set; }
     public DbSet<FraseModel> FRASE { get; set; }
-    public DbSet<EspecieModel> ESPECIE { get; set; }
+    public DbSet<GrupoModel> GRUPO { get; set; }
     public DbSet<PersonagemModel> PERSONAGEM { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -43,8 +43,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       modelBuilder.Entity<FraseModel>().HasOne(frase => frase.Personagem).WithMany(personagem => personagem.Frases).HasForeignKey(frase => frase.Personagem_id);
       modelBuilder.Entity<IdadeModel>().HasOne(idade => idade.Personagem).WithMany(personagem => personagem.Idades).HasForeignKey(idade => idade.Personagem_id);
       modelBuilder.Entity<IdadeModel>().HasOne(idade => idade.Versao).WithMany(versao => versao.Idades).HasForeignKey(idade => idade.Versao_id);
-      modelBuilder.Entity<PersonagemModel>().HasOne(a => a.Especie).WithMany(b => b.Personagens).HasForeignKey(a => a.Especie_id);
-
+      modelBuilder.Entity<PersonagemModel>().HasOne(personagem => personagem.Grupo).WithMany(grupo => grupo.Personagem).HasForeignKey(personagem => personagem.Grupo_id);
       #endregion
 
       #region Auto Generator
@@ -55,7 +54,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       modelBuilder.Entity<DesignerModel>().Property(designer => designer.Id).ValueGeneratedOnAdd();
       modelBuilder.Entity<FraseModel>().Property(frase => frase.Id).ValueGeneratedOnAdd();
       modelBuilder.Entity<IdadeModel>().Property(idade => idade.Id).ValueGeneratedOnAdd();
-      modelBuilder.Entity<EspecieModel>().Property(especie => especie.Id).ValueGeneratedOnAdd();
+      modelBuilder.Entity<GrupoModel>().Property(grupo => grupo.Id).ValueGeneratedOnAdd();
       modelBuilder.Entity<VersaoModel>().Property(versao => versao.Id).ValueGeneratedOnAdd();
       #endregion
 
@@ -67,7 +66,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       modelBuilder.Entity<LancamentoModel>().HasIndex(lancamento => lancamento.Data).IsUnique();
       modelBuilder.Entity<DesignerModel>().HasIndex(designer => designer.Nome).IsUnique();
       modelBuilder.Entity<FraseModel>().HasIndex(frase => frase.Descricao).IsUnique();
-      modelBuilder.Entity<EspecieModel>().HasIndex(especie => especie.Tipo).IsUnique();
+      modelBuilder.Entity<GrupoModel>().HasIndex(especie => especie.Descricao).IsUnique();
       modelBuilder.Entity<VersaoModel>().HasIndex(versao => versao.Descricao).IsUnique();
       #endregion
 
@@ -87,9 +86,8 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       modelBuilder.Entity<FraseModel>().Property(frase => frase.Descricao).IsRequired();
       modelBuilder.Entity<FraseModel>().Property(frase => frase.Personagem_id).IsRequired();
       modelBuilder.Entity<IdadeModel>().Property(idade => idade.Idade).IsRequired();
-      modelBuilder.Entity<EspecieModel>().Property(especie => especie.Tipo).IsRequired();
+      modelBuilder.Entity<GrupoModel>().Property(grupo => grupo.Descricao).IsRequired();
       modelBuilder.Entity<VersaoModel>().Property(versao => versao.Descricao).IsRequired();
-
       #endregion
 
       #region Popular Dados
@@ -100,7 +98,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       modelBuilder.Entity<PersonagemModel>().HasData(PopularDadosUtils.Instancia().PopularPersonagem());
       modelBuilder.Entity<VersaoModel>().HasData(PopularDadosUtils.Instancia().PopularVersao());
       modelBuilder.Entity<FraseModel>().HasData(PopularDadosUtils.Instancia().PopularFrase());
-      modelBuilder.Entity<EspecieModel>().HasData(PopularDadosUtils.Instancia().PopularEspecie());
+      modelBuilder.Entity<GrupoModel>().HasData(PopularDadosUtils.Instancia().PopularGrupo());
       #endregion
     }
   }

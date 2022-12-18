@@ -5,27 +5,27 @@ using System.Text.Json.Serialization;
 
 namespace API_REST_The_Last_Of_Us.Src.Models.Entity
 {
-  [Table("Especie", Schema = "public")]
-  public class EspecieModel
+  [Table("Grupo", Schema = "public")]
+  public class GrupoModel
   {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     [JsonPropertyName("id")]
     public int Id { get; set; }
 
-    [Column("Tipo")]
-    [Required(ErrorMessage = "Propriedade [tipo] é obrigatório")]
-    [StringLength(25, ErrorMessage = "Propriedade [tipo] deve ter no máximo 25 caractere")]
-    [JsonPropertyName("tipo")]
-    public string Tipo { get; set; }
-
-    [Column("Descricao", TypeName = "text")]
+    [Column("Descricao")]
+    [Required(ErrorMessage = "Propriedade [descricao] é obrigatório")]
+    [StringLength(25, ErrorMessage = "Propriedade [descricao] deve ter no máximo 25 caractere")]
     [JsonPropertyName("descricao")]
     public string Descricao { get; set; }
 
+    [Column("Detalhe", TypeName = "text")]
+    [JsonPropertyName("detalhe")]
+    public string Detalhe { get; set; }
+
     [Required(ErrorMessage = "Propriedade [especie.personagens] é obrigatório")]
     [JsonIgnore]
-    public virtual ICollection<PersonagemModel> Personagens { get; set; }
+    public virtual ICollection<PersonagemModel> Personagem { get; set; }
 
   }
 }
