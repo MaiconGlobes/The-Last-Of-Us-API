@@ -166,42 +166,26 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
           Titulo = "Perseguidores ",
           Definicao = "Os Perseguidores são uma facção de sobreviventes hostis no jogo. Eles são um grupo de humanos que se adaptou ao mundo pós-apocalíptico criado pelo fungo Cordyceps e se dedicam a perseguir e capturar outros sobreviventes para aumentar seus próprios recursos e poder. Os Perseguidores são conhecidos por usar táticas agressivas e serem altamente treinados e equipados, o que os torna um grande perigo para os outros sobreviventes no jogo. Eles são um inimigo importante a ser enfrentado pelo protagonista, Joel, e sua companheira de viagem, Ellie, enquanto eles tentam sobreviver em um mundo perigoso e hostil.",
         },
+
         new GrupoModel
         {
           Id = 7,
-          Titulo = "Runners",
-          Definicao = "O fungo cordyceps é conhecido por infectar o cérebro de seus hospedeiros e alterar seu comportamento, deixando-os extremamente agressivos e incapazes de raciocinar de maneira lógica. Após ser mordido por um hospedeiro infectado ou ter inalado os esporos do fungo, os sintomas geralmente começam a aparecer em um período de um a dois dias. Os hospedeiros infectados que ainda estão no primeiro estágio da infecção são chamados de \"corredores\" devido ao seu hábito de perseguir animais ou pessoas saudáveis quando são detectados. Embora mantenham aparência humana, eles são considerados os inimigos mais fáceis de serem eliminados quando encontrados individualmente. No entanto, quando se juntam em grandes grupos, é melhor evitar o confronto e tentar fugir.",
+          Titulo = "Infectado Inicial",
+          Definicao = "O primeiro estágio da infecção é conhecido como \"Infecção Inicial\", durante o qual o indivíduo ainda não apresenta sintomas evidentes da infecção, mas já está contaminado pelo fungo Ophiocordyceps unilateralis. O fungo se instala no sistema nervoso do hospedeiro e começa a controlar seus comportamentos.",
         },
         new GrupoModel
         {
           Id = 8,
-          Titulo = "Stalkers",
-          Definicao = "Os Perseguidores são uma variante dos Infectados em The Last of Us. Eles atingem o segundo estágio de infecção após passar duas semanas como um Corredor, com o fungo no cérebro crescendo e danificando o córtex visual do hospedeiro. Os Perseguidores são conhecidos por serem mais silenciosos e por possuir um sentido auditivo aguçado. Eles costumam se reunir em grupos pequenos e se esconder em locais fechados e escuros, como antigos prédios ou túneis subterrâneos. Em The Last of Us: Parte II (2020), eles também podem se esconder atrás de paredes cobertas de fungos para atacar os jogadores de surpresa.",
+          Titulo = "Infectado Ativo",
+          Definicao = "O primeiro estágio da infecção é conhecido como \"Infecção Inicial\", durante o qual o indivíduo ainda não apresenta sintomas evidentes da infecção, mas já está contaminado pelo fungo Ophiocordyceps unilateralis. O fungo se instala no sistema nervoso do hospedeiro e começa a controlar seus comportamentos.",
         },
         new GrupoModel
         {
           Id = 9,
-          Titulo = "Clickers",
-          Definicao = "Os Estaladores são uma variante dos Infectados em The Last of Us. Eles são humanos que foram infectados pelo fungo Cordyceps e passaram um ano inteiro sem ser mortos por sobreviventes. Como resultado, eles atingem o terceiro estágio de infecção e se transformam em uma das criaturas mais temidas do jogo. Os Estaladores têm o crescimento fúngico enorme em seus rostos, o que os deixa completamente cegos. No entanto, eles desenvolveram uma forma primitiva de ecolocalização, emitindo sons de \"click\" que os ajudam a se orientar. Eles também são conhecidos por serem resistentes e agressivos, correndo diretamente para sua presa quando provocados. Apesar de serem vulneráveis ao fogo, os Estaladores podem ser atacados furtivamente com facas ou diretamente com algum tipo de bastão.",
+          Titulo = "Infectado Tardio",
+          Definicao = "O primeiro estágio da infecção é conhecido como \"Infecção Inicial\", durante o qual o indivíduo ainda não apresenta sintomas evidentes da infecção, mas já está contaminado pelo fungo Ophiocordyceps unilateralis. O fungo se instala no sistema nervoso do hospedeiro e começa a controlar seus comportamentos.",
         },
-        new GrupoModel
-        {
-          Id = 10,
-          Titulo = "Worms",
-          Definicao = "Após um longo período de infecção pelo fungo cordyceps, os hospedeiros infectados atingem o estágio final da doença e se transformam em uma criatura conhecida como \"verme\". Neste estado, o fungo deforma o corpo do hospedeiro de maneira radical, cobrindo-o de grossas placas fúngicas que o tornam mais forte, resistente e difícil de ser eliminado. Além disso, os vermes também podem remover partes do fungo de seu próprio corpo e usá-las como bombas que liberam esporos. Na maioria dos jogos, essas criaturas só podem ser eliminadas com ataques de longa distância. É necessário enfraquecê-las com fogo intenso antes de usar o melhor de seu arsenal para acabar com elas.",
-        },
-        new GrupoModel
-        {
-          Id = 11,
-          Titulo = "Trôpegos",
-          Definicao = "Quando um hospedeiro infectado que está no processo de se transformar em um verme habita um ambiente muito úmido, o fungo passa por uma mutação e um aglomerado de esporos cresce na região da cabeça e dos ombros. Essas criaturas, conhecidas como \"trôpegos\", são menores e menos resistentes que os vermes, e não possuem bocas, o que as impede de morder. No entanto, ainda são extremamente perigosas, pois expelem esporos ácidos em suas vítimas. É importante manter distância desses infectados, pois ao serem eliminados, eles explodem e liberam ainda mais ácido. Essa variante de infectado foi introduzida somente em \"The Last of Us Parte II\", e é improvável que apareça na primeira temporada da adaptação para a HBO.",
-        },
-        new GrupoModel
-        {
-          Id = 12,
-          Titulo = "Rei dos Ratos",
-          Definicao = "Essa criatura nojenta e repulsiva é o resultado de alguns dos primeiros infectados terem sido mantidos em cativeiro em um hospital abandonado por 24 anos. O \"Rei dos Ratos\" (assim chamado em homenagem a um fenômeno raro no reino animal, onde um grupo de ratos foi encontrado com suas caudas interligadas e fundidas por cabelo e substâncias pegajosas) é uma mistura de todos os tipos de infectados existentes no universo de \"The Last of Us\", possuindo a velocidade de um perseguidor,  a ecolocalização de um estalador e a força de um verme. Como foi introduzido somente em \"The Last of Us Parte II\", é improvável que ele apareça na primeira temporada da nova série da HBO.",
-        },
+
       };
     }
 
@@ -340,6 +324,32 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
         {
           Id = new Guid("f3e22d07-e2aa-4fc7-9955-45cb879a48a5"),
           Nome =  "Jerry Anderson",
+          Grupo_id = 1
+        },
+
+
+        new PersonagemModel
+        {
+          Id = new Guid("B5D918D8-6FBB-4D43-99E7-F5C3E8A3D3B3"),
+          Nome =  "Runner",
+          Grupo_id = 1
+        },
+        new PersonagemModel
+        {
+          Id = new Guid("3F2504E0-4F89-41D3-9A0C-0305E82C3301"),
+          Nome =  "Stalker",
+          Grupo_id = 1
+        },
+        new PersonagemModel
+        {
+          Id = new Guid("3F2504E0-4F89-41D3-9A0C-0305E82C3301"),
+          Nome =  "Clicker",
+          Grupo_id = 1
+        },
+        new PersonagemModel
+        {
+          Id = new Guid("5DF3D9EF-5A68-4A50-8020-A5D5CC5CA8A5"),
+          Nome =  "Bloaters",
           Grupo_id = 1
         },
       };
