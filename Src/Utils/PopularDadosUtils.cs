@@ -327,30 +327,29 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
           Grupo_id = 1
         },
 
-
         new PersonagemModel
         {
           Id = new Guid("B5D918D8-6FBB-4D43-99E7-F5C3E8A3D3B3"),
           Nome =  "Runner",
-          Grupo_id = 1
+          Grupo_id = 7
         },
         new PersonagemModel
         {
           Id = new Guid("3F2504E0-4F89-41D3-9A0C-0305E82C3301"),
           Nome =  "Stalker",
-          Grupo_id = 1
+          Grupo_id = 8
         },
         new PersonagemModel
         {
-          Id = new Guid("3F2504E0-4F89-41D3-9A0C-0305E82C3301"),
+          Id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
           Nome =  "Clicker",
-          Grupo_id = 1
+          Grupo_id = 9
         },
         new PersonagemModel
         {
           Id = new Guid("5DF3D9EF-5A68-4A50-8020-A5D5CC5CA8A5"),
           Nome =  "Bloaters",
-          Grupo_id = 1
+          Grupo_id = 9
         },
       };
     }
