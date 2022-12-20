@@ -1,0 +1,34 @@
+Codigo c# conforme modelo, com new Guid("fc105ebc-0610-47af-8eea-fdde2db775b8"), aplicando as frases abaixo:
+return new List<FraseModel>
+      {
+        new FraseModel
+        {
+          Id = 29,
+          Descricao = "Eu não vou te deixar. (Expressando seu compromisso e lealdade a Ellie)",
+          Personagem_id = new Guid("fc105ebc-0610-47af-8eea-fdde2db775b8"),
+        }
+}
+
+
+Nós vamos passar por isso. (Expressando esperança e determinação para sobreviver em uma situação difícil)
+Farei o que for preciso. (Expressando a vontade de fazer sacrifícios para proteger Ellie e alcançar seus objetivos)
+Eu não vou te perder. (Expressando seu medo de perder Ellie e sua determinação em mantê-la segura)
+Eu vou protegê-lo. (Expressando seu desejo de manter Ellie segura e sua disposição de se colocar em perigo para fazê-lo)
+Estamos nisso juntos. (Expressando um senso de unidade e parceria com Ellie)
+
+
+Codigo c# conforme modelo, com new Guid("fc105ebc-0610-47af-8eea-fdde2db775b8"), aplicando as frases abaixo:
+return new List<FraseModel>
+      {
+        new FraseModel
+        {
+          Id = 35,
+          Descricao = "Eu vou te encontrar. (Expressando sua determinação em localizar Ellie, que foi separada dele)",
+          Personagem_id = new Guid("fc105ebc-0610-47af-8eea-fdde2db775b8"),
+        }
+}
+
+
+Eu te amo. (Expressando seus profundos sentimentos de amor por Ellie)
+Eu não vou deixar nada acontecer com você. (Expressando sua determinação em manter Ellie a salvo de danos)
+Estou aqui por você. (Expressando sua vontade de apoiar e ajudar Ellie de qualquer maneira que puder)

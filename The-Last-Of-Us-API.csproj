@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -56,6 +56,10 @@
     <None Include="wwwroot\src\App.js" />
     <None Include="wwwroot\src\App.test.js" />
     <None Include="wwwroot\src\index.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Src\Docs\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
