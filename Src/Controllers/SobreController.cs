@@ -11,7 +11,6 @@ namespace API_REST_The_Last_Of_Us.Controllers
   [ApiController]
   [ProducesResponseType(StatusCodes.Status400BadRequest)]
   [ProducesResponseType(StatusCodes.Status500InternalServerError)]
-  [Produces("application/json")]
   [Route("/sobre")]
   public class SobreController : ControllerBase
   {

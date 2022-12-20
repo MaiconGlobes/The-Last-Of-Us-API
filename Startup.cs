@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
+using System.Net;
 
 namespace The_Last_Of_Us_API
 {
@@ -51,6 +52,19 @@ namespace The_Last_Of_Us_API
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
+      app.Use(async (context, next) =>
+      {
+        var acceptHeader = context.Request.Headers["Accept"];
+        var authorizationHeader = context.Request.Headers["Authorization"];
+
+        if (!acceptHeader.ToString().Contains("application/json"))
+        {
+          context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+          return;
+        }
+        await next();
+      });
+
       if (env.IsDevelopment())
       {
         app.UseDeveloperExceptionPage();
