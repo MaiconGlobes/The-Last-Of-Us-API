@@ -283,7 +283,7 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
       new PersonagemModel
       {
         Id = new Guid("3ce1f89c-06b2-441c-86a8-d437c4680569"),
-        Nome =  "Tess (Theresa Servopoulos)",
+        Nome =  "Tess",
         Grupo_id = 1
       },
       new PersonagemModel
