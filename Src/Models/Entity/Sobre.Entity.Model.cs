@@ -86,10 +86,6 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
     [JsonPropertyName("plataformas")]
     public virtual ICollection<PlataformaModel> Plataformas { get; set; }
 
-    [Required(ErrorMessage = "Propriedade [sobre.versoes] é obrigatório")]
-    [JsonPropertyName("versoes")]
-    public virtual ICollection<VersaoModel> Versoes { get; set; }
-
     [Column("Sinopse", TypeName = "text")]
     [Required(ErrorMessage = "Propriedade [sinopse] é obrigatório")]
     [JsonPropertyName("sinopse")]
