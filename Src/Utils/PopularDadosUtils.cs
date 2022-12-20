@@ -233,19 +233,16 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
       {
         Id = 1,
         Descricao = "American Dreams",
-        Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
       },
       new VersaoModel
       {
         Id = 2,
         Descricao = "Left Behind",
-        Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
       },
       new VersaoModel
       {
         Id = 3,
         Descricao = "The Last of Us",
-        Sobre_id = new Guid("606ED30A-2F16-47FF-8812-D22B4B169C58"),
       },
     };
     }
