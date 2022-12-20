@@ -97,8 +97,8 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       modelBuilder.Entity<DesignerModel>().HasData(PopularDadosUtils.Instancia().PopularDesigner());
       modelBuilder.Entity<PersonagemModel>().HasData(PopularDadosUtils.Instancia().PopularPersonagem());
       modelBuilder.Entity<VersaoModel>().HasData(PopularDadosUtils.Instancia().PopularVersao());
-      modelBuilder.Entity<FraseModel>().HasData(PopularDadosUtils.Instancia().PopularFrase());
       modelBuilder.Entity<GrupoModel>().HasData(PopularDadosUtils.Instancia().PopularGrupo());
+      modelBuilder.Entity<FraseModel>().HasData(PopularDadosUtils.Instancia().PopularFrase());
       #endregion
     }
   }
