@@ -1,4 +1,4 @@
-﻿namespace API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType
+﻿namespace The_Last_Of_Us_API.Src.Models.Dto
 {
   public class MensagemErros
   {
