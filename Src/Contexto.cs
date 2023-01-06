@@ -68,7 +68,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       modelBuilder.Entity<LancamentoModel>().HasIndex(lancamento => lancamento.Data).IsUnique();
       modelBuilder.Entity<DesignerModel>().HasIndex(designer => designer.Nome).IsUnique();
       modelBuilder.Entity<FraseModel>().HasIndex(frase => frase.Descricao).IsUnique();
-      modelBuilder.Entity<GrupoModel>().HasIndex(grupo => grupo.Titulo).IsUnique();
+      modelBuilder.Entity<GrupoModel>().HasIndex(grupo => grupo.Tipo).IsUnique();
       modelBuilder.Entity<EspecieModel>().HasIndex(especie => especie.Definicao).IsUnique();
       modelBuilder.Entity<VersaoModel>().HasIndex(versao => versao.Descricao).IsUnique();
       #endregion
@@ -89,7 +89,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       modelBuilder.Entity<FraseModel>().Property(frase => frase.Descricao).IsRequired();
       modelBuilder.Entity<FraseModel>().Property(frase => frase.Personagem_id).IsRequired();
       modelBuilder.Entity<IdadeModel>().Property(idade => idade.Idade).IsRequired();
-      modelBuilder.Entity<GrupoModel>().Property(grupo => grupo.Titulo).IsRequired();
+      modelBuilder.Entity<GrupoModel>().Property(grupo => grupo.Tipo).IsRequired();
       modelBuilder.Entity<EspecieModel>().Property(especie => especie.Definicao).IsRequired();
       modelBuilder.Entity<VersaoModel>().Property(versao => versao.Descricao).IsRequired();
       #endregion

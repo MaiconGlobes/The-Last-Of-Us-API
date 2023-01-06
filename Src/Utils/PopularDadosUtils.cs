@@ -160,63 +160,63 @@ namespace API_REST_The_Last_Of_Us.Src.Utils
         new GrupoModel
         {
           Id = 1,
-          Titulo = "Independentes",
+          Tipo = "Independentes",
           Definicao = "São sobreviventes que lutam por sua própria sobrevivência e pelo bem-estar um do outro.",
           Especie_id = 1,
         },
         new GrupoModel
         {
           Id = 2,
-          Titulo = "Sentinéis",
+          Tipo = "Sentinéis",
           Definicao = "Um grupo de sobreviventes que tentam manter a ordem e a segurança em uma cidade chamada Jackson. Eles são liderados por Tommy e seguem regras rígidas para proteger sua comunidade.",
           Especie_id = 1,
         },
         new GrupoModel
         {
           Id = 3,
-          Titulo = "Conquistadores",
+          Tipo = "Conquistadores",
           Definicao = "Um grupo de sobreviventes que se estabeleceram em uma cidade chamada Salt Lake City e que controlam o comércio de recursos valiosos, como munição e medicamentos. Eles são liderados por David e usam a violência para manterem sua posição de poder.",
           Especie_id = 1,
         },
         new GrupoModel
         {
           Id = 4,
-          Titulo = "Fireflies",
+          Tipo = "Fireflies",
           Definicao = "Um grupo de sobreviventes que se estabeleceram em uma cidade chamada Salt Lake City e que controlam o comércio de recursos valiosos, como munição e medicamentos. Eles são liderados por David e usam a violência para manterem sua posição de poder.",
           Especie_id = 1,
         },
         new GrupoModel
         {
           Id = 5,
-          Titulo = "Bandidos",
+          Tipo = "Bandidos",
           Definicao = "Um grupo de sobreviventes que se aproveitam da situação pós-apocalíptica para cometer crimes e extorquir outros sobreviventes. Eles são liderados por Bill e são vistos como inimigos pelos outros grupos.",
           Especie_id = 1,
         },
         new GrupoModel
         {
           Id = 6,
-          Titulo = "Perseguidores ",
+          Tipo = "Perseguidores ",
           Definicao = "Os Perseguidores são uma facção de sobreviventes hostis no jogo. Eles são um grupo de humanos que se adaptou ao mundo pós-apocalíptico criado pelo fungo Cordyceps e se dedicam a perseguir e capturar outros sobreviventes para aumentar seus próprios recursos e poder. Os Perseguidores são conhecidos por usar táticas agressivas e serem altamente treinados e equipados, o que os torna um grande perigo para os outros sobreviventes no jogo. Eles são um inimigo importante a ser enfrentado pelo protagonista, Joel, e sua companheira de viagem, Enquanto eles tentam sobreviver em um mundo perigoso e hostil.",
           Especie_id = 1,
         },
         new GrupoModel
         {
           Id = 7,
-          Titulo = "Infectado Inicial",
+          Tipo = "Infectado Inicial",
           Definicao = "O primeiro estágio da infecção é conhecido como \"Infecção Inicial\", durante o qual o indivíduo ainda não apresenta sintomas evidentes da infecção, mas já está contaminado pelo fungo Ophiocordyceps unilateralis. O fungo se instala no sistema nervoso do hospedeiro e começa a controlar seus comportamentos.",
           Especie_id = 2,
         },
         new GrupoModel
         {
           Id = 8,
-          Titulo = "Infectado Ativo",
+          Tipo = "Infectado Ativo",
           Definicao = "O primeiro estágio da infecção é conhecido como \"Infecção Inicial\", durante o qual o indivíduo ainda não apresenta sintomas evidentes da infecção, mas já está contaminado pelo fungo Ophiocordyceps unilateralis. O fungo se instala no sistema nervoso do hospedeiro e começa a controlar seus comportamentos.",
           Especie_id = 2,
         },
         new GrupoModel
         {
           Id = 9,
-          Titulo = "Infectado Tardio",
+          Tipo = "Infectado Tardio",
           Definicao = "O primeiro estágio da infecção é conhecido como \"Infecção Inicial\", durante o qual o indivíduo ainda não apresenta sintomas evidentes da infecção, mas já está contaminado pelo fungo Ophiocordyceps unilateralis. O fungo se instala no sistema nervoso do hospedeiro e começa a controlar seus comportamentos.",
           Especie_id = 2,
         },
