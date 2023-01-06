@@ -1,5 +1,4 @@
-﻿using API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home;
-using API_REST_The_Last_Of_Us.Src.Services;
+﻿using API_REST_The_Last_Of_Us.Src.Services;
 using API_REST_The_Last_Of_Us.Src.Utils;
 using AutoMapper;
 using Microsoft.AspNetCore.Http;
@@ -9,8 +8,6 @@ using System.Threading.Tasks;
 namespace API_REST_The_Last_Of_Us.Controllers
 {
   [ApiController]
-  [ProducesResponseType(StatusCodes.Status400BadRequest)]
-  [ProducesResponseType(StatusCodes.Status500InternalServerError)]
   [Route("/sobre")]
   public class SobreController : ControllerBase
   {
@@ -23,7 +20,6 @@ namespace API_REST_The_Last_Of_Us.Controllers
       FSobreService = new SobreService();
     }
 
-    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(SobreRetornoOk))]
     [HttpGet]
     public async Task<IActionResult> GetTodosRegistrosSobreAsync()
     {

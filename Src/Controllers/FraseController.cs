@@ -11,8 +11,6 @@ using System.Threading.Tasks;
 namespace API_REST_The_Last_Of_Us.Controllers
 {
   [ApiController]
-  [ProducesResponseType(StatusCodes.Status400BadRequest)]
-  [ProducesResponseType(StatusCodes.Status500InternalServerError)]
   [Route("/frase")]
   public class FraseController : ControllerBase
   {
@@ -25,7 +23,6 @@ namespace API_REST_The_Last_Of_Us.Controllers
       FFraseService = new FraseService();
     }
 
-    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(FraseRetornoOk))]
     [HttpGet]
     public async Task<IActionResult> GetTodasFrasesAsync()
     {
@@ -47,7 +44,6 @@ namespace API_REST_The_Last_Of_Us.Controllers
       }
     }
 
-    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(FraseRetornoOk))]
     [HttpGet("{personagem}")]
     public async Task<IActionResult> GetFrasePorPersonagemAsync(string personagem)
     {
@@ -69,8 +65,6 @@ namespace API_REST_The_Last_Of_Us.Controllers
       }
     }
 
-    [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(FraseRetornoCreated))]
-    [ApiExplorerSettings(IgnoreApi = true)]
     [HttpPost]
     public async Task<IActionResult> PostFraseAsync([FromBody] FrasePOSTResponseDto AFraseBody)
     {
@@ -94,8 +88,6 @@ namespace API_REST_The_Last_Of_Us.Controllers
       }
     }
 
-    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    [ApiExplorerSettings(IgnoreApi = true)]
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteFrasePorId(int id)
     {
@@ -117,8 +109,6 @@ namespace API_REST_The_Last_Of_Us.Controllers
       }
     }
 
-    [ProducesResponseType(StatusCodes.Status204NoContent)]
-    [ApiExplorerSettings(IgnoreApi = true)]
     [HttpDelete]
     public async Task<IActionResult> DeleteTodasFrasesAsync()
     {
