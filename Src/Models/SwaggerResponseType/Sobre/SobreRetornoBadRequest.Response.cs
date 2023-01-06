@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
+using The_Last_Of_Us_API.Src.Models.Dto;
 
 namespace API_REST_The_Last_Of_Us.Src.Models.SwaggerResponseType.Home
 {

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
@@ -23,11 +22,5 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Entity
     [Required(ErrorMessage = "Propriedade [versao.idades] é obrigatório")]
     [JsonIgnore]
     public virtual ICollection<IdadeModel> Idades { get; set; }
-
-    [JsonIgnore]
-    public Guid Sobre_id { get; set; }
-
-    [JsonIgnore]
-    public virtual SobreModel Sobre { get; set; }
   }
 }

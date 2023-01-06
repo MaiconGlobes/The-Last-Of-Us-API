@@ -49,9 +49,6 @@ namespace API_REST_The_Last_Of_Us.Src.Models.Dto
     [JsonPropertyName("plataformas")]
     public virtual List<PlataformaModel> Plataformas { get; set; }
 
-    [JsonPropertyName("versoes")]
-    public virtual List<VersaoModel> Versoes { get; set; }
-
     [JsonPropertyName("sinopse")]
     public string Sinopse { get; set; }
   }

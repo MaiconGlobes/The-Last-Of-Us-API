@@ -10,7 +10,6 @@ namespace API_REST_The_Last_Of_Us.Controllers
   [ProducesResponseType(StatusCodes.Status400BadRequest)]
   [ProducesResponseType(StatusCodes.Status500InternalServerError)]
   [ApiExplorerSettings(IgnoreApi = true)]
-  [Produces("application/json")]
   [Route("/home")]
   public class HomeController : ControllerBase
   {

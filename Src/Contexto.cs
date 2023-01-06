@@ -16,6 +16,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
     public DbSet<DesignerModel> DESIGNER { get; set; }
     public DbSet<FraseModel> FRASE { get; set; }
     public DbSet<GrupoModel> GRUPO { get; set; }
+    public DbSet<EspecieModel> ESPECIE { get; set; }
     public DbSet<PersonagemModel> PERSONAGEM { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -38,11 +39,11 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       #region Relacionaemtno de Tabelas
       modelBuilder.Entity<LancamentoModel>().HasOne(lancamento => lancamento.Sobre).WithMany(sobre => sobre.Lancamentos).HasForeignKey(lancamento => lancamento.Sobre_id);
       modelBuilder.Entity<PlataformaModel>().HasOne(plataforma => plataforma.Sobre).WithMany(sobre => sobre.Plataformas).HasForeignKey(plataforma => plataforma.Sobre_id);
-      modelBuilder.Entity<VersaoModel>().HasOne(versao => versao.Sobre).WithMany(sobre => sobre.Versoes).HasForeignKey(versao => versao.Sobre_id);
       modelBuilder.Entity<DesignerModel>().HasOne(designer => designer.Sobre).WithMany(sobre => sobre.Designers).HasForeignKey(designer => designer.Sobre_id);
       modelBuilder.Entity<FraseModel>().HasOne(frase => frase.Personagem).WithMany(personagem => personagem.Frases).HasForeignKey(frase => frase.Personagem_id);
       modelBuilder.Entity<IdadeModel>().HasOne(idade => idade.Personagem).WithMany(personagem => personagem.Idades).HasForeignKey(idade => idade.Personagem_id);
       modelBuilder.Entity<IdadeModel>().HasOne(idade => idade.Versao).WithMany(versao => versao.Idades).HasForeignKey(idade => idade.Versao_id);
+      modelBuilder.Entity<GrupoModel>().HasOne(grupo => grupo.Especie).WithMany(especie => especie.Grupo).HasForeignKey(grupo => grupo.Especie_id);
       modelBuilder.Entity<PersonagemModel>().HasOne(personagem => personagem.Grupo).WithMany(grupo => grupo.Personagem).HasForeignKey(personagem => personagem.Grupo_id);
       #endregion
 
@@ -55,6 +56,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       modelBuilder.Entity<FraseModel>().Property(frase => frase.Id).ValueGeneratedOnAdd();
       modelBuilder.Entity<IdadeModel>().Property(idade => idade.Id).ValueGeneratedOnAdd();
       modelBuilder.Entity<GrupoModel>().Property(grupo => grupo.Id).ValueGeneratedOnAdd();
+      modelBuilder.Entity<EspecieModel>().Property(especie => especie.Id).ValueGeneratedOnAdd();
       modelBuilder.Entity<VersaoModel>().Property(versao => versao.Id).ValueGeneratedOnAdd();
       #endregion
 
@@ -66,7 +68,8 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       modelBuilder.Entity<LancamentoModel>().HasIndex(lancamento => lancamento.Data).IsUnique();
       modelBuilder.Entity<DesignerModel>().HasIndex(designer => designer.Nome).IsUnique();
       modelBuilder.Entity<FraseModel>().HasIndex(frase => frase.Descricao).IsUnique();
-      modelBuilder.Entity<GrupoModel>().HasIndex(especie => especie.Titulo).IsUnique();
+      modelBuilder.Entity<GrupoModel>().HasIndex(grupo => grupo.Titulo).IsUnique();
+      modelBuilder.Entity<EspecieModel>().HasIndex(especie => especie.Definicao).IsUnique();
       modelBuilder.Entity<VersaoModel>().HasIndex(versao => versao.Descricao).IsUnique();
       #endregion
 
@@ -87,6 +90,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       modelBuilder.Entity<FraseModel>().Property(frase => frase.Personagem_id).IsRequired();
       modelBuilder.Entity<IdadeModel>().Property(idade => idade.Idade).IsRequired();
       modelBuilder.Entity<GrupoModel>().Property(grupo => grupo.Titulo).IsRequired();
+      modelBuilder.Entity<EspecieModel>().Property(especie => especie.Definicao).IsRequired();
       modelBuilder.Entity<VersaoModel>().Property(versao => versao.Descricao).IsRequired();
       #endregion
 
@@ -97,6 +101,7 @@ namespace API_REST_The_Last_Of_Us.Src.Services
       modelBuilder.Entity<DesignerModel>().HasData(PopularDadosUtils.Instancia().PopularDesigner());
       modelBuilder.Entity<PersonagemModel>().HasData(PopularDadosUtils.Instancia().PopularPersonagem());
       modelBuilder.Entity<VersaoModel>().HasData(PopularDadosUtils.Instancia().PopularVersao());
+      modelBuilder.Entity<EspecieModel>().HasData(PopularDadosUtils.Instancia().PopularEspecie());
       modelBuilder.Entity<GrupoModel>().HasData(PopularDadosUtils.Instancia().PopularGrupo());
       modelBuilder.Entity<FraseModel>().HasData(PopularDadosUtils.Instancia().PopularFrase());
       #endregion
