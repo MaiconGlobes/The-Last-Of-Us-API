@@ -1,0 +1,38 @@
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.link-swagger {
+  color: aqua;
+}
+
+body::-webkit-scrollbar {
+  width: 16px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: #0E0E19;          /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #121212;    /* color of the scroll thumb */
+  border-radius: 20px;            /* roundness of the scroll thumb */
+  border: 3px solid #121212;     /* creates padding around scroll thumb */
+}
+
+@font-face {
+  font-family: 'Compacta-bold-bt';
+  src: local('Compacta-bold-bt'), url(./fonts/compacta-bold-bt.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-regular';
+  src: local('Roboto-regular'), url(./fonts/roboto-regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto-light';
+  src: local('Roboto-light'), url(./fonts/roboto-light.ttf) format('truetype');
+}
