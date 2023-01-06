@@ -1,6 +1,5 @@
 ﻿using API_REST_The_Last_Of_Us.Src.Services;
 using API_REST_The_Last_Of_Us.Src.Utils;
-using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
@@ -11,12 +10,10 @@ namespace API_REST_The_Last_Of_Us.Controllers
   [Route("/sobre")]
   public class SobreController : ControllerBase
   {
-    private readonly IMapper FMapper;
     private SobreService FSobreService { get; set; }
 
-    public SobreController(IMapper mapper)
+    public SobreController()
     {
-      FMapper = mapper;
       FSobreService = new SobreService();
     }
 
