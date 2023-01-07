@@ -13,6 +13,7 @@ import { ContextoCarregamento } from '../../context';
 const HomePage = () => {
   const { isImgCarregando, setImgCarregando } = useContext(ContextoCarregamento);
 
+  //Usado para testes
   // useEffect(() => {
   //   setTimeout(() => {
   //     setImgCarregando(false);
