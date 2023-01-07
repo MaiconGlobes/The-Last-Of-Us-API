@@ -115,3 +115,5 @@ C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-A
 C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.pdb
 C:\Users\Usuario\Documents\GIT\API-TLOU\obj\Debug\netcoreapp3.1\The-Last-Of-Us-API.genruntimeconfig.cache
 C:\Users\Usuario\Documents\GIT\API-TLOU\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Usuario\Documents\GIT\API-TLOU\bin\Debug\netcoreapp3.1\Src\Test\obj\project.assets.json
+C:\Users\Usuario\Documents\GIT\API-TLOU\bin\Debug\netcoreapp3.1\Src\Test\obj\Test.csproj.nuget.dgspec.json
