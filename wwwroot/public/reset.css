@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-.link-swagger {
-  color: aqua;
-}
-
 body::-webkit-scrollbar {
   width: 16px;               /* width of the entire scrollbar */
 }

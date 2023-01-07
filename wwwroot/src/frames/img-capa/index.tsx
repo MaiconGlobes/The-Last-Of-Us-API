@@ -1,7 +1,10 @@
 import { Box, useTheme } from '@mui/material';
+import { useContext } from 'react';
+import { ContextoCarregamento } from '../../context';
 
 const ImagemCapa = () => {
   const theme = useTheme();
+  const { setImgCarregando } = useContext(ContextoCarregamento);
 
   return (
     <Box
@@ -23,7 +26,7 @@ const ImagemCapa = () => {
         },
       }}
       src='https://thelastofusapi.azurewebsites.net/img/capa-site.jpg'
-      // onLoad={() => setImgCarregando(false)}
+      onLoad={() => setImgCarregando(false)}
     />
   );
 };
