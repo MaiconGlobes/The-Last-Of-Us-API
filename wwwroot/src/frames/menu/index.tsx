@@ -38,7 +38,6 @@ const MenuDireita = () => {
           paddingBottom: '10px',
         }}>
         <Link
-          // href='#'
           sx={{
             fontFamily: 'Compacta-bold-bt',
             fontSize: '0.975rem',
@@ -47,7 +46,25 @@ const MenuDireita = () => {
             cursor: 'pointer',
           }}
           onClick={() => RolarSessionCard()}>
-          UPDATES
+          UPDATES |
+        </Link>
+      </Box>
+
+      <Box
+        sx={{
+          minWidth: '60px',
+          maxWidth: '60px',
+          paddingBottom: '10px',
+        }}>
+        <Link
+          sx={{
+            fontFamily: 'Compacta-bold-bt',
+            fontSize: '0.975rem',
+            color: '#ffffff',
+            textDecoration: 'none',
+            cursor: 'pointer',
+          }}>
+          TOKEN
         </Link>
       </Box>
     </>

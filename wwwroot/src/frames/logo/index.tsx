@@ -1,5 +1,5 @@
 import { Box, useTheme } from '@mui/material';
-import Texto from '../texto';
+import Texto from '../../components/texto';
 
 const Logo = () => {
   const theme = useTheme();

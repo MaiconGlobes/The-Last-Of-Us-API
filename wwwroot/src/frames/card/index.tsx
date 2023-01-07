@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Link, useTheme } from '@mui/material';
+import { Box, Button, Link, useTheme } from '@mui/material';
 import { Stack } from '@mui/system';
 import Divisor from '../../components/divisor';
 import Texto from '../../components/texto';
@@ -77,7 +77,6 @@ const CardFrame = () => {
           }}>
           <Texto
             styles={{
-              // background: 'black',
               fontSize: '1.28rem',
               fontFamily: 'Roboto-regular',
               fontWeight: '550',
@@ -102,7 +101,6 @@ const CardFrame = () => {
             <>
               <Stack
                 sx={{
-                  // background: 'red',
                   marginBottom: '50px',
                 }}>
                 <Box
@@ -142,7 +140,6 @@ const CardFrame = () => {
                     lineHeight: '1.8rem',
                     textAlign: 'left',
                     marginBottom: '20px',
-                    // width: '300px',
                   }}>
                   {element.titulo}
                 </Texto>
@@ -200,7 +197,6 @@ const CardFrame = () => {
       <Stack
         spacing={-1}
         sx={{
-          // background: 'gray',
           width: '20%',
           justifyContent: 'stretch',
           alignContent: 'center',
@@ -222,7 +218,6 @@ const CardFrame = () => {
           }}>
           <Texto
             styles={{
-              // background: 'black',
               fontSize: '1rem',
               fontFamily: 'Roboto-regular',
               fontWeight: '500',
