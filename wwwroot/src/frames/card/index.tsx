@@ -6,31 +6,6 @@ import Texto from '../../components/texto';
 const CardFrame = () => {
   const theme = useTheme();
   const ListaCards = [
-    // {
-    //   versao: '11.11.18',
-    //   cateroria: 'infected',
-    //   titulo: 'List of all types of infected in The Last of Us',
-    //   subtitulo:
-    //     'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    //   imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/infected.jpeg',
-    // },
-    // {
-    //   versao: '11.11.17',
-    //   cateroria: 'arms',
-    //   titulo:
-    //     'Update the listing of existing weapons and accessories in The Last of Us',
-    //   subtitulo:
-    //     'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    //   imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/arms.jpeg',
-    // },
-    // {
-    //   versao: '11.11.16',
-    //   cateroria: 'groups',
-    //   titulo: 'Combat group imagery implementations',
-    //   subtitulo:
-    //     'Lorem ipsum dolor sit amet, consectetur ur adipiscing elit consectetur adipiscing elit, sed do eiusmod. nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    //   imgUrl: 'https://thelastofusapi.azurewebsites.net/img/card/groups.jpeg',
-    // },
     {
       versao: '11.11.18',
       cateroria: 'infected',

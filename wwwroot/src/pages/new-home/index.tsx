@@ -1,62 +1,20 @@
 import Divisor from '../../components/divisor';
-import Menu from '../../frames/menu';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Texto from '../../components/texto';
-import { AppBar, Box, Button, Grid, Skeleton, Toolbar, useTheme } from '@mui/material';
+import { AppBar, Box, Button, Grid, Skeleton, Stack, Toolbar, useTheme } from '@mui/material';
+import UpdatesSession from '../../sessions/updates';
+import MenuDireita from '../../frames/menu';
+import Logo from '../../components/logo';
 
 const NewHomePage = () => {
-  const [imgCarregada, setImgCarregada] = useState(true);
+  const [imgCarregando, setImgCarregando] = useState(true);
   const theme = useTheme();
 
-  function RolarSessionCard() {
-    const el = document.getElementById('documentation-session')?.scrollIntoView();
-  }
-
-  const Logo = () => {
-    return (
-      <>
-        <Box
-          sx={{
-            flexGrow: 0,
-            [theme.breakpoints.up('xs')]: {
-              marginTop: '-2px',
-            },
-            [theme.breakpoints.up('sm')]: {
-              marginTop: '-5px',
-            },
-            [theme.breakpoints.up('md')]: {
-              marginTop: '-5px',
-            },
-          }}>
-          <Texto
-            styles={{
-              fontSize: '1.2rem',
-              fontFamily: 'Compacta-bold-bt',
-              color: '#ffffff',
-              lineHeight: '1.25rem',
-              textAlign: 'left',
-              height: '40px',
-              width: '60px',
-            }}>
-            THE LAST OF US
-          </Texto>
-          <Texto
-            styles={{
-              fontSize: '22px',
-              fontFamily: 'Compacta-bold-bt',
-              textAlign: 'right',
-              color: '#C2C2C2',
-              height: '25px',
-              width: '60px',
-              marginLeft: '10px',
-              marginTop: '-25px',
-            }}>
-            API
-          </Texto>
-        </Box>
-      </>
-    );
-  };
+  useEffect(() => {
+    setTimeout(() => {
+      setImgCarregando(false);
+    }, 3000);
+  });
 
   const ImagemCapa = () => {
     return (
@@ -80,7 +38,7 @@ const NewHomePage = () => {
           },
         }}
         src='https://thelastofusapi.azurewebsites.net/img/capa-site.jpg'
-        onLoad={() => setImgCarregada(false)}
+        // onLoad={() => setImgCarregando(false)}
       />
     );
   };
@@ -211,8 +169,7 @@ const NewHomePage = () => {
                     background: '#d1190c',
                     border: '#7D2016 1px solid',
                   },
-                }}
-                onClick={RolarSessionCard}>
+                }}>
                 Get Started
               </Button>
             </Box>
@@ -224,10 +181,10 @@ const NewHomePage = () => {
 
   return (
     <>
-      {imgCarregada ? (
+      {imgCarregando ? (
         <>
-          <Skeleton variant='rectangular' width='100vw' height='65px' animation='wave' style={{ opacity: 0.4 }} />
-          <Skeleton variant='rectangular' width='100vw' height='97vh' animation='wave' style={{ opacity: 0.4 }} />
+          <Skeleton variant='rectangular' width='100vw' height='65px' animation='wave' style={{ opacity: 0.5 }} />
+          <Skeleton variant='rectangular' width='100vw' height='97vh' animation='wave' style={{ opacity: 0.5 }} />
         </>
       ) : (
         <>
@@ -241,14 +198,20 @@ const NewHomePage = () => {
               <Toolbar>
                 <Logo />
                 <Divisor />
-                <Menu />
+                <MenuDireita />
               </Toolbar>
             </AppBar>
           </Box>
         </>
       )}
       <ImagemCapa />
-      <TextoBoasVindas />
+
+      {imgCarregando ? null : (
+        <>
+          <TextoBoasVindas />
+          <UpdatesSession />
+        </>
+      )}
     </>
   );
 };

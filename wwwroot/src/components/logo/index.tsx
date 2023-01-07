@@ -1,7 +1,7 @@
 import { Box, useTheme } from '@mui/material';
 import Texto from '../texto';
 
-const Logo = (onLoad: any) => {
+const Logo = () => {
   const theme = useTheme();
   return (
     <>

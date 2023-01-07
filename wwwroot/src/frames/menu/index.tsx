@@ -1,11 +1,11 @@
 import { Box, Link, useTheme } from '@mui/material';
 import Texto from '../../components/texto';
 
-const Menu = () => {
+const MenuDireita = () => {
   const theme = useTheme();
 
   function RolarSessionCard() {
-    const el = document.getElementById('card-session')?.scrollIntoView();
+    document.getElementById('card-session')?.scrollIntoView();
   }
 
   return (
@@ -54,4 +54,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default MenuDireita;
