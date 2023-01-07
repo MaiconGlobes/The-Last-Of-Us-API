@@ -1,5 +1,4 @@
 import { Box, Link, useTheme } from '@mui/material';
-import { useRef } from 'react';
 import Texto from '../../components/texto';
 
 const Menu = () => {
@@ -48,24 +47,7 @@ const Menu = () => {
             cursor: 'pointer',
           }}
           onClick={() => RolarSessionCard()}>
-          UPDATES |
-        </Link>
-      </Box>
-      <Box
-        sx={{
-          minWidth: '50px',
-          maxWidth: '53px',
-          paddingBottom: '10px',
-        }}>
-        <Link
-          href='/swagger/index.html'
-          sx={{
-            fontFamily: 'Compacta-bold-bt',
-            fontSize: '0.975rem',
-            color: '#ffffff',
-            textDecoration: 'none',
-          }}>
-          SWAGGER
+          UPDATES
         </Link>
       </Box>
     </>

@@ -1,6 +1,4 @@
-import { useTheme } from '@emotion/react';
 import { SxProps, Theme, Typography } from '@mui/material';
-import React from 'react';
 
 type TProps = {
   children?: React.ReactNode;
@@ -8,7 +6,6 @@ type TProps = {
 };
 
 const Texto: React.FC<TProps> = ({ children, styles }) => {
-  // const theme = useTheme();
   return <Typography sx={styles}>{children}</Typography>;
 };
 

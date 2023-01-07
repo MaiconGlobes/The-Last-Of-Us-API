@@ -4,9 +4,7 @@ import Texto from '../../components/texto';
 
 const IntroductionSession = () => {
   function RolarSessionCard() {
-    const el = document
-      .getElementById('documentation-session')
-      ?.scrollIntoView();
+    const el = document.getElementById('documentation-session')?.scrollIntoView();
   }
   const theme = useTheme();
   const [imgNotLoad, setImgNotLoad] = useState(true);
@@ -18,14 +16,7 @@ const IntroductionSession = () => {
         sx={{
           position: 'fixed',
         }}>
-        {imgNotLoad ? (
-          <Skeleton
-            variant='rounded'
-            width='100vw'
-            height='100vh'
-            animation='wave'
-          />
-        ) : null}
+        {imgNotLoad ? <Skeleton variant='rounded' width='100vw' height='100vh' animation='wave' /> : null}
         <Box
           component='img'
           sx={{
